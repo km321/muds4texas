@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 280" fill="none">
+  <style>
+    .label { font-family: 'Source Sans 3', system-ui, sans-serif; font-size: 12px; fill: #4A5560; }
+    .label-ink { font-family: 'Source Sans 3', system-ui, sans-serif; font-size: 13px; fill: #0B1726; font-weight: 600; }
+    .label-small { font-family: 'Source Sans 3', system-ui, sans-serif; font-size: 11px; fill: #4A5560; }
+  </style>
+  
+  <!-- Document silhouette -->
+  <path d="M100 30 L220 30 L250 60 L250 250 L100 250 Z" fill="#FCFDFB" stroke="#1B4F72" stroke-width="2"/>
+  <!-- Folded corner -->
+  <path d="M220 30 L220 60 L250 60" fill="#F7F8F6" stroke="#1B4F72" stroke-width="1.5"/>
+  
+  <!-- Document lines (representing text) -->
+  <rect x="116" y="76" width="118" height="4" rx="2" fill="#C5CBC4"/>
+  <rect x="116" y="92" width="100" height="4" rx="2" fill="#C5CBC4"/>
+  <rect x="116" y="108" width="110" height="4" rx="2" fill="#C5CBC4"/>
+  
+  <rect x="116" y="132" width="118" height="4" rx="2" fill="#C5CBC4"/>
+  <rect x="116" y="148" width="90" height="4" rx="2" fill="#C5CBC4"/>
+  <rect x="116" y="164" width="105" height="4" rx="2" fill="#C5CBC4"/>
+  
+  <rect x="116" y="188" width="118" height="4" rx="2" fill="#C5CBC4"/>
+  <rect x="116" y="204" width="80" height="4" rx="2" fill="#C5CBC4"/>
+  
+  <!-- Callout 1: Tax info (clay accent) -->
+  <circle cx="234" cy="94" r="6" fill="#C45C26"/>
+  <line x1="240" y1="94" x2="290" y2="74" stroke="#C45C26" stroke-width="1.5"/>
+  <text x="295" y="70" class="label-ink">Tax rate info</text>
+  <text x="295" y="84" class="label-small">district-specific</text>
+  
+  <!-- Callout 2: District purposes -->
+  <circle cx="234" cy="150" r="6" fill="#1B4F72"/>
+  <line x1="240" y1="150" x2="290" y2="140" stroke="#1B4F72" stroke-width="1.5"/>
+  <text x="295" y="136" class="label-ink">District purposes</text>
+  <text x="295" y="150" class="label-small">water, sewer, etc.</text>
+  
+  <!-- Callout 3: Location/city -->
+  <circle cx="234" cy="196" r="6" fill="#1B4F72"/>
+  <line x1="240" y1="196" x2="290" y2="206" stroke="#1B4F72" stroke-width="1.5"/>
+  <text x="295" y="202" class="label-ink">Location info</text>
+  <text x="295" y="216" class="label-small">city/ETJ status</text>
+  
+  <!-- Document title -->
+  <text x="175" y="56" text-anchor="middle" class="label-ink" font-size="11">Notice to Purchaser</text>
+</svg>

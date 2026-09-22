@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 200" fill="none">
+  <style>
+    .label { font-family: 'Source Sans 3', system-ui, sans-serif; font-size: 12px; fill: #4A5560; }
+    .label-ink { font-family: 'Source Sans 3', system-ui, sans-serif; font-size: 13px; fill: #0B1726; font-weight: 600; }
+    .label-small { font-family: 'Source Sans 3', system-ui, sans-serif; font-size: 11px; fill: #4A5560; }
+    .label-white { font-family: 'Source Sans 3', system-ui, sans-serif; font-size: 13px; fill: #FCFDFB; font-weight: 600; }
+  </style>
+  
+  <!-- MUD entity -->
+  <rect x="20" y="40" width="140" height="100" rx="6" fill="#1B4F72"/>
+  <text x="90" y="75" text-anchor="middle" class="label-white">MUD</text>
+  <text x="90" y="93" text-anchor="middle" class="label-small" fill="#F7F8F6">Government</text>
+  <text x="90" y="110" text-anchor="middle" class="label-small" fill="#F7F8F6">Utilities, taxes</text>
+  <text x="90" y="127" text-anchor="middle" class="label-small" fill="#F7F8F6">Public board</text>
+  
+  <!-- PID entity -->
+  <rect x="190" y="40" width="140" height="100" rx="6" fill="#FCFDFB" stroke="#1B4F72" stroke-width="2"/>
+  <text x="260" y="75" text-anchor="middle" class="label-ink">PID</text>
+  <text x="260" y="93" text-anchor="middle" class="label-small">Assessment tool</text>
+  <text x="260" y="110" text-anchor="middle" class="label-small">Public improvements</text>
+  <text x="260" y="127" text-anchor="middle" class="label-small">City-created often</text>
+  
+  <!-- HOA entity -->
+  <rect x="360" y="40" width="140" height="100" rx="6" fill="#FCFDFB" stroke="#1B4F72" stroke-width="2"/>
+  <text x="430" y="75" text-anchor="middle" class="label-ink">HOA</text>
+  <text x="430" y="93" text-anchor="middle" class="label-small">Private association</text>
+  <text x="430" y="110" text-anchor="middle" class="label-small">Covenants, dues</text>
+  <text x="430" y="127" text-anchor="middle" class="label-small">Elected board</text>
+  
+  <!-- Overlap indicator (clay accent) -->
+  <rect x="140" y="155" width="240" height="32" rx="4" fill="#C45C26" opacity="0.15"/>
+  <rect x="140" y="155" width="240" height="32" rx="4" fill="none" stroke="#C45C26" stroke-width="1.5"/>
+  <text x="260" y="175" text-anchor="middle" class="label-ink" fill="#C45C26">A property can have more than one</text>
+</svg>
