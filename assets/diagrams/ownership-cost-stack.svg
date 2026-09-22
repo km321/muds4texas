@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" fill="none">
+  <style>
+    .label { font-family: 'Source Sans 3', system-ui, sans-serif; font-size: 12px; fill: #4A5560; }
+    .label-ink { font-family: 'Source Sans 3', system-ui, sans-serif; font-size: 13px; fill: #0B1726; font-weight: 600; }
+    .label-small { font-family: 'Source Sans 3', system-ui, sans-serif; font-size: 11px; fill: #4A5560; }
+    .label-white { font-family: 'Source Sans 3', system-ui, sans-serif; font-size: 13px; fill: #FCFDFB; font-weight: 600; }
+  </style>
+  
+  <!-- Title area -->
+  <text x="200" y="24" text-anchor="middle" class="label-ink">Ownership cost layers</text>
+  <text x="200" y="42" text-anchor="middle" class="label-small">Model as separate streams, not one lump</text>
+  
+  <!-- Stack container -->
+  <rect x="60" y="60" width="280" height="240" rx="6" fill="#F7F8F6" stroke="#C5CBC4" stroke-width="1"/>
+  
+  <!-- Layer 1: County/City taxes -->
+  <rect x="80" y="76" width="240" height="42" rx="4" fill="#FCFDFB" stroke="#1B4F72" stroke-width="1.5"/>
+  <text x="200" y="102" text-anchor="middle" class="label-ink">County &amp; city property tax</text>
+  
+  <!-- Layer 2: MUD tax (clay accent) -->
+  <rect x="80" y="126" width="240" height="42" rx="4" fill="#C45C26"/>
+  <text x="200" y="152" text-anchor="middle" class="label-white">MUD ad valorem tax</text>
+  
+  <!-- Layer 3: Utility bills -->
+  <rect x="80" y="176" width="240" height="42" rx="4" fill="#FCFDFB" stroke="#1B4F72" stroke-width="1.5"/>
+  <text x="200" y="202" text-anchor="middle" class="label-ink">Water &amp; sewer bills</text>
+  
+  <!-- Layer 4: HOA/PID (if present) -->
+  <rect x="80" y="226" width="240" height="42" rx="4" fill="#FCFDFB" stroke="#C5CBC4" stroke-width="1.5" stroke-dasharray="4 2"/>
+  <text x="200" y="248" text-anchor="middle" class="label">HOA dues / PID assessment</text>
+  <text x="200" y="262" text-anchor="middle" class="label-small">(if present)</text>
+  
+  <!-- Side annotation -->
+  <line x1="350" y1="76" x2="350" y2="268" stroke="#C5CBC4" stroke-width="1"/>
+  <line x1="345" y1="76" x2="355" y2="76" stroke="#C5CBC4" stroke-width="1"/>
+  <line x1="345" y1="268" x2="355" y2="268" stroke="#C5CBC4" stroke-width="1"/>
+  <text x="365" y="176" class="label-small" transform="rotate(90 365 176)">Total housing cost</text>
+</svg>

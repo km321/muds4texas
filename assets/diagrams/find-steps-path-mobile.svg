@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 420" fill="none" preserveAspectRatio="xMidYMid meet">
+  <style>
+    .label-ink { font-family: "Source Sans 3", system-ui, sans-serif; font-size: 14px; fill: #0B1726; font-weight: 600; }
+    .label-small { font-family: "Source Sans 3", system-ui, sans-serif; font-size: 12px; fill: #4A5560; }
+    .label-white { font-family: "Source Sans 3", system-ui, sans-serif; font-size: 14px; fill: #FCFDFB; font-weight: 600; }
+    .label-white-sm { font-family: "Source Sans 3", system-ui, sans-serif; font-size: 12px; fill: #FCFDFB; }
+    .step-num { font-family: "Newsreader", Georgia, serif; font-size: 20px; fill: #1B4F72; font-weight: 600; }
+  </style>
+  <!-- Step 1 clay -->
+  <rect x="24" y="16" width="232" height="72" rx="6" fill="#C45C26"/>
+  <text x="48" y="46" class="label-white">1</text>
+  <text x="72" y="46" class="label-white">TCEQ viewer</text>
+  <text x="72" y="66" class="label-white-sm">search address</text>
+  <path d="M140 88 L140 104" stroke="#C5CBC4" stroke-width="2"/>
+  <!-- 2 -->
+  <rect x="24" y="104" width="232" height="72" rx="6" fill="#FCFDFB" stroke="#1B4F72" stroke-width="1.5"/>
+  <text x="48" y="134" class="step-num">2</text>
+  <text x="72" y="134" class="label-ink">Note district</text>
+  <text x="72" y="154" class="label-small">name and type</text>
+  <path d="M140 176 L140 192" stroke="#C5CBC4" stroke-width="2"/>
+  <!-- 3 -->
+  <rect x="24" y="192" width="232" height="72" rx="6" fill="#FCFDFB" stroke="#1B4F72" stroke-width="1.5"/>
+  <text x="48" y="222" class="step-num">3</text>
+  <text x="72" y="222" class="label-ink">Cross-check</text>
+  <text x="72" y="242" class="label-small">county tax records</text>
+  <path d="M140 264 L140 280" stroke="#C5CBC4" stroke-width="2"/>
+  <!-- 4 -->
+  <rect x="24" y="280" width="232" height="72" rx="6" fill="#FCFDFB" stroke="#1B4F72" stroke-width="1.5"/>
+  <text x="48" y="310" class="step-num">4</text>
+  <text x="72" y="310" class="label-ink">Match</text>
+  <text x="72" y="330" class="label-small">district website</text>
+  <text x="140" y="390" text-anchor="middle" class="label-small">Use official tools, not third-party databases</text>
+</svg>

@@ -303,6 +303,17 @@
       }
     }
 
+    .diagram-card {
+      background: transparent;
+      border-radius: 0.375rem;
+      overflow: hidden;
+    }
+    .diagram-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
   </style>
 </head>
 <body class="antialiased">
@@ -430,7 +441,17 @@
     <section class="bg-paper border-y border-line">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 prose-edu">
         <h2>Notice to Purchaser (what it is, not how to fill it out)</h2>
-        <p>Texas law requires sellers of property in certain districts to provide a written notice to the purchaser about the district. In practice you will hear this called the MUD notice or Notice to Purchaser.</p>
+        
+        <div class="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-start not-prose mb-8">
+          <figure class="diagram-card lg:col-span-4 mb-6 lg:mb-0">
+            <img src="assets/diagrams/notice-to-purchaser.svg" alt="Document silhouette with callout lines pointing to key sections: tax rate info, district purposes, and location status" class="diagram-img" width="380" height="280" loading="lazy" decoding="async" />
+            <figcaption class="text-sm text-muted mt-3">The notice covers district-specific details. TREC Form 59-0 is a voluntary form that can help when a compliant district notice is not otherwise available.</figcaption>
+          </figure>
+          <div class="lg:col-span-8 prose-edu">
+            <p>Texas law requires sellers of property in certain districts to provide a written notice to the purchaser about the district. In practice you will hear this called the MUD notice or Notice to Purchaser.</p>
+          </div>
+        </div>
+        
         <ul>
           <li>The notice covers items such as tax information, bonds, fees, location relative to a city, strategic partnership agreements when applicable, and district purposes.</li>
           <li>Districts are generally expected to make the notice available (including online in many cases). Prefer the <strong class="text-ink">district&rsquo;s own completed notice</strong> when it exists.</li>
@@ -456,6 +477,12 @@
     <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16" aria-labelledby="cost-h">
       <h2 id="cost-h" class="font-display text-3xl font-semibold text-ink mb-6">Cost mental model</h2>
       <p class="text-muted max-w-measure mb-8">Model ongoing ownership cost as separate streams, not one lump &ldquo;MUD fee.&rdquo; Compare total housing cost, not sticker price alone.</p>
+      
+      <figure class="diagram-card mb-10 max-w-sm">
+        <img src="assets/diagrams/ownership-cost-stack.svg" alt="Stacked diagram showing layers of housing cost: county and city property tax, MUD ad valorem tax, water and sewer bills, and optional HOA dues or PID assessment" class="diagram-img" width="400" height="320" loading="lazy" decoding="async" />
+        <figcaption class="text-sm text-muted mt-3">Layers vary by property. The MUD tax is one piece, not the whole stack.</figcaption>
+      </figure>
+      
       <div class="grid md:grid-cols-2 gap-6 mb-10">
         <div class="bg-surface border border-line rounded-brand p-6 shadow-card">
           <h3 class="font-semibold text-ink mb-3">Things buyers often appreciate</h3>

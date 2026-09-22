@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160" fill="none">
+  <style>
+    .label { font-family: 'Source Sans 3', system-ui, sans-serif; font-size: 12px; fill: #4A5560; }
+    .label-ink { font-family: 'Source Sans 3', system-ui, sans-serif; font-size: 13px; fill: #0B1726; font-weight: 600; }
+    .label-small { font-family: 'Source Sans 3', system-ui, sans-serif; font-size: 11px; fill: #4A5560; }
+    .label-white { font-family: 'Source Sans 3', system-ui, sans-serif; font-size: 12px; fill: #FCFDFB; font-weight: 600; }
+    .step-num { font-family: 'Newsreader', Georgia, serif; font-size: 18px; fill: #1B4F72; font-weight: 600; }
+  </style>
+  
+  <!-- Step 1: TCEQ (clay accent for start) -->
+  <rect x="20" y="30" width="110" height="80" rx="6" fill="#C45C26"/>
+  <text x="75" y="58" text-anchor="middle" class="label-white">1</text>
+  <text x="75" y="78" text-anchor="middle" class="label-white">TCEQ viewer</text>
+  <text x="75" y="95" text-anchor="middle" class="label-small" fill="#FCFDFB">search address</text>
+  
+  <!-- Arrow 1-2 -->
+  <path d="M130 70 L155 70" stroke="#C5CBC4" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Step 2: Note district -->
+  <rect x="160" y="30" width="110" height="80" rx="6" fill="#FCFDFB" stroke="#1B4F72" stroke-width="1.5"/>
+  <text x="215" y="58" text-anchor="middle" class="step-num">2</text>
+  <text x="215" y="78" text-anchor="middle" class="label-ink">Note district</text>
+  <text x="215" y="95" text-anchor="middle" class="label-small">name and type</text>
+  
+  <!-- Arrow 2-3 -->
+  <path d="M270 70 L295 70" stroke="#C5CBC4" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Step 3: Cross-check -->
+  <rect x="300" y="30" width="110" height="80" rx="6" fill="#FCFDFB" stroke="#1B4F72" stroke-width="1.5"/>
+  <text x="355" y="58" text-anchor="middle" class="step-num">3</text>
+  <text x="355" y="78" text-anchor="middle" class="label-ink">Cross-check</text>
+  <text x="355" y="95" text-anchor="middle" class="label-small">county tax records</text>
+  
+  <!-- Arrow 3-4 -->
+  <path d="M410 70 L435 70" stroke="#C5CBC4" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Step 4: Match -->
+  <rect x="440" y="30" width="100" height="80" rx="6" fill="#FCFDFB" stroke="#1B4F72" stroke-width="1.5"/>
+  <text x="490" y="58" text-anchor="middle" class="step-num">4</text>
+  <text x="490" y="78" text-anchor="middle" class="label-ink">Match</text>
+  <text x="490" y="95" text-anchor="middle" class="label-small">district website</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#C5CBC4"/>
+    </marker>
+  </defs>
+  
+  <!-- Caption line -->
+  <text x="280" y="140" text-anchor="middle" class="label-small">Use official tools, not third-party databases</text>
+</svg>

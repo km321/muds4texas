@@ -303,6 +303,17 @@
       }
     }
 
+    .diagram-card {
+      background: transparent;
+      border-radius: 0.375rem;
+      overflow: hidden;
+    }
+    .diagram-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
   </style>
 </head>
 <body class="antialiased">
@@ -407,6 +418,12 @@
 
     <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16" aria-labelledby="call-h">
       <h2 id="call-h" class="font-display text-3xl font-semibold text-ink mb-6">Who to call</h2>
+      
+      <figure class="diagram-card mb-8 max-w-2xl">
+        <img src="assets/diagrams/who-to-call-routes.svg" alt="Flowchart showing how to route homeowner questions: tax questions go to county tax office, water bill issues go to district operator, and meeting or governance questions go to district website or board contacts" class="diagram-img" width="600" height="340" loading="lazy" decoding="async" />
+        <figcaption class="text-sm text-muted mt-3">Routes vary by district. Start with the issue type to find the right contact.</figcaption>
+      </figure>
+      
       <div class="overflow-hidden rounded-brand border border-line bg-surface shadow-card">
         <div class="table-scroll" tabindex="0" aria-label="Who to call routing table">
           <table class="w-full text-left text-sm min-w-[520px]">

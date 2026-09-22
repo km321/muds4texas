@@ -303,6 +303,17 @@
       }
     }
 
+    .diagram-card {
+      background: transparent;
+      border-radius: 0.375rem;
+      overflow: hidden;
+    }
+    .diagram-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
   </style>
 </head>
 <body class="antialiased">
@@ -391,6 +402,13 @@
 
     <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16" aria-labelledby="steps-h">
       <h2 id="steps-h" class="font-display text-3xl font-semibold text-ink mb-8">How to find your MUD</h2>
+      
+      <figure class="diagram-card mb-10 max-w-2xl">
+        <img src="assets/diagrams/find-steps-path.svg" alt="Four-step path to identify your MUD using official tools" class="diagram-steps-desktop" style="width:100%;height:auto;display:block" />
+          <img src="assets/diagrams/find-steps-path-mobile.svg" alt="Four-step path to identify your MUD using official tools" class="diagram-steps-mobile" style="width:100%;height:auto" />
+        <figcaption class="text-sm text-muted mt-3">A path for lookup, not a substitute for official records. Steps are detailed below.</figcaption>
+      </figure>
+      
       <ol class="space-y-6 max-w-measure-wide list-none pl-0">
         <li class="flex gap-4"><span class="step-num">1</span><span class="text-muted pt-1"><strong class="text-ink">Open the TCEQ Water Districts Map Viewer</strong> and search the property address (include city and/or ZIP when prompted).<br/><a href="https://www.tceq.texas.gov/gis/iwudview.html" target="_blank" rel="noopener noreferrer" class="btn-text">Official viewer</a> <span class="text-sm">(opens official site)</span></span></li>
         <li class="flex gap-4"><span class="step-num">2</span><span class="text-muted pt-1"><strong class="text-ink">Note the district name and type.</strong> Confirm it is a Municipal Utility District (MUD) if that is what you expect. Other district types also appear in the viewer.</span></li>
