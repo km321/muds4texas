@@ -223,13 +223,18 @@
       max-width: 100%;
       box-sizing: border-box;
       overflow: hidden;
+      padding: 0.75rem;
+    }
+    @media (min-width: 768px) {
+      .diagram-card { padding: 1rem 1.25rem; }
     }
     .diagram-card img,
     .diagram-card svg {
       display: block;
-      width: 100%;
-      max-width: 100%;
-      height: auto;
+      width: 100% !important;
+      max-width: none !important;
+      height: auto !important;
+      margin: 0;
       object-fit: contain;
     }
 
@@ -421,8 +426,8 @@
       
       <!-- Hero diagram: Three money streams -->
       <figure class="mb-8">
-        <div class="diagram-card bg-surface rounded-brand border border-line shadow-card p-3 sm:p-5">
-          <img src="assets/diagrams/three-money-streams.svg" alt="Diagram showing three separate payment streams for a property: MUD tax paid annually via tax bill, water bill paid monthly to district operator, and HOA or PID dues if present" class="w-full h-auto max-w-full" width="720" height="300" />
+        <div class="diagram-card bg-surface rounded-brand border border-line shadow-card">
+          <img src="assets/diagrams/three-money-streams.svg" alt="Diagram showing three separate payment streams for a property: MUD tax paid annually via tax bill, water bill paid monthly to district operator, and HOA or PID dues if present" class="diagram-img" style="width:100%;height:auto;display:block" />
         </div>
         <figcaption class="text-sm text-muted mt-3 max-w-measure">Three separate payment streams can apply to a single property. A MUD tax is not the same as your water bill. Districts vary in what they provide.</figcaption>
       </figure>

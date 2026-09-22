@@ -12,11 +12,9 @@
     .connector { stroke: #C5CBC4; stroke-width: 1.5; fill: none; }
     .dashed { stroke-dasharray: 4 3; }
     .label-note { font-family: "Source Sans 3", system-ui, sans-serif; font-size: 10px; font-weight: 400; fill: #4A5560; font-style: italic; }
-    .ground-fill { fill: #E6E9E4; }
   </style>
 
   <!-- Background -->
-  <rect width="560" height="320" class="ground-fill" rx="6"/>
   
   <!-- Center: MUD node -->
   <g transform="translate(280, 160)">
