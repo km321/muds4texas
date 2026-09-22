@@ -1,6 +1,2 @@
 User-agent: *
-Allow: /
-
-Disallow: /style-guide.html
-
-Sitemap: https://muds4texas.org/sitemap.xml
+Disallow: /
