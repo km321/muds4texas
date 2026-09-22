@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" role="img" aria-labelledby="gov-title gov-desc">
+  <title id="gov-title">MUD governance flow diagram</title>
+  <desc id="gov-desc">Visual showing how an elected board of directors oversees bond financing which funds infrastructure and services</desc>
+  
+  <style>
+    .label-main { font-family: "Source Sans 3", system-ui, sans-serif; font-size: 14px; font-weight: 600; fill: #0B1726; }
+    .label-sub { font-family: "Source Sans 3", system-ui, sans-serif; font-size: 11px; font-weight: 400; fill: #4A5560; }
+    .label-center { font-family: "Source Sans 3", system-ui, sans-serif; font-size: 13px; font-weight: 600; fill: #FCFDFB; }
+    .node-fill { fill: #F7F8F6; }
+    .node-stroke { stroke: #1B4F72; stroke-width: 1.5; fill: none; }
+    .node-civic { fill: #1B4F72; }
+    .node-clay { stroke: #C45C26; stroke-width: 2; fill: none; }
+    .arrow { stroke: #1B4F72; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+    .ground-fill { fill: #E6E9E4; }
+  </style>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#1B4F72"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="640" height="200" class="ground-fill" rx="6"/>
+  
+  <!-- Board of Directors (civic filled - authority node) -->
+  <g transform="translate(100, 100)">
+    <rect x="-80" y="-50" width="160" height="100" rx="5" class="node-civic"/>
+    <text x="0" y="-16" text-anchor="middle" class="label-center">Board of</text>
+    <text x="0" y="2" text-anchor="middle" class="label-center">Directors</text>
+    <text x="0" y="28" text-anchor="middle" style="font-family: 'Source Sans 3', system-ui, sans-serif; font-size: 10px; fill: #F7F8F6; opacity: 0.8;">Elected by voters</text>
+  </g>
+  
+  <!-- Arrow 1: Board ’ Bonds -->
+  <line x1="185" y1="100" x2="235" y2="100" class="arrow"/>
+  
+  <!-- Bonds / Financing (clay accent - key concept) -->
+  <g transform="translate(320, 100)">
+    <rect x="-80" y="-50" width="160" height="100" rx="5" class="node-fill"/>
+    <rect x="-80" y="-50" width="160" height="100" rx="5" class="node-clay"/>
+    <text x="0" y="-16" text-anchor="middle" class="label-main">Bond financing</text>
+    <text x="0" y="4" text-anchor="middle" class="label-sub">Repaid over time via</text>
+    <text x="0" y="18" text-anchor="middle" class="label-sub">taxes and revenues</text>
+    <text x="0" y="38" text-anchor="middle" style="font-family: 'Source Sans 3', system-ui, sans-serif; font-size: 10px; fill: #7A5B12; font-style: italic;">Not a fixed end date</text>
+  </g>
+  
+  <!-- Arrow 2: Bonds ’ Services -->
+  <line x1="405" y1="100" x2="455" y2="100" class="arrow"/>
+  
+  <!-- Infrastructure & Services -->
+  <g transform="translate(540, 100)">
+    <rect x="-80" y="-50" width="160" height="100" rx="5" class="node-fill"/>
+    <rect x="-80" y="-50" width="160" height="100" rx="5" class="node-stroke"/>
+    <text x="0" y="-16" text-anchor="middle" class="label-main">Infrastructure</text>
+    <text x="0" y="2" text-anchor="middle" class="label-main">& Services</text>
+    <text x="0" y="24" text-anchor="middle" class="label-sub">Water, sewer, drainage,</text>
+    <text x="0" y="38" text-anchor="middle" class="label-sub">and authorized facilities</text>
+  </g>
+  
+</svg>

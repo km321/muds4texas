@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" role="img" aria-labelledby="services-title services-desc">
+  <title id="services-title">MUD services cluster diagram</title>
+  <desc id="services-desc">Visual showing typical services a Municipal Utility District may provide: water supply, wastewater, drainage, and sometimes roads or parks</desc>
+  
+  <style>
+    .label-main { font-family: "Source Sans 3", system-ui, sans-serif; font-size: 14px; font-weight: 600; fill: #0B1726; }
+    .label-sub { font-family: "Source Sans 3", system-ui, sans-serif; font-size: 11px; font-weight: 400; fill: #4A5560; }
+    .label-center { font-family: "Source Sans 3", system-ui, sans-serif; font-size: 13px; font-weight: 600; fill: #FCFDFB; }
+    .node-fill { fill: #F7F8F6; }
+    .node-stroke { stroke: #1B4F72; stroke-width: 1.5; fill: none; }
+    .center-fill { fill: #1B4F72; }
+    .connector { stroke: #C5CBC4; stroke-width: 1.5; fill: none; }
+    .dashed { stroke-dasharray: 4 3; }
+    .label-note { font-family: "Source Sans 3", system-ui, sans-serif; font-size: 10px; font-weight: 400; fill: #4A5560; font-style: italic; }
+    .ground-fill { fill: #E6E9E4; }
+  </style>
+
+  <!-- Background -->
+  <rect width="560" height="320" class="ground-fill" rx="6"/>
+  
+  <!-- Center: MUD node -->
+  <g transform="translate(280, 160)">
+    <circle r="50" class="center-fill"/>
+    <text x="0" y="-6" text-anchor="middle" class="label-center">Municipal</text>
+    <text x="0" y="10" text-anchor="middle" class="label-center">Utility District</text>
+  </g>
+  
+  <!-- Connectors to service nodes -->
+  <line x1="230" y1="130" x2="150" y2="80" class="connector"/>
+  <line x1="330" y1="130" x2="410" y2="80" class="connector"/>
+  <line x1="230" y1="190" x2="150" y2="240" class="connector"/>
+  <line x1="330" y1="190" x2="410" y2="240" class="connector"/>
+  
+  <!-- Water Supply (top-left) -->
+  <g transform="translate(100, 60)">
+    <rect x="-80" y="-35" width="160" height="70" rx="4" class="node-fill"/>
+    <rect x="-80" y="-35" width="160" height="70" rx="4" class="node-stroke"/>
+    <text x="0" y="-8" text-anchor="middle" class="label-main">Water supply</text>
+    <text x="0" y="10" text-anchor="middle" class="label-sub">Distribution to homes</text>
+    <text x="0" y="24" text-anchor="middle" class="label-sub">and businesses</text>
+  </g>
+  
+  <!-- Wastewater (top-right) -->
+  <g transform="translate(460, 60)">
+    <rect x="-80" y="-35" width="160" height="70" rx="4" class="node-fill"/>
+    <rect x="-80" y="-35" width="160" height="70" rx="4" class="node-stroke"/>
+    <text x="0" y="-8" text-anchor="middle" class="label-main">Wastewater</text>
+    <text x="0" y="10" text-anchor="middle" class="label-sub">Sewer collection</text>
+    <text x="0" y="24" text-anchor="middle" class="label-sub">and treatment</text>
+  </g>
+  
+  <!-- Drainage (bottom-left) -->
+  <g transform="translate(100, 260)">
+    <rect x="-80" y="-35" width="160" height="70" rx="4" class="node-fill"/>
+    <rect x="-80" y="-35" width="160" height="70" rx="4" class="node-stroke"/>
+    <text x="0" y="-8" text-anchor="middle" class="label-main">Drainage</text>
+    <text x="0" y="10" text-anchor="middle" class="label-sub">Stormwater</text>
+    <text x="0" y="24" text-anchor="middle" class="label-sub">management</text>
+  </g>
+  
+  <!-- Other services (bottom-right) - dashed to indicate "sometimes" -->
+  <g transform="translate(460, 260)">
+    <rect x="-80" y="-35" width="160" height="70" rx="4" class="node-fill"/>
+    <rect x="-80" y="-35" width="160" height="70" rx="4" class="node-stroke dashed"/>
+    <text x="0" y="-8" text-anchor="middle" class="label-main">Other (varies)</text>
+    <text x="0" y="10" text-anchor="middle" class="label-sub">Roads, parks, fire</text>
+    <text x="0" y="24" text-anchor="middle" class="label-sub">(district-specific)</text>
+  </g>
+  
+  <!-- Connector to "other" is also dashed -->
+  <line x1="330" y1="190" x2="410" y2="240" class="connector dashed" style="stroke: #C5CBC4;"/>
+  
+</svg>
