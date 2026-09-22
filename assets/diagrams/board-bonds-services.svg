@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" role="img" aria-labelledby="gov-title gov-desc">
+<svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" role="img" aria-labelledby="gov-title gov-desc">
   <title id="gov-title">MUD governance flow diagram</title>
   <desc id="gov-desc">Visual showing how an elected board of directors oversees bond financing which funds infrastructure and services</desc>
   
@@ -31,7 +31,7 @@
     <text x="0" y="28" text-anchor="middle" style="font-family: 'Source Sans 3', system-ui, sans-serif; font-size: 10px; fill: #F7F8F6; opacity: 0.8;">Elected by voters</text>
   </g>
   
-  <!-- Arrow 1: Board ’ Bonds -->
+  <!-- Arrow 1: Board ' Bonds -->
   <line x1="185" y1="100" x2="235" y2="100" class="arrow"/>
   
   <!-- Bonds / Financing (clay accent - key concept) -->
@@ -44,7 +44,7 @@
     <text x="0" y="38" text-anchor="middle" style="font-family: 'Source Sans 3', system-ui, sans-serif; font-size: 10px; fill: #7A5B12; font-style: italic;">Not a fixed end date</text>
   </g>
   
-  <!-- Arrow 2: Bonds ’ Services -->
+  <!-- Arrow 2: Bonds ' Services -->
   <line x1="405" y1="100" x2="455" y2="100" class="arrow"/>
   
   <!-- Infrastructure & Services -->

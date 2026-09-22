@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" role="img" aria-labelledby="services-title services-desc">
+<svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" role="img" aria-labelledby="services-title services-desc">
   <title id="services-title">MUD services cluster diagram</title>
   <desc id="services-desc">Visual showing typical services a Municipal Utility District may provide: water supply, wastewater, drainage, and sometimes roads or parks</desc>
   
@@ -26,13 +26,13 @@
   </g>
   
   <!-- Connectors to service nodes -->
-  <line x1="230" y1="130" x2="150" y2="80" class="connector"/>
-  <line x1="330" y1="130" x2="410" y2="80" class="connector"/>
-  <line x1="230" y1="190" x2="150" y2="240" class="connector"/>
-  <line x1="330" y1="190" x2="410" y2="240" class="connector"/>
+  <line x1="235" y1="130" x2="160" y2="90" class="connector"/>
+  <line x1="325" y1="130" x2="400" y2="90" class="connector"/>
+  <line x1="235" y1="190" x2="160" y2="230" class="connector"/>
+  <line x1="325" y1="190" x2="400" y2="230" class="connector"/>
   
   <!-- Water Supply (top-left) -->
-  <g transform="translate(100, 60)">
+  <g transform="translate(110, 70)">
     <rect x="-80" y="-35" width="160" height="70" rx="4" class="node-fill"/>
     <rect x="-80" y="-35" width="160" height="70" rx="4" class="node-stroke"/>
     <text x="0" y="-8" text-anchor="middle" class="label-main">Water supply</text>
@@ -41,7 +41,7 @@
   </g>
   
   <!-- Wastewater (top-right) -->
-  <g transform="translate(460, 60)">
+  <g transform="translate(450, 70)">
     <rect x="-80" y="-35" width="160" height="70" rx="4" class="node-fill"/>
     <rect x="-80" y="-35" width="160" height="70" rx="4" class="node-stroke"/>
     <text x="0" y="-8" text-anchor="middle" class="label-main">Wastewater</text>
@@ -50,7 +50,7 @@
   </g>
   
   <!-- Drainage (bottom-left) -->
-  <g transform="translate(100, 260)">
+  <g transform="translate(110, 250)">
     <rect x="-80" y="-35" width="160" height="70" rx="4" class="node-fill"/>
     <rect x="-80" y="-35" width="160" height="70" rx="4" class="node-stroke"/>
     <text x="0" y="-8" text-anchor="middle" class="label-main">Drainage</text>
@@ -59,7 +59,7 @@
   </g>
   
   <!-- Other services (bottom-right) - dashed to indicate "sometimes" -->
-  <g transform="translate(460, 260)">
+  <g transform="translate(450, 250)">
     <rect x="-80" y="-35" width="160" height="70" rx="4" class="node-fill"/>
     <rect x="-80" y="-35" width="160" height="70" rx="4" class="node-stroke dashed"/>
     <text x="0" y="-8" text-anchor="middle" class="label-main">Other (varies)</text>
@@ -68,6 +68,6 @@
   </g>
   
   <!-- Connector to "other" is also dashed -->
-  <line x1="330" y1="190" x2="410" y2="240" class="connector dashed" style="stroke: #C5CBC4;"/>
+  <line x1="325" y1="190" x2="400" y2="230" class="connector dashed" style="stroke: #C5CBC4;"/>
   
 </svg>

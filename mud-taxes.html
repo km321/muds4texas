@@ -216,6 +216,23 @@
     .scrim-ink { background: linear-gradient(105deg, rgba(11,23,38,0.88) 0%, rgba(11,23,38,0.72) 55%, rgba(11,23,38,0.45) 100%); }
 
   
+
+    /* Diagram cards: keep SVG fully inside frame */
+    .diagram-card {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .diagram-card img,
+    .diagram-card svg {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
     /* === Bebe engage/mobile pass #2 === */
     html { overflow-x: clip; }
     body { overflow-x: clip; }
@@ -404,8 +421,8 @@
       
       <!-- Hero diagram: Three money streams -->
       <figure class="mb-8">
-        <div class="bg-surface rounded-brand border border-line shadow-card p-4 sm:p-6 overflow-hidden">
-          <img src="assets/diagrams/three-money-streams.svg" alt="Diagram showing three separate payment streams for a property: MUD tax paid annually via tax bill, water bill paid monthly to district operator, and HOA or PID dues if present" class="w-full h-auto max-w-3xl mx-auto" width="720" height="280" />
+        <div class="diagram-card bg-surface rounded-brand border border-line shadow-card p-3 sm:p-5">
+          <img src="assets/diagrams/three-money-streams.svg" alt="Diagram showing three separate payment streams for a property: MUD tax paid annually via tax bill, water bill paid monthly to district operator, and HOA or PID dues if present" class="w-full h-auto max-w-full" width="720" height="300" />
         </div>
         <figcaption class="text-sm text-muted mt-3 max-w-measure">Three separate payment streams can apply to a single property. A MUD tax is not the same as your water bill. Districts vary in what they provide.</figcaption>
       </figure>

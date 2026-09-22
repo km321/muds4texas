@@ -216,6 +216,23 @@
     .scrim-ink { background: linear-gradient(105deg, rgba(11,23,38,0.88) 0%, rgba(11,23,38,0.72) 55%, rgba(11,23,38,0.45) 100%); }
 
   
+
+    /* Diagram cards: keep SVG fully inside frame */
+    .diagram-card {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .diagram-card img,
+    .diagram-card svg {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
     /* === Bebe engage/mobile pass #2 === */
     html { overflow-x: clip; }
     body { overflow-x: clip; }
@@ -438,8 +455,8 @@
 
         <!-- Services cluster diagram -->
         <figure class="my-8 not-prose">
-          <div class="bg-surface rounded-brand border border-line shadow-card p-4 sm:p-6 overflow-hidden">
-            <img src="assets/diagrams/mud-services-cluster.svg" alt="Diagram showing typical MUD services: water supply, wastewater, drainage, and sometimes roads or parks (varies by district)" class="w-full h-auto max-w-xl mx-auto" width="560" height="320" />
+          <div class="diagram-card bg-surface rounded-brand border border-line shadow-card p-3 sm:p-5">
+            <img src="assets/diagrams/mud-services-cluster.svg" alt="Diagram showing typical MUD services: water supply, wastewater, drainage, and sometimes roads or parks (varies by district)" class="w-full h-auto max-w-full" width="560" height="320" />
           </div>
           <figcaption class="text-sm text-muted mt-3">Typical services a MUD may provide. Districts vary in scope and authorized purposes.</figcaption>
         </figure>
@@ -461,8 +478,8 @@
 
         <!-- Governance flow diagram -->
         <figure class="my-8 not-prose">
-          <div class="bg-surface rounded-brand border border-line shadow-card p-4 sm:p-6 overflow-hidden">
-            <img src="assets/diagrams/board-bonds-services.svg" alt="Diagram showing governance flow: elected board of directors oversees bond financing which funds infrastructure and services" class="w-full h-auto max-w-2xl mx-auto" width="640" height="200" />
+          <div class="diagram-card bg-surface rounded-brand border border-line shadow-card p-3 sm:p-5">
+            <img src="assets/diagrams/board-bonds-services.svg" alt="Diagram showing governance flow: elected board of directors oversees bond financing which funds infrastructure and services" class="w-full h-auto max-w-full" width="640" height="200" />
           </div>
           <figcaption class="text-sm text-muted mt-3">How MUD governance typically flows: elected board, bond financing, infrastructure delivery. This is a simplified overview, not legal advice.</figcaption>
         </figure>
