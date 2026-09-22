@@ -560,38 +560,50 @@
           
           <div class="scene-illustration">
             <svg viewBox="0 0 400 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <!-- Dirt ground -->
+              <!-- Dusty sky -->
+              <rect x="0" y="0" width="400" height="80" fill="#C9CED4"/>
+              <!-- Dirt ground with texture -->
               <rect x="0" y="80" width="400" height="60" fill="#C4A882"/>
-              <rect x="0" y="80" width="400" height="60" fill="url(#dirtPattern)" opacity="0.5"/>
-              <!-- Empty lots -->
+              <rect x="0" y="80" width="400" height="60" fill="url(#dirtPatternWithout)" opacity="0.5"/>
+              <!-- Unpaved road (dirt path) -->
+              <rect x="0" y="105" width="400" height="14" fill="#B89A74" opacity="0.7"/>
+              <!-- Empty graded lots -->
               <g fill="#B89A74" stroke="#8B7355" stroke-width="1">
-                <rect x="30" y="90" width="70" height="40" rx="2"/>
-                <rect x="120" y="90" width="70" height="40" rx="2"/>
-                <rect x="210" y="90" width="70" height="40" rx="2"/>
+                <rect x="20" y="72" width="75" height="30" rx="2"/>
+                <rect x="115" y="72" width="75" height="30" rx="2"/>
+                <rect x="210" y="72" width="75" height="30" rx="2"/>
+                <rect x="305" y="72" width="75" height="30" rx="2"/>
               </g>
-              <!-- Stake markers -->
+              <!-- Survey stakes with flags -->
               <g stroke="#6B5A42" stroke-width="1.5">
-                <line x1="40" y1="90" x2="40" y2="78"/>
-                <line x1="130" y1="90" x2="130" y2="78"/>
+                <line x1="30" y1="72" x2="30" y2="58"/>
+                <line x1="85" y1="72" x2="85" y2="58"/>
+                <line x1="125" y1="72" x2="125" y2="58"/>
+                <line x1="220" y1="72" x2="220" y2="58"/>
+                <line x1="315" y1="72" x2="315" y2="58"/>
               </g>
-              <g fill="#C45C26" opacity="0.8">
-                <polygon points="40,78 46,75 40,72"/>
-                <polygon points="130,78 136,75 130,72"/>
+              <g fill="#C45C26" opacity="0.85">
+                <polygon points="30,58 38,55 30,52"/>
+                <polygon points="85,58 93,55 85,52"/>
+                <polygon points="125,58 133,55 125,52"/>
+                <polygon points="220,58 228,55 220,52"/>
+                <polygon points="315,58 323,55 315,52"/>
               </g>
-              <!-- Chain-link fence with lock -->
-              <g transform="translate(300,50)">
-                <rect x="0" y="10" width="4" height="70" fill="#5A6570"/>
-                <rect x="76" y="10" width="4" height="70" fill="#5A6570"/>
-                <g fill="none" stroke="#6B7680" stroke-width="0.7" opacity="0.7">
-                  <path d="M4 18 H80 M4 28 H80 M4 38 H80 M4 48 H80 M4 58 H80 M4 68 H80"/>
-                </g>
-                <rect x="24" y="22" width="32" height="48" fill="#F7F8F6" stroke="#3D4852" stroke-width="1.5" rx="1"/>
-                <circle cx="50" cy="46" r="4" fill="#C45C26"/>
-                <rect x="48" y="46" width="3" height="10" rx="1" fill="#C45C26"/>
-                <text x="40" y="88" text-anchor="middle" font-family="Source Sans 3" font-size="8" fill="#4A5560">Locked</text>
+              <!-- Construction cone -->
+              <g transform="translate(175,55)">
+                <polygon points="8,26 0,26 4,8" fill="#C45C26" stroke="#9E471C" stroke-width="0.5"/>
+                <rect x="1" y="12" width="6" height="2" fill="#F7F8F6" rx="0.5"/>
+                <rect x="2" y="18" width="4" height="2" fill="#F7F8F6" rx="0.5"/>
               </g>
+              <g transform="translate(350,60)">
+                <polygon points="8,22 0,22 4,6" fill="#C45C26" stroke="#9E471C" stroke-width="0.5"/>
+                <rect x="1" y="10" width="6" height="2" fill="#F7F8F6" rx="0.5"/>
+                <rect x="2" y="15" width="4" height="2" fill="#F7F8F6" rx="0.5"/>
+              </g>
+              <!-- "No utilities" hint text -->
+              <text x="200" y="130" text-anchor="middle" font-family="Source Sans 3" font-size="8" fill="#6B5A42" font-weight="500">Undeveloped lots · no ready infrastructure</text>
               <defs>
-                <pattern id="dirtPattern" patternUnits="userSpaceOnUse" width="12" height="8">
+                <pattern id="dirtPatternWithout" patternUnits="userSpaceOnUse" width="12" height="8">
                   <path d="M0 4 Q3 2 6 4 T12 4" fill="none" stroke="#9A8060" stroke-width="0.5" opacity="0.4"/>
                 </pattern>
               </defs>
@@ -618,6 +630,8 @@
           
           <div class="scene-illustration">
             <svg viewBox="0 0 400 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Blue sky -->
+              <rect x="0" y="0" width="400" height="80" fill="#B8CDE0"/>
               <!-- Grass ground -->
               <rect x="0" y="80" width="400" height="60" fill="#7A9B6E"/>
               <!-- Street -->
@@ -625,54 +639,64 @@
               <rect x="0" y="112" width="400" height="2" fill="#E8E4D8" opacity="0.6" stroke-dasharray="12 8"/>
               <!-- Sidewalk -->
               <rect x="0" y="100" width="400" height="5" fill="#C5CBC4"/>
+              <!-- Water tower in background (services ready) -->
+              <g transform="translate(340,8)">
+                <rect x="14" y="28" width="4" height="52" fill="#5A6570"/>
+                <rect x="26" y="28" width="4" height="52" fill="#5A6570"/>
+                <line x1="16" y1="40" x2="28" y2="50" stroke="#5A6570" stroke-width="2"/>
+                <line x1="28" y1="40" x2="16" y2="50" stroke="#5A6570" stroke-width="2"/>
+                <ellipse cx="22" cy="22" rx="20" ry="14" fill="#1B4F72"/>
+                <ellipse cx="22" cy="18" rx="16" ry="8" fill="#143A55"/>
+                <text x="22" y="25" text-anchor="middle" font-family="Source Sans 3" font-size="6" fill="#F7F8F6" font-weight="600">WATER</text>
+              </g>
               <!-- Houses -->
-              <g transform="translate(30,55)">
+              <g transform="translate(15,55)">
                 <rect x="6" y="20" width="50" height="28" fill="#F0E6D8" stroke="#B8A890" stroke-width="0.8"/>
                 <path d="M4 20 L31 0 L58 20 Z" fill="#8B4518" stroke="#6B3410" stroke-width="0.8"/>
                 <rect x="22" y="32" width="14" height="16" fill="#1B4F72"/>
                 <rect x="12" y="26" width="8" height="8" fill="#87A8C4" class="house-light"/>
                 <rect x="44" y="26" width="8" height="8" fill="#87A8C4" class="house-light"/>
               </g>
-              <g transform="translate(120,50)">
+              <g transform="translate(95,50)">
                 <rect x="6" y="22" width="54" height="30" fill="#D8E2EA" stroke="#8FA0AC" stroke-width="0.8"/>
                 <path d="M2 22 L33 -2 L64 22 Z" fill="#5A6570" stroke="#3D4852" stroke-width="0.8"/>
                 <rect x="26" y="36" width="14" height="16" fill="#C45C26" opacity="0.85"/>
                 <rect x="12" y="30" width="10" height="10" fill="#F5E6A0" class="house-light"/>
                 <rect x="44" y="30" width="10" height="10" fill="#F5E6A0" class="house-light"/>
               </g>
-              <g transform="translate(220,58)">
+              <g transform="translate(185,58)">
                 <rect x="4" y="18" width="48" height="26" fill="#F5EDE0" stroke="#C5B8A4" stroke-width="0.8"/>
                 <path d="M2 18 L28 0 L54 18 Z" fill="#A65D3F" stroke="#8B4A30" stroke-width="0.8"/>
                 <rect x="20" y="28" width="12" height="16" fill="#1B4F72"/>
                 <rect x="10" y="24" width="7" height="7" fill="#F5E6A0" class="house-light"/>
                 <rect x="39" y="24" width="7" height="7" fill="#F5E6A0" class="house-light"/>
               </g>
+              <g transform="translate(260,55)">
+                <rect x="6" y="20" width="46" height="28" fill="#E8DDD0" stroke="#C5B8A4" stroke-width="0.8"/>
+                <path d="M4 20 L29 2 L54 20 Z" fill="#6B4A32" stroke="#5A3D28" stroke-width="0.8"/>
+                <rect x="20" y="32" width="12" height="16" fill="#1B4F72"/>
+                <rect x="10" y="26" width="7" height="7" fill="#87A8C4" class="house-light"/>
+                <rect x="39" y="26" width="7" height="7" fill="#87A8C4" class="house-light"/>
+              </g>
               <!-- Trees -->
-              <g transform="translate(300,60)">
+              <g transform="translate(325,60)">
                 <rect x="6" y="22" width="4" height="18" fill="#6B4A32"/>
                 <ellipse cx="8" cy="18" rx="14" ry="14" fill="#2F4F44"/>
               </g>
-              <g transform="translate(350,65)">
-                <rect x="5" y="18" width="3" height="14" fill="#6B4A32"/>
-                <ellipse cx="6" cy="14" rx="10" ry="10" fill="#3A6356"/>
+              <!-- Shrubs/landscaping -->
+              <ellipse cx="12" cy="95" rx="8" ry="5" fill="#3A6356"/>
+              <ellipse cx="78" cy="96" rx="6" ry="4" fill="#2F4F44"/>
+              <ellipse cx="165" cy="95" rx="7" ry="4" fill="#3A6356"/>
+              <ellipse cx="252" cy="96" rx="6" ry="4" fill="#2F4F44"/>
+              <!-- Underground utilities visualization -->
+              <g opacity="0.5">
+                <path d="M20 125 H380" stroke="#1B4F72" stroke-width="2" stroke-dasharray="4 2"/>
+                <circle cx="60" cy="125" r="3" fill="#1B4F72"/>
+                <circle cx="150" cy="125" r="3" fill="#1B4F72"/>
+                <circle cx="240" cy="125" r="3" fill="#1B4F72"/>
+                <circle cx="330" cy="125" r="3" fill="#1B4F72"/>
               </g>
-              <!-- Open gate -->
-              <g transform="translate(0,55)" class="gate-open">
-                <rect x="0" y="6" width="3" height="44" fill="#2F4F44"/>
-                <g transform="rotate(-25 3 26)">
-                  <rect x="3" y="10" width="26" height="34" fill="#FCFDFB" stroke="#1B4F72" stroke-width="1.2" rx="1"/>
-                  <circle cx="24" cy="27" r="2.5" fill="#2F4F44"/>
-                </g>
-                <text x="18" y="58" text-anchor="middle" font-family="Source Sans 3" font-size="8" fill="#1B4F72" font-weight="600">Open</text>
-              </g>
-              <!-- Infrastructure hint -->
-              <g opacity="0.4">
-                <path d="M30 95 H380" stroke="#1B4F72" stroke-width="1.5"/>
-                <circle cx="80" cy="95" r="3" fill="#1B4F72"/>
-                <circle cx="180" cy="95" r="3" fill="#1B4F72"/>
-                <circle cx="280" cy="95" r="3" fill="#1B4F72"/>
-              </g>
-              <text x="200" y="78" text-anchor="middle" font-family="Source Sans 3" font-size="8" fill="#1B4F72" font-weight="600">Water · sewer · drainage ready</text>
+              <text x="200" y="136" text-anchor="middle" font-family="Source Sans 3" font-size="8" fill="#1B4F72" font-weight="600">Water · sewer · drainage ready</text>
             </svg>
           </div>
 
@@ -701,19 +725,38 @@
               </div>
               <div class="scene-illustration" style="height:120px;">
                 <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <!-- Dusty sky -->
+                  <rect x="0" y="0" width="400" height="60" fill="#C9CED4"/>
+                  <!-- Dirt ground -->
                   <rect x="0" y="60" width="400" height="60" fill="#C4A882"/>
+                  <!-- Unpaved road -->
+                  <rect x="0" y="88" width="400" height="12" fill="#B89A74" opacity="0.7"/>
+                  <!-- Empty graded lots -->
                   <g fill="#B89A74" stroke="#8B7355" stroke-width="1">
-                    <rect x="30" y="70" width="80" height="45" rx="2"/>
-                    <rect x="130" y="70" width="80" height="45" rx="2"/>
-                    <rect x="230" y="70" width="80" height="45" rx="2"/>
+                    <rect x="20" y="52" width="85" height="32" rx="2"/>
+                    <rect x="120" y="52" width="85" height="32" rx="2"/>
+                    <rect x="220" y="52" width="85" height="32" rx="2"/>
+                    <rect x="320" y="52" width="60" height="32" rx="2"/>
                   </g>
-                  <g transform="translate(320,30)">
-                    <rect x="0" y="5" width="3" height="50" fill="#5A6570"/>
-                    <rect x="57" y="5" width="3" height="50" fill="#5A6570"/>
-                    <rect x="18" y="12" width="24" height="36" fill="#F7F8F6" stroke="#3D4852" stroke-width="1.5"/>
-                    <circle cx="38" cy="30" r="4" fill="#C45C26"/>
-                    <text x="30" y="62" text-anchor="middle" font-family="Source Sans 3" font-size="9" fill="#4A5560">Locked</text>
+                  <!-- Survey stakes -->
+                  <g stroke="#6B5A42" stroke-width="1.5">
+                    <line x1="30" y1="52" x2="30" y2="40"/>
+                    <line x1="130" y1="52" x2="130" y2="40"/>
+                    <line x1="230" y1="52" x2="230" y2="40"/>
+                    <line x1="330" y1="52" x2="330" y2="40"/>
                   </g>
+                  <g fill="#C45C26" opacity="0.85">
+                    <polygon points="30,40 38,37 30,34"/>
+                    <polygon points="130,40 138,37 130,34"/>
+                    <polygon points="230,40 238,37 230,34"/>
+                    <polygon points="330,40 338,37 330,34"/>
+                  </g>
+                  <!-- Construction cone -->
+                  <g transform="translate(95,38)">
+                    <polygon points="8,22 0,22 4,6" fill="#C45C26" stroke="#9E471C" stroke-width="0.5"/>
+                    <rect x="1" y="10" width="6" height="2" fill="#F7F8F6" rx="0.5"/>
+                  </g>
+                  <text x="200" y="112" text-anchor="middle" font-family="Source Sans 3" font-size="9" fill="#6B5A42" font-weight="500">Undeveloped lots · no ready infrastructure</text>
                 </svg>
               </div>
               <div class="price-card stress visible">
@@ -737,31 +780,66 @@
               </div>
               <div class="scene-illustration" style="height:120px;">
                 <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <!-- Blue sky -->
+                  <rect x="0" y="0" width="400" height="60" fill="#B8CDE0"/>
+                  <!-- Grass -->
                   <rect x="0" y="60" width="400" height="60" fill="#7A9B6E"/>
+                  <!-- Street -->
                   <rect x="0" y="82" width="400" height="16" fill="#6B7280"/>
+                  <rect x="0" y="88" width="400" height="2" fill="#E8E4D8" opacity="0.6" stroke-dasharray="12 8"/>
+                  <!-- Sidewalk -->
                   <rect x="0" y="78" width="400" height="4" fill="#C5CBC4"/>
-                  <g transform="translate(40,30)">
+                  <!-- Water tower -->
+                  <g transform="translate(350,5)">
+                    <rect x="10" y="22" width="3" height="38" fill="#5A6570"/>
+                    <rect x="20" y="22" width="3" height="38" fill="#5A6570"/>
+                    <line x1="12" y1="32" x2="22" y2="40" stroke="#5A6570" stroke-width="1.5"/>
+                    <line x1="22" y1="32" x2="12" y2="40" stroke="#5A6570" stroke-width="1.5"/>
+                    <ellipse cx="16" cy="16" rx="15" ry="10" fill="#1B4F72"/>
+                    <ellipse cx="16" cy="13" rx="12" ry="6" fill="#143A55"/>
+                  </g>
+                  <!-- Houses -->
+                  <g transform="translate(20,30)">
                     <rect x="6" y="18" width="48" height="28" fill="#F0E6D8" stroke="#B8A890"/>
                     <path d="M4 18 L30 0 L56 18 Z" fill="#8B4518"/>
                     <rect x="20" y="30" width="14" height="16" fill="#1B4F72"/>
                     <rect x="10" y="24" width="8" height="8" fill="#87A8C4"/>
+                    <rect x="42" y="24" width="8" height="8" fill="#87A8C4"/>
                   </g>
-                  <g transform="translate(130,25)">
+                  <g transform="translate(100,25)">
                     <rect x="6" y="20" width="52" height="30" fill="#D8E2EA" stroke="#8FA0AC"/>
                     <path d="M2 20 L32 0 L62 20 Z" fill="#5A6570"/>
                     <rect x="24" y="34" width="14" height="16" fill="#C45C26" opacity="0.85"/>
                     <rect x="12" y="28" width="10" height="10" fill="#F5E6A0"/>
+                    <rect x="44" y="28" width="10" height="10" fill="#F5E6A0"/>
                   </g>
-                  <g transform="translate(230,32)">
+                  <g transform="translate(190,32)">
                     <rect x="4" y="16" width="46" height="26" fill="#F5EDE0" stroke="#C5B8A4"/>
                     <path d="M2 16 L27 0 L52 16 Z" fill="#A65D3F"/>
                     <rect x="18" y="26" width="12" height="16" fill="#1B4F72"/>
+                    <rect x="8" y="22" width="7" height="7" fill="#F5E6A0"/>
+                    <rect x="37" y="22" width="7" height="7" fill="#F5E6A0"/>
                   </g>
-                  <g transform="translate(310,35)">
-                    <rect x="5" y="18" width="4" height="18" fill="#6B4A32"/>
-                    <ellipse cx="7" cy="14" rx="12" ry="12" fill="#2F4F44"/>
+                  <g transform="translate(268,30)">
+                    <rect x="6" y="18" width="44" height="28" fill="#E8DDD0" stroke="#C5B8A4"/>
+                    <path d="M4 18 L28 2 L52 18 Z" fill="#6B4A32"/>
+                    <rect x="18" y="30" width="12" height="16" fill="#1B4F72"/>
+                    <rect x="8" y="24" width="7" height="7" fill="#87A8C4"/>
+                    <rect x="37" y="24" width="7" height="7" fill="#87A8C4"/>
                   </g>
-                  <text x="200" y="56" text-anchor="middle" font-family="Source Sans 3" font-size="9" fill="#1B4F72" font-weight="600">Water · sewer · drainage ready</text>
+                  <!-- Tree -->
+                  <g transform="translate(335,40)">
+                    <rect x="5" y="16" width="4" height="16" fill="#6B4A32"/>
+                    <ellipse cx="7" cy="12" rx="11" ry="11" fill="#2F4F44"/>
+                  </g>
+                  <!-- Underground utilities -->
+                  <g opacity="0.5">
+                    <path d="M20 105 H380" stroke="#1B4F72" stroke-width="1.5" stroke-dasharray="4 2"/>
+                    <circle cx="70" cy="105" r="2.5" fill="#1B4F72"/>
+                    <circle cx="165" cy="105" r="2.5" fill="#1B4F72"/>
+                    <circle cx="260" cy="105" r="2.5" fill="#1B4F72"/>
+                  </g>
+                  <text x="200" y="116" text-anchor="middle" font-family="Source Sans 3" font-size="9" fill="#1B4F72" font-weight="600">Water · sewer · drainage ready</text>
                 </svg>
               </div>
               <div class="price-card attain visible">
