@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>With MUD vs without · animation preview | MUDs 4 Texas</title>
+  <meta name="description" content="Education animation preview: modeled Houston-area new home comparison with MUD financing versus without. Figures from ABHR / CBAS." />
+  <link rel="icon" href="../assets/logo-muds4texas-stacked.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ground: '#E6E9E4',
+            paper: '#F7F8F6',
+            surface: '#FCFDFB',
+            ink: '#0B1726',
+            muted: '#4A5560',
+            line: '#C5CBC4',
+            civic: '#1B4F72',
+            'civic-dark': '#143A55',
+            clay: '#C45C26',
+            'clay-dark': '#9E471C',
+            mesquite: '#2F4F44',
+          },
+          fontFamily: {
+            sans: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
+            serif: ['Newsreader', 'Georgia', 'serif'],
+          },
+          boxShadow: {
+            card: '0 2px 4px rgba(11, 23, 38, 0.08)',
+            lift: '0 10px 28px rgba(11, 23, 38, 0.14)',
+          },
+          borderRadius: { brand: '0.375rem' },
+          maxWidth: { measure: '42rem', 'measure-wide': '48rem' },
+        },
+      },
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      background-color: #E6E9E4;
+      color: #0B1726;
+      font-size: 1.125rem;
+      line-height: 1.65;
+    }
+    .font-display { font-family: Newsreader, Georgia, serif; }
+    ::selection { background: rgba(27, 79, 114, 0.18); color: #0B1726; }
+    :focus-visible { outline: 2px solid #1B4F72; outline-offset: 3px; }
+    .btn-primary {
+      background-color: #1B4F72;
+      color: #FCFDFB;
+      transition: background-color 0.15s ease;
+    }
+    .btn-primary:hover { background-color: #143A55; }
+    .btn-secondary {
+      background: transparent;
+      color: #1B4F72;
+      border: 1.5px solid #1B4F72;
+    }
+    .btn-secondary:hover { background-color: rgba(27, 79, 114, 0.08); }
+    .btn-text {
+      color: #1B4F72;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .anim-frame {
+      width: 100%;
+      max-width: 100%;
+      border: 0;
+      border-radius: 0.375rem;
+      background: transparent;
+      display: block;
+      overflow: hidden;
+      height: clamp(520px, 72vw, 720px);
+    }
+    @media (max-width: 640px) {
+      .anim-frame { height: clamp(560px, 178vw, 820px); }
+    }
+    @media (max-width: 380px) {
+      .anim-frame { height: clamp(600px, 195vw, 860px); }
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-civic focus:text-paper focus:px-4 focus:py-2 focus:rounded-brand">Skip to main content</a>
+
+  <header class="border-b border-line bg-surface">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between min-h-[64px] gap-4">
+      <a href="../index.html" class="inline-flex items-center min-h-[44px]" aria-label="MUDs 4 Texas home">
+        <img src="../assets/logo-muds4texas.svg" alt="MUDs 4 Texas" width="180" height="36" class="h-9 w-auto" decoding="async" />
+      </a>
+      <p class="text-sm text-muted hidden sm:block">Animation preview · Designer review</p>
+      <a href="../index.html" class="btn-text text-sm font-medium">Back to Home</a>
+    </div>
+  </header>
+
+  <main id="main" class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+    <h1 class="font-display font-semibold text-ink mb-3" style="font-size:clamp(2.5rem,5vw,3.75rem)">With a MUD vs without</h1>
+    <p class="text-muted max-w-measure-wide mb-8 leading-relaxed">
+      Illustrated neighborhood story for Home. Autoplays once when in view. Replay available. Reduced motion shows the final comparison immediately (both scenes drawn, numbers visible).
+    </p>
+
+    <div class="bg-surface border border-line rounded-brand shadow-card overflow-hidden mb-8">
+      <iframe
+        class="anim-frame"
+        src="mud-vs-no-mud-embed.html"
+        title="Modeled example: Houston-area new homes with MUD financing versus without"
+        loading="eager"
+      ></iframe>
+    </div>
+
+    <aside class="callout border border-[#D4C4B8] bg-[#F3EEE8] rounded-brand p-5 sm:p-6 mb-8" aria-label="Education disclaimer">
+      <p class="text-sm text-ink leading-relaxed mb-2">
+        <strong>Education only.</strong> Figures are from published modeled examples and cited research, not a quote for a specific address. Confirm with Notice to Purchaser, tax office, lender, and licensed professionals.
+      </p>
+      <p class="text-sm text-muted leading-relaxed">
+        Primary source: <a class="btn-text" href="https://abhr.com/muds-in-texas/" target="_blank" rel="noopener noreferrer">ABHR / CBAS modeling</a>.
+        Optional secondary: ~$150k price gap (Meyers / AEI).
+      </p>
+    </aside>
+
+    <div class="flex flex-wrap gap-3 mb-10">
+      <a href="../mud-taxes.html" class="btn-primary inline-flex items-center gap-2 rounded-brand px-5 py-3 text-base font-semibold min-h-[44px]">
+        MUD taxes explained
+        <i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i>
+      </a>
+      <a href="../buying-in-a-mud.html" class="btn-secondary inline-flex items-center rounded-brand px-5 py-3 text-base font-semibold min-h-[44px]">
+        Buying in a MUD
+      </a>
+    </div>
+
+    <section class="bg-paper border border-line rounded-brand p-6 sm:p-8" aria-labelledby="beats-h">
+      <h2 id="beats-h" class="font-display text-2xl font-semibold text-ink mb-4">Story beats</h2>
+      <ol class="space-y-3 text-base text-muted list-decimal list-inside max-w-measure-wide">
+        <li><span class="text-ink font-medium">Split:</span> barren dirt pads + locked chain-link gate vs Texas starter homes on a green street.</li>
+        <li><span class="text-ink font-medium">Price tags:</span> ~$475k stress wall vs ~$250k attainable (modeled example); tags snap in with personality.</li>
+        <li><span class="text-ink font-medium">Unlock delight:</span> WITH gate swings open, porch lights flicker on, sprinkler pulse; WITHOUT stays locked.</li>
+        <li><span class="text-ink font-medium">Income gate:</span> ~$156,500 vs ~$95,800; monthly ~$3,652 vs ~$2,235.</li>
+        <li><span class="text-ink font-medium">How paid + balance:</span> bond → services → transparent tax; taxes real/disclosed; CTAs to taxes and buying guides.</li>
+      </ol>
+    </section>
+
+    <p class="text-sm text-muted mt-8">
+      Embed file: <code class="text-ink text-sm">animations/mud-vs-no-mud-embed.html</code> ·
+      Home iframes that file inside section <code class="text-ink text-sm">#mud-vs-compare</code>.
+    </p>
+  </main>
+
+  <footer class="border-t border-line bg-ink text-paper mt-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 text-sm text-paper/70">
+      <p>&copy; 2026 MUDs 4 Texas. Education hub. Preview page for internal review.</p>
+    </div>
+  </footer>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

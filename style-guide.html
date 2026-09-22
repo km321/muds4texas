@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MUDs 4 Texas - Style Guide (Phase 1)</title>
+  <meta name="description" content="Design system for MUDs 4 Texas Phase 1 education hub: dials, palette, type, forbidden patterns." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="assets/logo-muds4texas-stacked.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ground: '#E6E9E4',
+            paper: '#F7F8F6',
+            surface: '#FCFDFB',
+            ink: '#0B1726',
+            muted: '#4A5560',
+            line: '#C5CBC4',
+            civic: '#1B4F72',
+            'civic-dark': '#143A55',
+            clay: '#C45C26',
+            'clay-dark': '#9E471C',
+            mesquite: '#2F4F44',
+            caution: '#7A5B12',
+            'focus-ring': '#1B4F72',
+          },
+          fontFamily: {
+            sans: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
+            serif: ['Newsreader', 'Georgia', 'serif'],
+          },
+          boxShadow: {
+            card: '0 2px 4px rgba(11, 23, 38, 0.08)',
+            lift: '0 10px 28px rgba(11, 23, 38, 0.14)',
+            focus: '0 0 0 3px rgba(27, 79, 114, 0.35)',
+          },
+          borderRadius: {
+            brand: '0.375rem',
+          },
+          maxWidth: {
+            measure: '42rem',
+            'measure-wide': '48rem',
+          },
+        },
+      },
+    };
+</script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+
+    html { scroll-behavior: smooth; overflow-x: clip; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    ::selection { background: rgba(27, 79, 114, 0.18); color: #0B1726; }
+    body {
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      background-color: #E6E9E4;
+      color: #0B1726;
+      font-size: 1.125rem;
+      line-height: 1.65;
+    }
+    .font-display { font-family: Newsreader, Georgia, serif; }
+
+    /* h1/h2 moved to engage/mobile block */
+    main h3 {
+      font-size: 1.125rem;
+      line-height: 1.35;
+      font-weight: 600;
+    }
+
+    :focus-visible {
+      outline: 2px solid #1B4F72;
+      outline-offset: 3px;
+    }
+    .btn-primary {
+      background-color: #1B4F72;
+      color: #FCFDFB;
+      transition: background-color 0.15s ease, transform 0.1s ease;
+    }
+    .btn-primary:hover { background-color: #143A55; }
+    .btn-primary:active { transform: scale(0.98); }
+    .btn-secondary {
+      background: transparent;
+      color: #1B4F72;
+      border: 1.5px solid #1B4F72;
+      transition: background-color 0.15s ease;
+    }
+    .btn-secondary:hover { background-color: rgba(27, 79, 114, 0.08); }
+    .btn-ghost {
+      background: #FCFDFB;
+      color: #0B1726;
+      border: 1.5px solid #C5CBC4;
+      transition: border-color 0.15s ease, color 0.15s ease;
+    }
+    .btn-ghost:hover { border-color: #1B4F72; color: #1B4F72; }
+    .btn-clay {
+      background-color: #8F3F16;
+      color: #FFFFFF;
+      transition: background-color 0.15s ease;
+    }
+    .btn-clay:hover { background-color: #733212; }
+    .btn-text {
+      color: #1B4F72;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+    }
+    .btn-text:hover { color: #143A55; }
+    .link-on-dark {
+      color: #F7F8F6;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .link-on-dark:hover { color: #fff; }
+    .video-slot {
+      aspect-ratio: 16 / 9;
+      background: #F7F8F6;
+      border: 1.5px dashed #C5CBC4;
+      padding: 1.5rem 1.25rem;
+      min-height: 12rem;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .video-slot code {
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
+    .nav-link { color: #0B1726; }
+    .nav-link:hover { color: #1B4F72; }
+    .nav-link[aria-current="page"] {
+      color: #1B4F72;
+      box-shadow: inset 0 -2px 0 #1B4F72;
+    }
+    #mobile-nav[data-open="false"] { display: none; }
+    #mobile-nav[data-open="true"] { display: block; }
+    .utility-menu { display: none; }
+    .utility-wrap:focus-within .utility-menu,
+    .utility-wrap:hover .utility-menu { display: block; }
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .table-scroll:focus-visible {
+      outline: 2px solid #1B4F72;
+      outline-offset: 2px;
+    }
+    details summary {
+      cursor: pointer;
+      list-style: none;
+    }
+    details summary::-webkit-details-marker { display: none; }
+    .prose-edu h2 {
+      font-family: Newsreader, Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(1.5rem, 2.5vw, 1.875rem);
+      line-height: 1.2;
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+      color: #0B1726;
+    }
+    .prose-edu h3 {
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 1.125rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #0B1726;
+    }
+    .prose-edu p, .prose-edu li { color: #4A5560; }
+    .prose-edu p { margin-bottom: 1rem; max-width: 42rem; }
+    .prose-edu ul { margin: 0.75rem 0 1.25rem; padding-left: 1.25rem; }
+    .prose-edu li { margin-bottom: 0.4rem; }
+    .step-num {
+      font-family: Newsreader, Georgia, serif;
+      font-weight: 600;
+      font-size: 1.75rem;
+      color: #1B4F72;
+      line-height: 1;
+    }
+    /* guide-row moved to engage/mobile block */
+    .callout-edu {
+      border: 1px solid #B8BEB5;
+      background: #E8ECE6;
+      padding: 1.25rem 1.5rem;
+    }
+    .callout-overlap {
+      border: 1px solid #D4C4B8;
+      background: #F7F1EC;
+      padding: 1.25rem 1.5rem;
+    }
+    .callout-confirm {
+      border: 1px solid #D4C4B8;
+      background: #F3EEE8;
+      padding: 1.25rem 1.5rem;
+    }
+
+
+  
+    /* Client white logo: only on ink/navy. Never invent a dark logo. */
+    .logo-ink-chip { background-color: #0B1726; }
+    .img-lock { width: 100%; height: auto; display: block; }
+    .photo-frame { overflow: hidden; border-radius: 0.375rem; }
+    .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+    .scrim-ink { background: linear-gradient(105deg, rgba(11,23,38,0.88) 0%, rgba(11,23,38,0.72) 55%, rgba(11,23,38,0.45) 100%); }
+
+  
+    /* === Bebe engage/mobile pass #2 === */
+    html { overflow-x: clip; }
+    body { overflow-x: clip; }
+
+    main h1 {
+      font-size: clamp(2.125rem, 5.8vw + 0.65rem, 3.75rem);
+      line-height: 1.12;
+      font-weight: 600;
+      text-wrap: balance;
+    }
+    main h2 {
+      font-size: clamp(1.5rem, 2.4vw + 0.55rem, 2.125rem);
+      line-height: 1.22;
+      font-weight: 600;
+      text-wrap: balance;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      width: 100%;
+    }
+    .cta-row > a,
+    .cta-row > button {
+      width: 100%;
+      justify-content: center;
+      min-height: 44px;
+      box-sizing: border-box;
+    }
+    @media (min-width: 480px) {
+      .cta-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+      }
+      .cta-row > a,
+      .cta-row > button {
+        width: auto;
+      }
+    }
+
+    .guide-row {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 1rem;
+      align-items: start;
+      padding: 1.35rem 0;
+      border-bottom: 1px solid #C5CBC4;
+      text-decoration: none;
+      color: inherit;
+      transition: background-color 0.15s ease, padding-left 0.15s ease;
+    }
+    .guide-row:hover {
+      padding-left: 0.35rem;
+    }
+    .guide-row:hover h3,
+    .guide-row:hover h4 { color: #1B4F72; }
+    .guide-row:last-child { border-bottom: 0; }
+    .guide-row .guide-num {
+      font-family: Newsreader, Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(1.5rem, 3vw, 1.75rem);
+      color: #1B4F72;
+      line-height: 1.1;
+      min-width: 2ch;
+    }
+    @media (max-width: 428px) {
+      .guide-row {
+        grid-template-columns: auto 1fr;
+        gap: 0.65rem 0.85rem;
+        padding: 1.15rem 0;
+      }
+      .guide-row > .guide-arrow,
+      .guide-row > i[data-lucide] {
+        display: none;
+      }
+      .guide-row:hover { padding-left: 0; }
+    }
+
+    @media (max-width: 428px) {
+      .page-hero-pad {
+        padding-top: 2.25rem !important;
+        padding-bottom: 2.25rem !important;
+      }
+    }
+
+  </style>
+</head>
+<body class="antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-civic focus:text-paper focus:px-4 focus:py-2 focus:rounded-brand">
+    Skip to main content
+  </a>
+
+  <header class="sticky top-0 z-40 border-b border-line bg-surface/95 backdrop-blur-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="hidden lg:flex items-center justify-end gap-4 pt-2 text-sm text-muted">
+        <div class="utility-wrap relative">
+          <button type="button" class="inline-flex items-center gap-1 min-h-[32px] font-medium text-muted hover:text-civic" aria-haspopup="true" aria-expanded="false" id="official-tools-btn">
+            Official tools
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5" aria-hidden="true"></i>
+          </button>
+          <div class="utility-menu absolute right-0 top-full mt-1 w-72 rounded-brand border border-line bg-surface shadow-lift p-3 z-50" role="menu" aria-label="Official tools">
+            <a href="https://www.tceq.texas.gov/gis/iwudview.html" target="_blank" rel="noopener noreferrer" class="block rounded-brand px-2 py-2 text-sm text-ink hover:bg-paper" role="menuitem">
+              <span class="font-semibold block">TCEQ Water Districts Map Viewer</span>
+              <span class="text-xs text-muted">Opens official site in a new tab</span>
+            </a>
+            <a href="https://www.hctax.net/Property/ViewStatementReceipts" target="_blank" rel="noopener noreferrer" class="block rounded-brand px-2 py-2 text-sm text-ink hover:bg-paper" role="menuitem">
+              <span class="font-semibold block">Harris County tax lookup (example)</span>
+              <span class="text-xs text-muted">Opens official site in a new tab</span>
+            </a>
+            <a href="find-your-mud.html" class="block rounded-brand px-2 py-2 text-sm text-civic font-medium hover:bg-paper" role="menuitem">
+              How to find your MUD
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center justify-between gap-4 min-h-[64px]">
+        <a href="index.html" class="inline-flex items-center shrink-0 min-h-[44px]" aria-label="MUDs 4 Texas home">
+          <img src="assets/logo-muds4texas.svg" alt="MUDs 4 Texas" width="180" height="36" class="h-9 sm:h-10 w-auto" decoding="async" />
+        </a>
+        <nav class="hidden lg:flex items-center gap-4 xl:gap-5 text-sm font-medium" aria-label="Primary">
+          <a href="what-is-a-mud.html" class="nav-link py-1">What is a MUD?</a>
+          <a href="mud-taxes.html" class="nav-link py-1">Taxes</a>
+          <a href="buying-in-a-mud.html" class="nav-link py-1">Buying</a>
+          <a href="living-in-a-mud.html" class="nav-link py-1">Living</a>
+          <a href="mud-vs-pid-vs-hoa.html" class="nav-link py-1">Compare</a>
+          <a href="find-your-mud.html" class="inline-flex items-center rounded-brand border border-civic/40 px-2.5 py-1 text-civic font-medium">Find your MUD</a>
+          <a href="about.html" class="nav-link py-1">About</a>
+        </nav>
+        <button type="button" id="menu-toggle" class="lg:hidden inline-flex items-center justify-center min-h-[44px] min-w-[44px] rounded-brand border border-line bg-surface" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
+          <i data-lucide="menu" class="w-5 h-5" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-nav" data-open="false" class="lg:hidden border-t border-line bg-surface" hidden>
+      <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-4 space-y-1" aria-label="Mobile primary">
+        <p class="text-sm font-semibold text-mesquite mb-2">For homeowners</p>
+<a href="living-in-a-mud.html" class="block rounded-brand px-3 py-2.5 text-base font-medium text-ink hover:bg-paper min-h-[44px]">Living</a>
+<a href="find-your-mud.html" class="block rounded-brand px-3 py-2.5 text-base font-medium text-ink hover:bg-paper min-h-[44px]">Find your MUD</a>
+<a href="mud-taxes.html" class="block rounded-brand px-3 py-2.5 text-base font-medium text-ink hover:bg-paper min-h-[44px]">Taxes</a>
+<p class="text-sm font-semibold text-mesquite mt-4 mb-2">For buyers</p>
+<a href="what-is-a-mud.html" class="block rounded-brand px-3 py-2.5 text-base font-medium text-ink hover:bg-paper min-h-[44px]">What is a MUD?</a>
+<a href="buying-in-a-mud.html" class="block rounded-brand px-3 py-2.5 text-base font-medium text-ink hover:bg-paper min-h-[44px]">Buying</a>
+<a href="mud-vs-pid-vs-hoa.html" class="block rounded-brand px-3 py-2.5 text-base font-medium text-ink hover:bg-paper min-h-[44px]">Compare</a>
+<hr class="border-line my-3" />
+<a href="about.html" class="block rounded-brand px-3 py-2.5 text-base font-medium text-ink hover:bg-paper min-h-[44px]">About</a>
+<p class="text-sm font-semibold text-muted mt-4 mb-2">Official tools</p>
+<a href="https://www.tceq.texas.gov/gis/iwudview.html" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 rounded-brand px-3 py-2.5 text-base text-ink hover:bg-paper min-h-[44px]">
+          TCEQ map viewer
+          <i data-lucide="external-link" class="w-3.5 h-3.5 text-muted" aria-hidden="true"></i>
+        </a>
+<a href="https://www.hctax.net/Property/ViewStatementReceipts" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 rounded-brand px-3 py-2.5 text-base text-ink hover:bg-paper min-h-[44px]">
+          Harris County tax lookup (example)
+          <i data-lucide="external-link" class="w-3.5 h-3.5 text-muted" aria-hidden="true"></i>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="bg-ink text-paper">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-20">
+        <h1 class="font-display font-semibold leading-[1.05] max-w-3xl mb-5">
+          MUDs 4 Texas style guide
+        </h1>
+        <p class="text-lg text-paper/80 max-w-2xl leading-relaxed">
+          Texas civic education brand: warm authority without realtor flash, dark SaaS, or generic AI civic cards.
+          Mode: <strong class="text-paper">Read</strong>. Stack: static HTML + Tailwind CDN + Lucide + Google Fonts.
+        </p>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12" id="dials" aria-labelledby="dials-h">
+      <h2 id="dials-h" class="font-display text-3xl font-semibold text-ink mb-2">Design dials (committed)</h2>
+      <p class="text-muted mb-8 max-w-measure">Locked for Phase 1 education Read mode. Do not drift without Kenny sign-off.</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="bg-surface border border-line rounded-brand p-6 shadow-card">
+          <p class="font-display text-5xl font-semibold text-civic mb-2">6</p>
+          <h3 class="font-semibold text-ink text-lg mb-2">DESIGN_VARIANCE</h3>
+          <p class="text-sm text-muted leading-relaxed">Expressive civic editorial. Asymmetric layouts, typographic heroes, table craft. Not experimental theatre.</p>
+        </article>
+        <article class="bg-surface border border-line rounded-brand p-6 shadow-card md:mt-8">
+          <p class="font-display text-5xl font-semibold text-civic mb-2">2</p>
+          <h3 class="font-semibold text-ink text-lg mb-2">MOTION_INTENSITY</h3>
+          <p class="text-sm text-muted leading-relaxed">Hover and focus only. No scroll theatre, no GSAP. Respects prefers-reduced-motion.</p>
+        </article>
+        <article class="bg-surface border border-line rounded-brand p-6 shadow-card">
+          <p class="font-display text-5xl font-semibold text-civic mb-2">5</p>
+          <h3 class="font-semibold text-ink text-lg mb-2">VISUAL_DENSITY</h3>
+          <p class="text-sm text-muted leading-relaxed">Scannable education: steps, tables, FAQ folds. Breathing room between sections. Not dashboard-dense.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="bg-paper border-y border-line" id="colors" aria-labelledby="colors-h">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+        <h2 id="colors-h" class="font-display text-3xl font-semibold text-ink mb-2">Palette</h2>
+        <p class="text-muted mb-8 max-w-measure">Cool capitol stone ground (not AI cream wall). Deep civic navy for authority. Adobe clay for rare emphasis. Mesquite sage for secondary calm. Surfaces are cool off-whites, never pure #FFFFFF as the only canvas.</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="rounded-brand overflow-hidden border border-line">
+            <div class="h-24" style="background:#E6E9E4"></div>
+            <div class="p-3 bg-surface"><p class="font-semibold text-sm">ground</p><p class="text-xs text-muted">#E6E9E4 · page canvas</p></div>
+          </div>
+          <div class="rounded-brand overflow-hidden border border-line">
+            <div class="h-24" style="background:#F7F8F6"></div>
+            <div class="p-3 bg-surface"><p class="font-semibold text-sm">paper</p><p class="text-xs text-muted">#F7F8F6 · bands</p></div>
+          </div>
+          <div class="rounded-brand overflow-hidden border border-line">
+            <div class="h-24 border-b border-line" style="background:#FCFDFB"></div>
+            <div class="p-3 bg-surface"><p class="font-semibold text-sm">surface</p><p class="text-xs text-muted">#FCFDFB · cards / header</p></div>
+          </div>
+          <div class="rounded-brand overflow-hidden border border-line">
+            <div class="h-24" style="background:#0B1726"></div>
+            <div class="p-3 bg-surface"><p class="font-semibold text-sm">ink</p><p class="text-xs text-muted">#0B1726 · text / footer</p></div>
+          </div>
+          <div class="rounded-brand overflow-hidden border border-line">
+            <div class="h-24" style="background:#1B4F72"></div>
+            <div class="p-3 bg-surface"><p class="font-semibold text-sm">civic</p><p class="text-xs text-muted">#1B4F72 · primary CTA</p></div>
+          </div>
+          <div class="rounded-brand overflow-hidden border border-line">
+            <div class="h-24" style="background:#C45C26"></div>
+            <div class="p-3 bg-surface"><p class="font-semibold text-sm">clay</p><p class="text-xs text-muted">#C45C26 · rare accent</p></div>
+          </div>
+          <div class="rounded-brand overflow-hidden border border-line">
+            <div class="h-24" style="background:#2F4F44"></div>
+            <div class="p-3 bg-surface"><p class="font-semibold text-sm">mesquite</p><p class="text-xs text-muted">#2F4F44 · secondary</p></div>
+          </div>
+          <div class="rounded-brand overflow-hidden border border-line">
+            <div class="h-24" style="background:#4A5560"></div>
+            <div class="p-3 bg-surface"><p class="font-semibold text-sm">muted</p><p class="text-xs text-muted">#4A5560 · body secondary</p></div>
+          </div>
+        </div>
+        <p class="text-sm text-muted mt-6 max-w-measure"><strong class="text-ink">Anti-clone:</strong> Not Air Solutions amber (#D97706) or IBM Plex. Not Hufflin&rsquo;s Fraunces / forest / teal. Not purple-blue gradients.</p>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12" id="type" aria-labelledby="type-h">
+      <h2 id="type-h" class="font-display text-3xl font-semibold text-ink mb-2">Typography</h2>
+      <p class="text-muted mb-8 max-w-measure">Newsreader for display and section heads. Source Sans 3 for UI and body. Strong scale steps. No kickers or eyebrows above headings (craft-floor ban).</p>
+      <div class="space-y-8 bg-surface border border-line rounded-brand p-6 sm:p-8 shadow-card">
+        <div>
+          <p class="text-sm text-muted mb-1">Display · Newsreader · clamp(2.5rem, 5vw, 3.75rem)</p>
+          <p class="font-display font-semibold text-ink leading-[1.05]" style="font-size:clamp(2.5rem,5vw,3.75rem)">Texas Municipal Utility Districts</p>
+        </div>
+        <div>
+          <p class="text-sm text-muted mb-1">H1 · Newsreader · clamp(2.5rem, 5vw, 3.75rem)</p>
+          <h1 class="font-display font-semibold text-ink leading-tight">What is a Municipal Utility District (MUD)?</h1>
+        </div>
+        <div>
+          <p class="text-sm text-muted mb-1">H2 · Newsreader · clamp(1.625rem, 2.8vw, 2.125rem)</p>
+          <h2 class="font-display font-semibold text-ink">Three money streams people mix up</h2>
+        </div>
+        <div>
+          <p class="text-sm text-muted mb-1">H3 · Source Sans 3 semibold · 1.125rem</p>
+          <h3 class="font-semibold text-lg text-ink">Notice to Purchaser (what it is)</h3>
+        </div>
+        <div>
+          <p class="text-sm text-muted mb-1">Body · Source Sans 3 · 1.125rem · leading 1.65 · measure 65–75ch</p>
+          <p class="text-muted max-w-measure">A Municipal Utility District (MUD) is a political subdivision of the State of Texas created to provide certain public services, most often water, wastewater, and drainage, within defined boundaries.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-mesquite text-paper" id="forbidden" aria-labelledby="forbidden-h">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+        <h2 id="forbidden-h" class="font-display text-3xl font-semibold mb-4">Forbidden patterns (AI tells)</h2>
+        <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 text-paper/90 text-base max-w-4xl list-disc pl-5">
+          <li>Eyebrow / kicker labels above H1 or H2</li>
+          <li>Identical icon + title + paragraph cards as page structure</li>
+          <li>Lucide-in-tint-box above title as default section pattern</li>
+          <li>Equal-height 3-column feature grids</li>
+          <li>Nested cards inside cards</li>
+          <li>Purple-to-blue gradients as primary palette</li>
+          <li>Pure #FFFFFF as the only page surface</li>
+          <li>Zero-offset glow shadows</li>
+          <li>Thick decorative left borders on callouts</li>
+          <li>Em dashes in chrome copy; emoji as icons</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12" id="buttons" aria-labelledby="buttons-h">
+      <h2 id="buttons-h" class="font-display text-3xl font-semibold text-ink mb-6">Buttons and links</h2>
+      <div class="cta-row mb-6">
+        <a href="#" class="btn-primary inline-flex items-center gap-2 rounded-brand px-5 py-3 font-semibold min-h-[44px] text-base">Primary education CTA <i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
+        <a href="#" class="btn-secondary inline-flex items-center rounded-brand px-5 py-3 font-semibold min-h-[44px] text-base">Secondary</a>
+        <a href="#" class="btn-ghost inline-flex items-center rounded-brand px-5 py-3 font-semibold min-h-[44px] text-base">Ghost</a>
+        <a href="#" class="btn-clay inline-flex items-center rounded-brand px-5 py-3 font-semibold min-h-[44px] text-base">Official tool (clay)</a>
+        <a href="#" class="btn-text text-base">Text link</a>
+      </div>
+      <p class="text-sm text-muted max-w-measure">Primary = civic navy. Clay reserved for official external tools (TCEQ, tax). Never lead-gen CTAs. Use <code class="text-ink">.cta-row</code> so buttons stack full-width under 480px (min-height 44px).</p>
+    </section>
+
+    <section class="bg-paper border-y border-line" id="patterns" aria-labelledby="patterns-h">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+        <h2 id="patterns-h" class="font-display text-3xl font-semibold text-ink mb-6">Preferred patterns</h2>
+        <div class="grid lg:grid-cols-2 gap-8">
+          <div>
+            <h3 class="font-semibold text-ink mb-3">Editorial guide row</h3>
+            <div class="bg-surface border border-line rounded-brand px-5 shadow-card">
+              <a href="what-is-a-mud.html" class="guide-row">
+                <span class="guide-num tabular-nums">01</span>
+                <span>
+                  <h4 class="font-semibold text-ink text-lg">What is a Municipal Utility District?</h4>
+                  <p class="text-sm text-muted mt-1">Plain-language definition and how it shows up in real estate.</p>
+                </span>
+                <i data-lucide="arrow-right" class="guide-arrow w-5 h-5 text-civic mt-1 shrink-0" aria-hidden="true"></i>
+              </a>
+              <a href="mud-taxes.html" class="guide-row">
+                <span class="guide-num tabular-nums">02</span>
+                <span>
+                  <h4 class="font-semibold text-ink text-lg">How MUD taxes differ from your water bill</h4>
+                  <p class="text-sm text-muted mt-1">Ad valorem tax vs utility charges vs HOA/PID.</p>
+                </span>
+                <i data-lucide="arrow-right" class="guide-arrow w-5 h-5 text-civic mt-1 shrink-0" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-semibold text-ink mb-3">Callouts</h3>
+            <div class="callout-edu mb-4" role="note">
+              <p class="font-semibold text-ink mb-1">Education only</p>
+              <p class="text-sm text-muted">Not legal, tax, or financial advice. Confirm with your district and licensed professionals.</p>
+            </div>
+            <div class="callout-overlap" role="note">
+              <p class="font-semibold text-ink mb-1">They can overlap</p>
+              <p class="text-sm text-muted">A property can have a MUD, a PID, and an HOA at the same time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12" id="hero-sample" aria-labelledby="hero-sample-h">
+      <h2 id="hero-sample-h" class="font-display text-3xl font-semibold text-ink mb-6">Sample typographic hero</h2>
+      <div class="bg-surface border border-line rounded-brand p-8 sm:p-12 shadow-card">
+        <h1 class="font-display font-semibold text-ink leading-[1.08] max-w-3xl mb-5">
+          Texas Municipal Utility Districts (MUDs), explained
+        </h1>
+        <p class="text-lg text-muted max-w-measure-wide mb-8 leading-relaxed">
+          A Municipal Utility District (MUD) is a special-purpose local government in Texas that often provides water, sewer, drainage, and related services in growing communities.
+        </p>
+        <div class="cta-row">
+          <a href="what-is-a-mud.html" class="btn-primary inline-flex items-center justify-center gap-2 rounded-brand px-5 py-3 font-semibold min-h-[44px]">What is a MUD? <i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
+          <a href="find-your-mud.html" class="btn-secondary inline-flex items-center rounded-brand px-5 py-3 font-semibold min-h-[44px]">Find your MUD</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12" id="brand-assets" aria-labelledby="assets-h">
+      <h2 id="assets-h" class="font-display text-3xl font-semibold text-ink mb-2">Brand assets (client)</h2>
+      <p class="text-muted mb-8 max-w-measure">Locked Option A wordmark (Kenny/Kyle). Rejected live pictorial marks archived below — do not use as site chrome.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <figure class="bg-surface border border-line rounded-brand p-6 flex flex-col items-center justify-center min-h-[200px]">
+          <img src="assets/logo-muds4texas.svg" alt="MUDs 4 Texas" width="180" height="36" class="h-10 w-auto mb-3" />
+          <figcaption class="text-xs text-muted text-center"><code>logo-muds4texas.svg</code> header / light — LOCKED Option A</figcaption>
+        </figure>
+        <figure class="bg-ink rounded-brand p-6 flex flex-col items-center justify-center min-h-[200px]">
+          <img src="assets/logo-muds4texas-on-dark.svg" alt="MUDs 4 Texas" width="180" height="36" class="h-10 w-auto mb-3" />
+          <figcaption class="text-xs text-paper/70 text-center"><code class="text-paper/90">logo-muds4texas-on-dark.svg</code> footer / ink — LOCKED</figcaption>
+        </figure>
+        <figure class="bg-ink rounded-brand p-6 flex flex-col items-center justify-center min-h-[200px]">
+          <img src="assets/logo.png" alt="There&rsquo;s more to MUDs than meets the eye" width="140" height="140" class="w-28 h-28 object-contain mb-3" />
+          <figcaption class="text-xs text-paper/70 text-center"><code class="text-paper/90">logo.png</code> rejected live mark / archive</figcaption>
+        </figure>
+        <figure class="bg-civic-dark rounded-brand p-6 flex flex-col items-center justify-center min-h-[200px]">
+          <img src="assets/logo-white-type.png" alt="" width="140" height="140" class="w-28 h-28 object-contain mb-3" />
+          <figcaption class="text-xs text-paper/70 text-center"><code class="text-paper/90">logo-white-type.png</code> rejected live / archive</figcaption>
+        </figure>
+        <figure class="rounded-brand overflow-hidden border border-line bg-surface">
+          <img src="assets/homepage-numbers-banner.png" alt="" class="w-full h-auto" />
+          <figcaption class="p-3 text-xs text-muted"><code>homepage-numbers-banner.png</code></figcaption>
+        </figure>
+        <figure class="rounded-brand overflow-hidden border border-line bg-surface sm:col-span-2">
+          <img src="assets/factsheet-infographic.png" alt="" class="w-full h-auto" />
+          <figcaption class="p-3 text-xs text-muted"><code>factsheet-infographic.png</code> What is a MUD</figcaption>
+        </figure>
+        <figure class="photo-frame aspect-[4/3] border border-line">
+          <img src="assets/kids-on-playground.png" alt="" class="object-cover w-full h-full" />
+          <figcaption class="sr-only">kids-on-playground.png</figcaption>
+        </figure>
+      </div>
+      <p class="text-sm text-muted mt-6">Also in use: <code>hero-muds-background.png</code> for atmospheric heroes with ink scrim (WCAG AA text).</p>
+      <p class="text-sm text-caution mt-2 font-medium">Missing from client: dark-ink horizontal &ldquo;MUDs 4 Texas&rdquo; wordmark for light headers. Current chrome uses text wordmark + logo on ink chip.</p>
+    </section>
+
+    <section class="bg-paper border-t border-line" id="a11y" aria-labelledby="a11y-h">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+        <h2 id="a11y-h" class="font-display text-3xl font-semibold text-ink mb-4">Accessibility</h2>
+        <ul class="text-muted space-y-2 max-w-measure list-disc pl-5">
+          <li>WCAG AA contrast on civic/clay/ink combinations</li>
+          <li>Visible focus-visible rings; skip link first</li>
+          <li>One H1 per page; Lucide decorative icons aria-hidden</li>
+          <li>Tables: caption, scope, mobile scroll container</li>
+          <li>External links announce new tab in visible helper text</li>
+          <li>No em dashes in chrome; no emoji icons</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-line bg-ink text-paper">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-14">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-12 gap-10 mb-10">
+        <div class="lg:col-span-4">
+          <a href="index.html" class="inline-block mb-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-paper rounded-brand">
+            <img src="assets/logo-muds4texas-on-dark.svg" alt="MUDs 4 Texas" width="180" height="36" class="h-9 sm:h-10 w-auto" decoding="async" />
+          </a>
+          <p class="text-sm text-paper/75 leading-relaxed max-w-sm">
+            MUDs 4 Texas is an education hub about Municipal Utility Districts (MUDs) in Texas. Content is for general information only and is not legal, tax, financial, or real estate advice. Always verify with official sources and licensed professionals.
+          </p>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="text-sm font-semibold text-paper mb-2">Already live in a MUD?</p>
+          <p class="text-sm text-paper/70 mb-3 leading-relaxed">Start with day-to-day questions: which district serves you, how water bills work, and what the tax line means.</p>
+          <ul class="text-sm space-y-2">
+            <li><a href="living-in-a-mud.html" class="link-on-dark">Living in a MUD</a></li>
+            <li><a href="find-your-mud.html" class="link-on-dark">Find your MUD</a></li>
+            <li><a href="mud-taxes.html" class="link-on-dark">MUD taxes explained</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="text-sm font-semibold text-paper mb-2">Considering a home in a MUD?</p>
+          <p class="text-sm text-paper/70 mb-3 leading-relaxed">Start with the basics, then work through buyer diligence, comparisons, and money questions before you close.</p>
+          <ul class="text-sm space-y-2">
+            <li><a href="what-is-a-mud.html" class="link-on-dark">What is a MUD?</a></li>
+            <li><a href="buying-in-a-mud.html" class="link-on-dark">Buying a home in a MUD</a></li>
+            <li><a href="mud-vs-pid-vs-hoa.html" class="link-on-dark">MUD vs PID vs HOA</a></li>
+            <li><a href="mud-taxes.html" class="link-on-dark">MUD taxes explained</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-2">
+          <p class="text-sm font-semibold text-paper mb-3">Official tools</p>
+          <ul class="text-sm space-y-3">
+            <li>
+              <a href="https://www.tceq.texas.gov/gis/iwudview.html" target="_blank" rel="noopener noreferrer" class="link-on-dark inline-flex items-center gap-1.5">
+                TCEQ map viewer
+                <i data-lucide="external-link" class="w-3.5 h-3.5" aria-hidden="true"></i>
+              </a>
+              <span class="block text-xs text-paper/55 mt-0.5">Opens official site</span>
+            </li>
+            <li>
+              <a href="https://www.hctax.net/Property/ViewStatementReceipts" target="_blank" rel="noopener noreferrer" class="link-on-dark inline-flex items-center gap-1.5">
+                Harris County tax (example)
+                <i data-lucide="external-link" class="w-3.5 h-3.5" aria-hidden="true"></i>
+              </a>
+              <span class="block text-xs text-paper/55 mt-0.5">Opens official site</span>
+            </li>
+            <li><a href="about.html" class="link-on-dark">About this site</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pt-6 border-t border-paper/15 text-sm text-paper/60">
+        <p>&copy; 2026 MUDs 4 Texas. Education hub.</p>
+        <p class="flex flex-wrap gap-x-4 gap-y-1">
+          <a href="privacy.html" class="hover:text-paper underline underline-offset-2">Privacy</a>
+          <a href="terms.html" class="hover:text-paper underline underline-offset-2">Terms</a>
+          <a href="style-guide.html" class="hover:text-paper underline underline-offset-2">Style guide</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    (function () {
+      var toggle = document.getElementById('menu-toggle');
+      var panel = document.getElementById('mobile-nav');
+      if (!toggle || !panel) return;
+      toggle.addEventListener('click', function () {
+        var open = panel.getAttribute('data-open') === 'true';
+        panel.setAttribute('data-open', open ? 'false' : 'true');
+        panel.hidden = open;
+        toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+        toggle.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+      });
+    })();
+  </script>
+</body>
+</html>
