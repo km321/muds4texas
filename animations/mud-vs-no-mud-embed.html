@@ -139,9 +139,12 @@
     .stage[data-state="end"] .gate-lock,
     .stage[data-state="end"] .infra-draw,
     .stage[data-state="end"] .balance-note,
-    .stage[data-state="end"] .house-lights,
-    .stage[data-state="end"] .buyer-sil {
+    .stage[data-state="end"] .house-lights {
       opacity: 1;
+      transform: none;
+    }
+    .stage[data-state="end"] .buyer-sil {
+      opacity: 0;
       transform: none;
     }
     .stage[data-state="end"] .stress-haze { opacity: 0.35; transform: none; }
@@ -346,23 +349,20 @@
           </filter>
         </defs>
 
-        <!-- Header -->
-        <rect x="0" y="0" width="960" height="52" fill="#F7F8F6"/>
-        <text x="24" y="24" font-family="Newsreader, Georgia, serif" font-size="17" font-weight="600" fill="#0B1726">Neighborhood with a MUD vs without</text>
-        <text x="24" y="42" font-family="Source Sans 3, system-ui, sans-serif" font-size="11.5" fill="#4A5560">Modeled example · Houston-area new homes</text>
-        <text x="936" y="32" text-anchor="end" font-family="Source Sans 3, system-ui, sans-serif" font-size="11" fill="#4A5560">Education · not a quote for a specific address</text>
-        <line x1="0" y1="52" x2="960" y2="52" stroke="#C5CBC4" stroke-width="1"/>
-        <line x1="480" y1="52" x2="480" y2="490" stroke="#C5CBC4" stroke-width="1.5"/>
+        <!-- Top divider (page supplies the section title; keep SVG scene-only) -->
+        <rect x="0" y="0" width="960" height="8" fill="#F7F8F6"/>
+        <line x1="0" y1="8" x2="960" y2="8" stroke="#C5CBC4" stroke-width="1"/>
+        <line x1="480" y1="8" x2="480" y2="490" stroke="#C5CBC4" stroke-width="1.5"/>
 
         <!-- ========== WITHOUT (left) ========== -->
         <g class="panel-without">
-          <rect x="0" y="52" width="480" height="438" fill="url(#skyL)"/>
+          <rect x="0" y="8" width="480" height="482" fill="url(#skyL)"/>
           <!-- Soft overcast haze -->
           <ellipse cx="120" cy="90" rx="70" ry="14" fill="#B8BDC4" opacity="0.35"/>
           <ellipse cx="280" cy="100" rx="90" ry="12" fill="#B8BDC4" opacity="0.28"/>
 
-          <text x="20" y="76" font-family="Source Sans 3, system-ui, sans-serif" font-size="12" font-weight="700" fill="#4A5560" letter-spacing="0.05em">WITHOUT MUD FINANCING</text>
-          <text x="20" y="92" font-family="Source Sans 3, system-ui, sans-serif" font-size="11" fill="#4A5560">Infrastructure often embedded in price</text>
+          <text x="20" y="36" font-family="Source Sans 3, system-ui, sans-serif" font-size="12" font-weight="700" fill="#4A5560" letter-spacing="0.05em">WITHOUT MUD FINANCING</text>
+          <text x="20" y="52" font-family="Source Sans 3, system-ui, sans-serif" font-size="11" fill="#4A5560">Infrastructure often embedded in price</text>
 
           <!-- Distant barren horizon -->
           <path d="M0 250 L80 235 L160 245 L240 230 L320 242 L400 228 L480 240 L480 490 L0 490 Z" fill="#B5A890" opacity="0.45"/>
@@ -406,7 +406,7 @@
           </g>
 
           <!-- Chain-link + wrought gate (locked) -->
-          <g class="gate-lock" transform="translate(300,118)">
+          <g class="gate-lock" transform="translate(318,168)">
             <!-- Fence posts -->
             <rect x="0" y="20" width="6" height="100" fill="#5A6570"/>
             <rect x="108" y="20" width="6" height="100" fill="#5A6570"/>
@@ -424,7 +424,7 @@
               <circle cx="78" cy="76" r="5" fill="#C45C26"/>
               <rect x="76" y="76" width="4" height="14" rx="1" fill="#C45C26"/>
             </g>
-            <text x="57" y="138" text-anchor="middle" font-family="Source Sans 3, system-ui, sans-serif" font-size="10.5" fill="#4A5560">Locked price wall</text>
+            <text x="57" y="128" text-anchor="middle" font-family="Source Sans 3, system-ui, sans-serif" font-size="10" fill="#4A5560">Locked price wall</text>
           </g>
 
           <!-- Price barrier card -->
@@ -456,13 +456,13 @@
 
         <!-- ========== WITH (right) ========== -->
         <g class="panel-with">
-          <rect x="480" y="52" width="480" height="438" fill="url(#skyR)"/>
+          <rect x="480" y="8" width="480" height="482" fill="url(#skyR)"/>
           <!-- Soft clouds -->
           <ellipse cx="620" cy="88" rx="48" ry="10" fill="#FFFFFF" opacity="0.45"/>
           <ellipse cx="780" cy="98" rx="60" ry="11" fill="#FFFFFF" opacity="0.35"/>
 
-          <text x="500" y="76" font-family="Source Sans 3, system-ui, sans-serif" font-size="12" font-weight="700" fill="#1B4F72" letter-spacing="0.05em">WITH MUD FINANCING</text>
-          <text x="500" y="92" font-family="Source Sans 3, system-ui, sans-serif" font-size="11" fill="#4A5560">Tax-exempt bonds fund infrastructure</text>
+          <text x="500" y="36" font-family="Source Sans 3, system-ui, sans-serif" font-size="12" font-weight="700" fill="#1B4F72" letter-spacing="0.05em">WITH MUD FINANCING</text>
+          <text x="500" y="52" font-family="Source Sans 3, system-ui, sans-serif" font-size="11" fill="#4A5560">Tax-exempt bonds fund infrastructure</text>
 
           <!-- Water tower (far) -->
           <g transform="translate(880,100)" opacity="0.85">
@@ -690,8 +690,7 @@
         <!-- Balance footer -->
         <g class="balance-note">
           <rect x="0" y="490" width="960" height="70" fill="#F3EEE8"/>
-          <text x="480" y="516" text-anchor="middle" font-family="Source Sans 3, system-ui, sans-serif" font-size="13" font-weight="600" fill="#0B1726">MUD taxes are real and disclosed. Compare total monthly cost, not list price alone.</text>
-          <text x="480" y="536" text-anchor="middle" font-family="Source Sans 3, system-ui, sans-serif" font-size="11" fill="#4A5560">Source: ABHR / CBAS modeling (Houston-area new homes). Optional context: ~$150k price gap (Meyers / AEI).</text>
+          <text x="480" y="522" text-anchor="middle" font-family="Source Sans 3, system-ui, sans-serif" font-size="12" fill="#4A5560">Source: ABHR / CBAS modeling (Houston-area new homes). Optional context: ~$150k price gap (Meyers / AEI).</text>
         </g>
       </svg>
 
@@ -726,7 +725,7 @@
       { t: 2600, text: 'With a MUD the gate opens: infrastructure is ready, porch lights on, utilities running.' },
       { t: 3600, text: 'Income to qualify (modeled): ~$156,500 without vs ~$95,800 with. Total monthly ~$3,652 vs ~$2,235.' },
       { t: 4500, text: 'How it is paid with a MUD: bond funds services; residents repay over time through a disclosed tax line.' },
-      { t: 5600, text: 'MUD taxes are real and disclosed. Compare total monthly cost, not list price alone.' }
+      { t: 5600, text: 'Compare total monthly cost, not list price alone — then confirm with Notice to Purchaser and your lender.' }
     ];
     var captionTimers = [];
 
@@ -738,7 +737,7 @@
     function showEnd() {
       stage.setAttribute('data-playing', 'false');
       stage.setAttribute('data-state', 'end');
-      caption.textContent = 'MUD taxes are real and disclosed. Compare total monthly cost, not list price alone.';
+      caption.textContent = 'Modeled comparison complete. Confirm figures with Notice to Purchaser, tax office, and your lender.';
       replay.disabled = false;
     }
 
