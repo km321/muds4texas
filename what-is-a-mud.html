@@ -325,6 +325,28 @@
       }
     }
 
+    /* Centered video section: heading + figure as one centered column */
+    .video-section-centered {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .video-section-centered h2 {
+      text-align: center;
+      width: 100%;
+    }
+    .video-section-centered p {
+      text-align: center;
+    }
+    .video-section-centered figure {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .video-section-centered figcaption {
+      text-align: center;
+    }
+
   </style>
 </head>
 <body class="antialiased">
@@ -429,10 +451,10 @@
       </div>
     </section>
 
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12" aria-labelledby="video-h">
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 video-section-centered" aria-labelledby="video-h">
       <h2 id="video-h" class="font-display text-2xl font-semibold text-ink mb-4">Video overview</h2>
       
-      <figure class="w-full max-w-3xl">
+      <figure class="w-full max-w-3xl mx-auto">
         <div class="video-slot rounded-brand flex flex-col items-center justify-center text-center" role="img" aria-label="Video placeholder: What is a Municipal Utility District?">
           <i data-lucide="play" class="w-10 h-10 text-civic mb-3" aria-hidden="true"></i>
           <p class="font-semibold text-ink text-base">Video coming from production partner</p>

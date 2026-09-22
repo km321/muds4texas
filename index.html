@@ -469,6 +469,28 @@
       .guides-shell .guide-row h3 { font-size: 1.2rem; }
     }
 
+    /* Centered video section: heading + figure as one centered column */
+    .video-section-centered {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .video-section-centered h2 {
+      text-align: center;
+      width: 100%;
+    }
+    .video-section-centered p {
+      text-align: center;
+    }
+    .video-section-centered figure {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .video-section-centered figcaption {
+      text-align: center;
+    }
+
   </style>
 </head>
 <body class="antialiased">
@@ -701,11 +723,11 @@
       </div>
     </section>
 
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16" aria-labelledby="video-heading">
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 video-section-centered" aria-labelledby="video-heading">
       <h2 id="video-heading" class="font-display text-3xl font-semibold text-ink mb-2">Watch a short overview</h2>
       <p class="text-muted mb-6 max-w-measure">Short overview of Municipal Utility Districts in Texas.</p>
       
-      <figure class="w-full max-w-3xl">
+      <figure class="w-full max-w-3xl mx-auto">
         <div class="video-slot rounded-brand flex flex-col items-center justify-center text-center" role="img" aria-label="Video placeholder: Short overview of Municipal Utility Districts in Texas.">
           <i data-lucide="play" class="w-10 h-10 text-civic mb-3" aria-hidden="true"></i>
           <p class="font-semibold text-ink text-base">Video coming from production partner</p>
