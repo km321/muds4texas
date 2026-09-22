@@ -223,18 +223,19 @@
       display: block;
       background: transparent;
       border-radius: 0.375rem;
-      /* Responsive height: SVG stage + toolbar + caption; avoid h-scroll 320–768 */
-      height: clamp(520px, 72vw, 720px);
+      /* Responsive height: 3-step interactive embed with controls */
+      height: clamp(620px, 76vw, 780px);
       overflow: hidden;
     }
     @media (max-width: 640px) {
       .mud-compare-frame {
-        height: clamp(560px, 178vw, 820px);
+        /* Mobile: stacked single-step view needs more height */
+        height: clamp(640px, 165vw, 780px);
       }
     }
     @media (max-width: 380px) {
       .mud-compare-frame {
-        height: clamp(600px, 195vw, 860px);
+        height: clamp(680px, 180vw, 820px);
       }
     }
     #mud-vs-compare {
@@ -674,9 +675,16 @@
     <section class="bg-paper border-y border-line" id="mud-vs-compare" aria-labelledby="mud-compare-heading">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20">
         <h2 id="mud-compare-heading" class="font-display font-semibold text-ink mb-2">With a MUD vs&nbsp;without</h2>
-        <p class="text-muted mb-6 max-w-measure-wide leading-relaxed">
-          A calm modeled example for Houston-area new homes: what changes when infrastructure is financed through a Municipal Utility District instead of being built into the purchase price.
+        <p class="text-muted mb-4 max-w-measure-wide leading-relaxed">
+          A modeled example for Houston-area new homes in 3 clear steps: what changes when infrastructure is financed through a Municipal Utility District instead of being built into the purchase price.
         </p>
+
+        <!-- Step legend -->
+        <ol class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted mb-6 max-w-measure-wide" aria-label="Comparison steps overview">
+          <li><span class="font-semibold text-ink">Step 1:</span> Without MUD (higher price)</li>
+          <li><span class="font-semibold text-ink">Step 2:</span> With MUD (bonds fund infrastructure)</li>
+          <li><span class="font-semibold text-ink">Step 3:</span> Compare numbers side by side</li>
+        </ol>
 
         <div class="mud-compare-shell mb-6">
           <div class="mud-frame-chrome">
@@ -684,13 +692,13 @@
               <span class="alive-dot" aria-hidden="true"></span>
               <span>Modeled example</span>
             </div>
-            <p class="mud-frame-caption hidden sm:block">Scroll or wait: the comparison plays once when it enters view. Replay anytime.</p>
+            <p class="mud-frame-caption hidden sm:block">Use the step buttons to navigate, or let it play through automatically.</p>
           </div>
-          <p class="sm:hidden text-xs text-muted px-3 py-2 border-b border-line bg-surface leading-relaxed">Plays once when visible. Use Replay in the frame to watch again.</p>
+          <p class="sm:hidden text-xs text-muted px-3 py-2 border-b border-line bg-surface leading-relaxed">Tap step buttons or let it play. Use controls to pause or replay.</p>
           <iframe
             class="mud-compare-frame"
             src="animations/mud-vs-no-mud-embed.html"
-            title="Modeled example: Houston-area new homes with MUD financing versus without"
+            title="Modeled example: Houston-area new homes with MUD financing versus without - 3-step interactive comparison"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>

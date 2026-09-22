@@ -5,7 +5,7 @@
   <meta name="robots" content="noindex,nofollow" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>With MUD vs without · animation preview | MUDs 4 Texas</title>
-  <meta name="description" content="Education animation preview: modeled Houston-area new home comparison with MUD financing versus without. Figures from ABHR / CBAS." />
+  <meta name="description" content="Education animation preview: modeled Houston-area new home comparison with MUD financing versus without. Interactive 3-step format. Figures from ABHR / CBAS." />
   <link rel="icon" href="../assets/logo-muds4texas-stacked.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -79,13 +79,13 @@
       background: transparent;
       display: block;
       overflow: hidden;
-      height: clamp(520px, 72vw, 720px);
+      height: clamp(620px, 76vw, 780px);
     }
     @media (max-width: 640px) {
-      .anim-frame { height: clamp(560px, 178vw, 820px); }
+      .anim-frame { height: clamp(640px, 165vw, 780px); }
     }
     @media (max-width: 380px) {
-      .anim-frame { height: clamp(600px, 195vw, 860px); }
+      .anim-frame { height: clamp(680px, 180vw, 820px); }
     }
   </style>
 </head>
@@ -104,15 +104,15 @@
 
   <main id="main" class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
     <h1 class="font-display font-semibold text-ink mb-3" style="font-size:clamp(2.5rem,5vw,3.75rem)">With a MUD vs without</h1>
-    <p class="text-muted max-w-measure-wide mb-8 leading-relaxed">
-      Illustrated neighborhood story for Home. Autoplays once when in view. Replay available. Reduced motion shows the final comparison immediately (both scenes drawn, numbers visible).
+    <p class="text-muted max-w-measure-wide mb-6 leading-relaxed">
+      Interactive 3-step comparison for Houston-area new homes. Navigate with step buttons, use Previous/Next, or let it auto-play. Reduced motion shows the final comparison immediately.
     </p>
 
     <div class="bg-surface border border-line rounded-brand shadow-card overflow-hidden mb-8">
       <iframe
         class="anim-frame"
         src="mud-vs-no-mud-embed.html"
-        title="Modeled example: Houston-area new homes with MUD financing versus without"
+        title="Modeled example: Houston-area new homes with MUD financing versus without - 3-step interactive comparison"
         loading="eager"
       ></iframe>
     </div>
@@ -137,14 +137,36 @@
       </a>
     </div>
 
+    <section class="bg-paper border border-line rounded-brand p-6 sm:p-8 mb-8" aria-labelledby="interaction-h">
+      <h2 id="interaction-h" class="font-display text-2xl font-semibold text-ink mb-4">Interaction model</h2>
+      <ul class="space-y-3 text-base text-muted max-w-measure-wide">
+        <li><span class="text-ink font-medium">Step chips:</span> Click any step (1, 2, or 3) to jump directly to that part of the comparison.</li>
+        <li><span class="text-ink font-medium">Previous / Next:</span> Navigate one step at a time using the arrow buttons.</li>
+        <li><span class="text-ink font-medium">Play / Pause:</span> Auto-advance through all steps, or pause to study the current view.</li>
+        <li><span class="text-ink font-medium">Replay:</span> Start the sequence again from Step 1.</li>
+        <li><span class="text-ink font-medium">Keyboard:</span> Left/Right arrows navigate steps. Space toggles Play/Pause when focused.</li>
+        <li><span class="text-ink font-medium">Reduced motion:</span> Jumps directly to Step 3 (full comparison) with no animation.</li>
+      </ul>
+    </section>
+
+    <section class="bg-paper border border-line rounded-brand p-6 sm:p-8 mb-8" aria-labelledby="mobile-h">
+      <h2 id="mobile-h" class="font-display text-2xl font-semibold text-ink mb-4">Mobile behavior</h2>
+      <ul class="space-y-3 text-base text-muted max-w-measure-wide">
+        <li><span class="text-ink font-medium">Stacked layout:</span> On screens 640px and below, shows one step at a time in a vertical card.</li>
+        <li><span class="text-ink font-medium">Step 1:</span> Without MUD panel with price and income cards.</li>
+        <li><span class="text-ink font-medium">Step 2:</span> With MUD panel with price and income cards.</li>
+        <li><span class="text-ink font-medium">Step 3:</span> Side-by-side comparison table plus "How it's paid" flow.</li>
+        <li><span class="text-ink font-medium">Touch targets:</span> All controls are at least 44px tall for easy tapping.</li>
+        <li><span class="text-ink font-medium">No horizontal scroll:</span> Content fits within viewport at 320px and up.</li>
+      </ul>
+    </section>
+
     <section class="bg-paper border border-line rounded-brand p-6 sm:p-8" aria-labelledby="beats-h">
       <h2 id="beats-h" class="font-display text-2xl font-semibold text-ink mb-4">Story beats</h2>
       <ol class="space-y-3 text-base text-muted list-decimal list-inside max-w-measure-wide">
-        <li><span class="text-ink font-medium">Split:</span> barren dirt pads + locked chain-link gate vs Texas starter homes on a green street.</li>
-        <li><span class="text-ink font-medium">Price tags:</span> ~$475k stress wall vs ~$250k attainable (modeled example); tags snap in with personality.</li>
-        <li><span class="text-ink font-medium">Unlock delight:</span> WITH gate swings open, porch lights flicker on, sprinkler pulse; WITHOUT stays locked.</li>
-        <li><span class="text-ink font-medium">Income gate:</span> ~$156,500 vs ~$95,800; monthly ~$3,652 vs ~$2,235.</li>
-        <li><span class="text-ink font-medium">How paid + balance:</span> bond → services → transparent tax; taxes real/disclosed; CTAs to taxes and buying guides.</li>
+        <li><span class="text-ink font-medium">Step 1 - Without MUD:</span> Barren dirt lots behind a locked gate. Infrastructure embedded in price: ~$475k home, ~$3,652/mo, ~$156,500 income to qualify.</li>
+        <li><span class="text-ink font-medium">Step 2 - With MUD:</span> Ready neighborhood with houses, streets, and utilities. Bond-funded infrastructure: ~$250k home, ~$2,235/mo, ~$95,800 income to qualify.</li>
+        <li><span class="text-ink font-medium">Step 3 - Compare:</span> Numbers side by side. "How it's paid" flow: Bond → Services → Transparent tax. Reminder that MUD taxes are real and disclosed.</li>
       </ol>
     </section>
 
