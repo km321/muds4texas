@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Living in a Municipal Utility District (MUD): Homeowner Guide | MUDs 4 Texas</title>
+  <meta name="description" content="Homeowner guide to Municipal Utility Districts in Texas: how to find your MUD, understand water bills, follow the board, and know who to call." />
+  <link rel="icon" href="assets/logo-muds4texas-stacked.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            stage: '#0D0D0D',
+            booth: '#151515',
+            corkboard: '#CD7F4A',
+            'corkboard-dark': '#A65D2C',
+            'corkboard-light': '#DCA06A',
+            mahogany: '#4A2511',
+            'mahogany-light': '#6B3A1E',
+            brass: '#D4A574',
+            'brass-light': '#E8C9A0',
+            onair: '#E53935',
+            'onair-dark': '#C62828',
+            teal: '#26A69A',
+            'teal-dark': '#00838F',
+            'teal-light': '#4DB6AC',
+            coral: '#FF6B5B',
+            hibiscus: '#FF8B7A',
+            cream: '#FFF8E7',
+            'cream-dark': '#F5EBD8',
+            bulb: '#FFE4B5',
+            duck: '#FDD835',
+            'duck-dark': '#F9A825',
+            navy: '#0D47A1',
+          },
+          fontFamily: {
+            display: ['"Bebas Neue"', 'Impact', 'sans-serif'],
+            sans: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    html { scroll-behavior: smooth; overflow-x: clip; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    ::selection { background: rgba(229, 57, 53, 0.25); color: #FFF8E7; }
+    body {
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      background-color: #0D0D0D;
+      color: #FFF8E7;
+      font-size: 1.125rem;
+      line-height: 1.65;
+    }
+    .font-display { font-family: "Bebas Neue", Impact, sans-serif; letter-spacing: 0.04em; }
+
+    :focus-visible {
+      outline: 2px solid #E53935;
+      outline-offset: 3px;
+    }
+
+    .onair-badge {
+      background: linear-gradient(180deg, #E53935 0%, #C62828 100%);
+      color: #FFF;
+      font-family: "Bebas Neue", Impact, sans-serif;
+      letter-spacing: 0.15em;
+      padding: 0.5rem 1.25rem;
+      border-radius: 4px;
+      box-shadow: 0 0 20px rgba(229, 57, 53, 0.7), 0 0 40px rgba(229, 57, 53, 0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .onair-badge { animation: onairPulse 2s ease-in-out infinite; }
+    }
+    @keyframes onairPulse {
+      0%, 100% { box-shadow: 0 0 20px rgba(229, 57, 53, 0.7), 0 0 40px rgba(229, 57, 53, 0.4), inset 0 1px 0 rgba(255,255,255,0.2); }
+      50% { box-shadow: 0 0 30px rgba(229, 57, 53, 0.9), 0 0 60px rgba(229, 57, 53, 0.6), inset 0 1px 0 rgba(255,255,255,0.3); }
+    }
+
+    .corkboard-bg {
+      background: 
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E"),
+        radial-gradient(ellipse at 30% 20%, rgba(220, 160, 106, 0.4) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 80%, rgba(166, 93, 44, 0.3) 0%, transparent 50%),
+        linear-gradient(180deg, #CD7F4A 0%, #A65D2C 100%);
+    }
+
+    .pinned-card {
+      background: linear-gradient(180deg, #FFF8E7 0%, #F5EBD8 100%);
+      border-radius: 2px;
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+      position: relative;
+      transform: rotate(-0.5deg);
+    }
+    .pinned-card:nth-child(even) { transform: rotate(0.5deg); }
+    .pinned-card::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 16px;
+      background: radial-gradient(circle at 30% 30%, #FF6B5B, #E53935);
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), inset 0 -2px 4px rgba(0,0,0,0.2);
+    }
+
+    .btn-teal {
+      background: linear-gradient(180deg, #26A69A 0%, #00838F 100%);
+      color: #FFF;
+      border: 2px solid #4DB6AC;
+      font-weight: 600;
+      transition: all 0.15s ease;
+    }
+    .btn-teal:hover {
+      background: linear-gradient(180deg, #4DB6AC 0%, #26A69A 100%);
+      transform: translateY(-1px);
+    }
+
+    .nav-retro {
+      background: linear-gradient(180deg, #151515 0%, #0D0D0D 100%);
+      border-bottom: 3px solid #4A2511;
+    }
+    .nav-link-retro { color: #D4A574; transition: color 0.15s ease; }
+    .nav-link-retro:hover { color: #FFF8E7; }
+    .nav-link-retro[aria-current="page"] { color: #FFF8E7; border-bottom: 2px solid #E53935; }
+
+    .footer-retro {
+      background: linear-gradient(180deg, #151515 0%, #0D0D0D 100%);
+      border-top: 3px solid #4A2511;
+    }
+
+    #mobile-nav[data-open="false"] { display: none; }
+    #mobile-nav[data-open="true"] { display: block; }
+
+    .prose-retro h2 {
+      font-family: "Bebas Neue", Impact, sans-serif;
+      letter-spacing: 0.04em;
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      line-height: 1.15;
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+      color: #FFF8E7;
+    }
+    .prose-retro h3 {
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 1.125rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #FFF8E7;
+    }
+    .prose-retro p { color: #D4A574; margin-bottom: 1rem; max-width: 42rem; }
+    .prose-retro ul { margin: 0.75rem 0 1.25rem; padding-left: 1.25rem; }
+    .prose-retro li { color: #D4A574; margin-bottom: 0.4rem; }
+    .prose-retro strong { color: #FFF8E7; }
+    .prose-retro a { color: #26A69A; text-decoration: underline; text-underline-offset: 3px; }
+    .prose-retro a:hover { color: #4DB6AC; }
+
+    .callout-retro {
+      border: 2px solid #4A2511;
+      background: linear-gradient(180deg, #1A1A1A 0%, #151515 100%);
+      padding: 1.25rem 1.5rem;
+      border-radius: 4px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .section-header::before,
+    .section-header::after {
+      content: "";
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #A65D2C, transparent);
+    }
+
+    .diagram-card-retro {
+      background: linear-gradient(180deg, #FFF8E7 0%, #F5EBD8 100%);
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+
+    main h1 { font-size: clamp(2.25rem, 6vw + 0.5rem, 4rem); line-height: 1.08; }
+
+    .page-hero-retro {
+      background: linear-gradient(180deg, #151515 0%, #0D0D0D 100%);
+      border-bottom: 3px solid #4A2511;
+    }
+
+    .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  </style>
+</head>
+<body class="antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-onair focus:text-cream focus:px-4 focus:py-2 focus:rounded">
+    Skip to main content
+  </a>
+
+  <header class="nav-retro sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between gap-4 min-h-[64px]">
+        <a href="home-retro.html" class="inline-flex items-center gap-3 shrink-0 min-h-[44px]" aria-label="MUDs 4 Texas home">
+          <span class="onair-badge text-sm">ON AIR</span>
+          <span class="font-display text-2xl sm:text-3xl text-cream tracking-wider">MUDs 4 TEXAS</span>
+        </a>
+        <nav class="hidden lg:flex items-center gap-5 text-sm font-medium" aria-label="Primary">
+          <a href="what-is-a-mud-retro.html" class="nav-link-retro py-1">What is a MUD?</a>
+          <a href="mud-taxes-retro.html" class="nav-link-retro py-1">Taxes</a>
+          <a href="buying-in-a-mud-retro.html" class="nav-link-retro py-1">Buying</a>
+          <a href="living-in-a-mud-retro.html" class="nav-link-retro py-1" aria-current="page">Living</a>
+          <a href="mud-vs-pid-vs-hoa-retro.html" class="nav-link-retro py-1">Compare</a>
+          <a href="find-your-mud-retro.html" class="btn-teal inline-flex items-center rounded px-3 py-1.5 text-sm">Find your MUD</a>
+          <a href="about-retro.html" class="nav-link-retro py-1">About</a>
+        </nav>
+        <button type="button" id="menu-toggle" class="lg:hidden inline-flex items-center justify-center min-h-[44px] min-w-[44px] rounded border border-mahogany bg-booth text-brass" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
+          <i data-lucide="menu" class="w-5 h-5" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-nav" data-open="false" class="lg:hidden border-t border-mahogany bg-booth" hidden>
+      <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-4 space-y-1" aria-label="Mobile primary">
+        <a href="what-is-a-mud-retro.html" class="block rounded px-3 py-2.5 text-base font-medium text-cream hover:bg-mahogany/30 min-h-[44px]">What is a MUD?</a>
+        <a href="mud-taxes-retro.html" class="block rounded px-3 py-2.5 text-base font-medium text-cream hover:bg-mahogany/30 min-h-[44px]">Taxes</a>
+        <a href="buying-in-a-mud-retro.html" class="block rounded px-3 py-2.5 text-base font-medium text-cream hover:bg-mahogany/30 min-h-[44px]">Buying</a>
+        <a href="living-in-a-mud-retro.html" class="block rounded px-3 py-2.5 text-base font-medium text-cream bg-mahogany/30 min-h-[44px]" aria-current="page">Living</a>
+        <a href="mud-vs-pid-vs-hoa-retro.html" class="block rounded px-3 py-2.5 text-base font-medium text-cream hover:bg-mahogany/30 min-h-[44px]">Compare</a>
+        <a href="find-your-mud-retro.html" class="block rounded px-3 py-2.5 text-base font-medium text-teal hover:bg-mahogany/30 min-h-[44px]">Find your MUD</a>
+        <a href="about-retro.html" class="block rounded px-3 py-2.5 text-base font-medium text-cream hover:bg-mahogany/30 min-h-[44px]">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero-retro" aria-labelledby="page-h1">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-16 lg:py-20">
+        <h1 id="page-h1" class="font-display text-cream leading-tight max-w-3xl mb-5">
+          LIVING IN A MUNICIPAL UTILITY DISTRICT (MUD)
+        </h1>
+        <p class="text-lg sm:text-xl text-brass leading-relaxed max-w-3xl">
+          If you already own a home in a Municipal Utility District, most questions are operational: Which district am I in? Who gets the water payment? What is the tax line on my bill? How do I follow the board? This guide points you to official tools and clear next steps.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-booth border-y border-mahogany py-12 sm:py-16 lg:py-20" aria-labelledby="call-h">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 id="call-h" class="font-display text-3xl text-cream mb-6">WHO TO CALL</h2>
+        
+        <figure class="diagram-card-retro mb-8 max-w-2xl">
+          <div class="p-4">
+            <img src="assets/diagrams/who-to-call-routes.svg" alt="Flowchart showing how to route homeowner questions: tax questions go to county tax office, water bill issues go to district operator, and meeting or governance questions go to district website or board contacts" class="w-full h-auto" />
+          </div>
+          <figcaption class="px-4 py-3 text-sm text-mahogany border-t border-corkboard-dark/30 bg-cream-dark">Routes vary by district. Start with the issue type to find the right contact.</figcaption>
+        </figure>
+        
+        <div class="overflow-hidden rounded border-2 border-mahogany bg-stage shadow-lg">
+          <div class="table-scroll" tabindex="0" aria-label="Who to call routing table">
+            <table class="w-full text-left text-sm min-w-[520px]">
+              <caption class="sr-only">Routing table for common MUD homeowner issues</caption>
+              <thead class="bg-mahogany text-cream">
+                <tr>
+                  <th scope="col" class="px-4 py-3 font-semibold">Issue</th>
+                  <th scope="col" class="px-4 py-3 font-semibold">Start here</th>
+                </tr>
+              </thead>
+              <tbody class="text-brass">
+                <tr class="border-t border-mahogany/50"><th scope="row" class="px-4 py-3 font-semibold text-cream text-left">Water outage, leak, billing login</th><td class="px-4 py-3">District operator / billing portal on your water bill</td></tr>
+                <tr class="border-t border-mahogany/50 bg-booth/50"><th scope="row" class="px-4 py-3 font-semibold text-cream text-left">Tax amount, due dates, exemptions process</th><td class="px-4 py-3">County tax office / appraisal district</td></tr>
+                <tr class="border-t border-mahogany/50"><th scope="row" class="px-4 py-3 font-semibold text-cream text-left">"Which district am I in?"</th><td class="px-4 py-3">TCEQ map viewer + tax bill entities + <a href="find-your-mud-retro.html" class="text-teal hover:text-teal-light underline">Find your MUD</a></td></tr>
+                <tr class="border-t border-mahogany/50 bg-booth/50"><th scope="row" class="px-4 py-3 font-semibold text-cream text-left">Notice to Purchaser copy</th><td class="px-4 py-3">District website or district office</td></tr>
+                <tr class="border-t border-mahogany/50"><th scope="row" class="px-4 py-3 font-semibold text-cream text-left">Governance / agenda questions</th><td class="px-4 py-3">District board secretary or posted contacts</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
+          <a href="find-your-mud-retro.html" class="btn-teal inline-flex items-center justify-center gap-2 rounded px-5 py-3 font-semibold min-h-[44px]">Find your district <i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
+          <p class="text-sm text-brass/70 max-w-md">Maps and tax records are approximate for education. For legal boundary questions, use survey/title professionals and district confirmation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-stage py-12 sm:py-16 lg:py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 prose-retro">
+        <h2>WATER AND SEWER BILLS (SEPARATE FROM THE MUD TAX)</h2>
+        <p>Your monthly (or periodic) water/sewer bill is usually handled by the district's operator or billing company, not by "paying the MUD tax again." Common homeowner tasks:</p>
+        <ul>
+          <li>Set up online payment with the correct operator portal for <em>your</em> district</li>
+          <li>Update mailing address after refinance or ownership changes</li>
+          <li>Ask about deposits, transfers, and leak adjustments using that operator's published process</li>
+        </ul>
+        <p>Always match the portal to your district name on the bill. For ad valorem MUD tax concepts, use <a href="mud-taxes-retro.html">MUD taxes explained</a>.</p>
+
+        <h2>BOARD MEETINGS AND TRANSPARENCY</h2>
+        <p>Most districts publish meeting information. Practical participation:</p>
+        <ul>
+          <li>Read the agenda before you attend</li>
+          <li>Bring parcel-specific questions in writing when possible</li>
+          <li>Use public comment rules for that meeting</li>
+          <li>For records requests, follow the district's posted process</li>
+        </ul>
+        <p>Board members set policy within legal limits. Day-to-day leaks and billing usually go to the operator first.</p>
+      </div>
+    </section>
+
+    <section class="corkboard-bg py-12 sm:py-16 lg:py-20" aria-labelledby="tools-h">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="section-header">
+          <h2 id="tools-h" class="font-display text-2xl sm:text-3xl text-cream whitespace-nowrap drop-shadow-lg">OFFICIAL TOOLS</h2>
+        </div>
+        <p class="text-cream/80 mb-8 max-w-2xl mx-auto text-center">Use official lookup tools, not a third-party proprietary database.</p>
+        <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <a href="https://www.tceq.texas.gov/gis/iwudview.html" target="_blank" rel="noopener noreferrer" class="pinned-card p-6 pt-8 block hover:scale-[1.02] transition-transform">
+            <h3 class="font-display text-xl text-mahogany mb-2 tracking-wide">TCEQ WATER DISTRICTS MAP VIEWER</h3>
+            <p class="text-corkboard-dark text-sm mb-4">Official Texas Commission on Environmental Quality tool to search water districts by address.</p>
+            <span class="inline-flex items-center gap-2 text-sm font-semibold text-teal-dark">Open official site <i data-lucide="external-link" class="w-4 h-4" aria-hidden="true"></i></span>
+          </a>
+          <a href="https://www.hctax.net/Property/ViewStatementReceipts" target="_blank" rel="noopener noreferrer" class="pinned-card p-6 pt-8 block hover:scale-[1.02] transition-transform">
+            <h3 class="font-display text-xl text-mahogany mb-2 tracking-wide">HARRIS COUNTY TAX LOOKUP</h3>
+            <p class="text-corkboard-dark text-sm mb-4">Example county only. Use your county tax office or appraisal district property search to see taxing units.</p>
+            <span class="inline-flex items-center gap-2 text-sm font-semibold text-teal-dark">Open official site <i data-lucide="external-link" class="w-4 h-4" aria-hidden="true"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-booth border-y border-mahogany py-12 sm:py-16 lg:py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="font-display text-2xl sm:text-3xl text-cream mb-4">VIDEO</h2>
+        <figure class="max-w-3xl mx-auto">
+          <div class="aspect-video rounded border-2 border-mahogany bg-stage flex flex-col items-center justify-center text-center p-6" role="img" aria-label="Video placeholder: How to find your MUD and who to call.">
+            <i data-lucide="play" class="w-12 h-12 text-teal mb-3" aria-hidden="true"></i>
+            <p class="font-semibold text-cream text-base">Video coming soon</p>
+            <p class="text-sm text-brass mt-2 max-w-md">How to find your MUD and who to call.</p>
+          </div>
+          <figcaption class="text-sm text-brass/70 mt-3">How to find your MUD and who to call.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="corkboard-bg py-12 sm:py-16 lg:py-20" aria-labelledby="faq-h">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="section-header">
+          <h2 id="faq-h" class="font-display text-2xl sm:text-3xl text-cream whitespace-nowrap drop-shadow-lg">COMMON QUESTIONS</h2>
+        </div>
+        <div class="max-w-3xl mx-auto space-y-4">
+          <details class="group pinned-card p-5 pt-6 mt-2">
+            <summary class="flex items-start justify-between gap-4 font-semibold text-mahogany text-base min-h-[44px]">
+              <span>What MUD district am I in?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-teal-dark shrink-0 mt-0.5 group-open:rotate-180 transition-transform" aria-hidden="true"></i>
+            </summary>
+            <div class="pt-3 text-corkboard-dark leading-relaxed">Look up the address in the TCEQ Water Districts Map Viewer and confirm against your tax bill entities.</div>
+          </details>
+          <details class="group pinned-card p-5 pt-6 mt-2">
+            <summary class="flex items-start justify-between gap-4 font-semibold text-mahogany text-base min-h-[44px]">
+              <span>How do I pay my MUD water bill?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-teal-dark shrink-0 mt-0.5 group-open:rotate-180 transition-transform" aria-hidden="true"></i>
+            </summary>
+            <div class="pt-3 text-corkboard-dark leading-relaxed">Use the operator/billing instructions on your water bill for that district. It is not the same payment as your property tax.</div>
+          </details>
+          <details class="group pinned-card p-5 pt-6 mt-2">
+            <summary class="flex items-start justify-between gap-4 font-semibold text-mahogany text-base min-h-[44px]">
+              <span>Can I attend meetings?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-teal-dark shrink-0 mt-0.5 group-open:rotate-180 transition-transform" aria-hidden="true"></i>
+            </summary>
+            <div class="pt-3 text-corkboard-dark leading-relaxed">Public meetings are generally open. Check your district's posted schedule and rules.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-booth border-y border-mahogany py-10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="callout-retro max-w-3xl mx-auto" role="note">
+          <p class="font-semibold text-cream mb-1">Education only</p>
+          <p class="text-sm text-brass">Not legal, tax, or financial advice. Confirm details with your district and licensed professionals.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-stage py-10 sm:py-12" aria-labelledby="related-heading">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 id="related-heading" class="font-display text-xl text-cream mb-3">RELATED READING</h2>
+        <p class="text-brass">
+          <a href="find-your-mud-retro.html" class="text-teal hover:text-teal-light underline underline-offset-2">Find your MUD</a> · 
+          <a href="mud-taxes-retro.html" class="text-teal hover:text-teal-light underline underline-offset-2">MUD taxes explained</a> · 
+          <a href="about-retro.html" class="text-teal hover:text-teal-light underline underline-offset-2">About MUDs 4 Texas</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-retro text-cream">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-14">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-12 gap-10 mb-10">
+        <div class="lg:col-span-4">
+          <a href="home-retro.html" class="inline-flex items-center gap-3 mb-4">
+            <span class="font-display text-2xl text-cream tracking-wider">MUDs 4 TEXAS</span>
+          </a>
+          <p class="text-sm text-brass/70 leading-relaxed max-w-sm">
+            MUDs 4 Texas is an education hub about Municipal Utility Districts (MUDs) in Texas. Content is for general information only and is not legal, tax, financial, or real estate advice. Always verify with official sources and licensed professionals.
+          </p>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="text-sm font-semibold text-cream mb-2">Already live in a MUD?</p>
+          <ul class="text-sm space-y-2">
+            <li><a href="living-in-a-mud-retro.html" class="text-brass hover:text-cream underline underline-offset-2">Living in a MUD</a></li>
+            <li><a href="find-your-mud-retro.html" class="text-brass hover:text-cream underline underline-offset-2">Find your MUD</a></li>
+            <li><a href="mud-taxes-retro.html" class="text-brass hover:text-cream underline underline-offset-2">MUD taxes explained</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="text-sm font-semibold text-cream mb-2">Considering a home in a MUD?</p>
+          <ul class="text-sm space-y-2">
+            <li><a href="what-is-a-mud-retro.html" class="text-brass hover:text-cream underline underline-offset-2">What is a MUD?</a></li>
+            <li><a href="buying-in-a-mud-retro.html" class="text-brass hover:text-cream underline underline-offset-2">Buying a home in a MUD</a></li>
+            <li><a href="mud-vs-pid-vs-hoa-retro.html" class="text-brass hover:text-cream underline underline-offset-2">MUD vs PID vs HOA</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-2">
+          <p class="text-sm font-semibold text-cream mb-2">Official tools</p>
+          <ul class="text-sm space-y-2">
+            <li>
+              <a href="https://www.tceq.texas.gov/gis/iwudview.html" target="_blank" rel="noopener noreferrer" class="text-brass hover:text-cream underline underline-offset-2 inline-flex items-center gap-1">
+                TCEQ map viewer
+                <i data-lucide="external-link" class="w-3 h-3" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li><a href="about-retro.html" class="text-brass hover:text-cream underline underline-offset-2">About this site</a></li>
+            <li><a href="living-in-a-mud.html" class="text-brass/50 hover:text-brass underline underline-offset-2 text-xs">Civic version</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pt-6 border-t border-mahogany text-sm text-brass/50">
+        <p>&copy; 2026 MUDs 4 Texas. Education hub.</p>
+        <p class="flex flex-wrap gap-x-4 gap-y-1">
+          <a href="privacy-retro.html" class="hover:text-cream underline underline-offset-2">Privacy</a>
+          <a href="terms-retro.html" class="hover:text-cream underline underline-offset-2">Terms</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    (function () {
+      var toggle = document.getElementById('menu-toggle');
+      var panel = document.getElementById('mobile-nav');
+      if (!toggle || !panel) return;
+      toggle.addEventListener('click', function () {
+        var open = panel.getAttribute('data-open') === 'true';
+        panel.setAttribute('data-open', open ? 'false' : 'true');
+        panel.hidden = open;
+        toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+        toggle.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+      });
+    })();
+  </script>
+</body>
+</html>
