@@ -259,9 +259,46 @@
             <p>In Texas, "MUD tax" usually means the district's share of ad valorem taxation. School, county, city (if any), and other jurisdictions may also tax the same property. The Municipal Utility District line is one piece of that stack, not a mysterious "extra fee" invented at closing. Whether people <em>feel</em> it as "extra" depends on what they compared the home to (for example, an older in-city neighborhood with different tax entities).</p>
           </div>
           <aside class="lg:col-span-5 mt-8 lg:mt-0">
-            <figure class="diagram-card-retro">
-              <div class="p-3">
-                <img src="assets/diagrams/retro/property-tax-stack-retro.svg" alt="Diagram showing property tax bill as a stack of entities: county, school, city, and MUD. The MUD is one piece of the stack, not a separate extra fee." class="w-full h-auto" loading="lazy" decoding="async" />
+            <figure class="diagram-card-retro" role="img" aria-label="Diagram showing property tax bill as a stack of entities: county, school, city, and MUD. The MUD is one piece of the stack, not a separate extra fee.">
+              <div class="p-4">
+                <!-- Property Tax Stack - HTML/CSS Version -->
+                <div class="retro-tax-stack">
+                  <div class="tax-stack-header">YOUR PROPERTY TAX BILL</div>
+                  <div class="tax-stack-layers">
+                    <div class="tax-layer tax-layer-brass">
+                      <strong>County</strong>
+                      <span>General county services</span>
+                    </div>
+                    <div class="tax-layer tax-layer-brass">
+                      <strong>School District</strong>
+                      <span>Public education funding</span>
+                    </div>
+                    <div class="tax-layer tax-layer-brass">
+                      <strong>City (if applicable)</strong>
+                      <span>Municipal services</span>
+                    </div>
+                    <div class="tax-layer tax-layer-mud">
+                      <strong>Municipal Utility District</strong>
+                      <span>Water, sewer, drainage, etc.</span>
+                    </div>
+                  </div>
+                  <p class="tax-stack-note">MUD is one piece of the stack, not a separate "extra fee"</p>
+                </div>
+                <style>
+                  .retro-tax-stack { background: #1A1A1A; border: 2px solid #4A2511; border-radius: 6px; padding: 0.75rem; }
+                  .tax-stack-header { background: linear-gradient(180deg, #CD7F4A, #A65D2C); color: #FFF8E7; font-family: "Bebas Neue", Impact, sans-serif; font-size: 0.9rem; letter-spacing: 0.08em; text-align: center; padding: 0.5rem; border-radius: 4px; margin-bottom: 0.75rem; }
+                  .tax-stack-layers { display: flex; flex-direction: column; gap: 0.4rem; }
+                  .tax-layer { padding: 0.6rem 0.75rem; border-radius: 4px; text-align: center; }
+                  .tax-layer strong { display: block; font-size: 0.85rem; margin-bottom: 0.1rem; }
+                  .tax-layer span { display: block; font-size: 0.7rem; }
+                  .tax-layer-brass { background: linear-gradient(180deg, #E8C9A0, #D4A574); border: 1.5px solid #A65D2C; }
+                  .tax-layer-brass strong { color: #0D0D0D; }
+                  .tax-layer-brass span { color: #4A2511; }
+                  .tax-layer-mud { background: linear-gradient(180deg, #26A69A, #00838F); border: 2px solid #4DB6AC; }
+                  .tax-layer-mud strong { color: #FFF8E7; }
+                  .tax-layer-mud span { color: #B2DFDB; }
+                  .tax-stack-note { font-size: 0.65rem; color: #A65D2C; text-align: center; margin: 0.5rem 0 0; }
+                </style>
               </div>
               <figcaption class="px-4 py-2 text-xs text-mahogany border-t border-corkboard-dark/30 bg-cream-dark">The MUD tax is one layer in your property tax bill, alongside county, school, and city.</figcaption>
             </figure>
@@ -276,9 +313,56 @@
             <p>Municipal Utility Districts commonly use debt (bonds) and annual tax rate setting. As debt is paid and the tax base grows, rates <em>can</em> change over time, up or down, subject to law and board decisions. That is not the same as "MUD tax automatically goes away when bonds mature." For a specific district, read the Notice to Purchaser, district financial reports, and ask the district or a licensed professional. We will not publish a statewide "typical year it ends" claim.</p>
           </div>
           <aside class="lg:col-span-5 mt-8 lg:mt-0">
-            <figure class="diagram-card-retro">
-              <div class="p-3">
-                <img src="assets/diagrams/retro/rate-timeline-retro.svg" alt="Diagram showing MUD tax rates fluctuating over time based on debt and board decisions, with a question mark indicating no guaranteed end date." class="w-full h-auto" loading="lazy" decoding="async" />
+            <figure class="diagram-card-retro" role="img" aria-label="Diagram showing MUD tax rates fluctuating over time based on debt and board decisions, with a question mark indicating no guaranteed end date.">
+              <div class="p-4">
+                <!-- Rate Timeline - HTML/CSS Version -->
+                <div class="retro-rate-timeline">
+                  <div class="rate-timeline-header">MUD TAX RATES OVER TIME</div>
+                  <div class="rate-timeline-chart">
+                    <div class="rate-axis-y">
+                      <span>High</span>
+                      <span>Rate</span>
+                      <span>Low</span>
+                    </div>
+                    <div class="rate-chart-area">
+                      <div class="rate-line" aria-hidden="true">
+                        <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+                          <path d="M0 20 Q20 15, 40 25 T80 30 T120 20 T160 35 T200 25" fill="none" stroke="#26A69A" stroke-width="3"/>
+                        </svg>
+                      </div>
+                      <div class="rate-question">?</div>
+                      <div class="rate-annotations">
+                        <span class="rate-anno rate-anno-down">Debt paid down</span>
+                        <span class="rate-anno rate-anno-up">New bonds issued</span>
+                      </div>
+                    </div>
+                    <div class="rate-axis-x">
+                      <span>Now</span>
+                      <span>Years</span>
+                      <span>Future</span>
+                    </div>
+                  </div>
+                  <div class="rate-warning">
+                    <strong>No automatic "end date"</strong>
+                    <span>Rates change with debt, board decisions, and law. Read district documents.</span>
+                  </div>
+                </div>
+                <style>
+                  .retro-rate-timeline { background: #1A1A1A; border: 2px solid #4A2511; border-radius: 6px; padding: 0.75rem; }
+                  .rate-timeline-header { background: linear-gradient(180deg, #CD7F4A, #A65D2C); color: #FFF8E7; font-family: "Bebas Neue", Impact, sans-serif; font-size: 0.85rem; letter-spacing: 0.08em; text-align: center; padding: 0.4rem; border-radius: 4px; margin-bottom: 0.75rem; }
+                  .rate-timeline-chart { display: flex; gap: 0.25rem; margin-bottom: 0.75rem; }
+                  .rate-axis-y { display: flex; flex-direction: column; justify-content: space-between; font-size: 0.6rem; color: #D4A574; text-align: right; padding: 0.25rem 0; width: 2rem; }
+                  .rate-chart-area { flex: 1; position: relative; background: #151515; border: 1px solid #4A2511; border-radius: 4px; padding: 0.5rem; min-height: 80px; }
+                  .rate-line { height: 60px; }
+                  .rate-line svg { width: 100%; height: 100%; }
+                  .rate-question { position: absolute; right: 0.25rem; top: 50%; transform: translateY(-50%); font-family: "Bebas Neue", Impact, sans-serif; font-size: 1.5rem; color: #E53935; }
+                  .rate-annotations { position: absolute; bottom: 0.25rem; left: 0; right: 0; display: flex; justify-content: space-around; }
+                  .rate-anno { font-size: 0.5rem; background: #4A2511; color: #FFF8E7; padding: 0.15rem 0.3rem; border-radius: 2px; }
+                  .rate-axis-x { display: flex; justify-content: space-between; font-size: 0.6rem; color: #D4A574; padding-left: 2.25rem; }
+                  .rate-warning { background: #2A1A1A; border: 1.5px solid #E53935; border-radius: 4px; padding: 0.5rem; text-align: center; }
+                  .rate-warning strong { display: block; font-size: 0.75rem; color: #E53935; }
+                  .rate-warning span { font-size: 0.6rem; color: #A65D2C; }
+                </style>
               </div>
               <figcaption class="px-4 py-2 text-xs text-mahogany border-t border-corkboard-dark/30 bg-cream-dark">Rates can change as debt is paid and new bonds are issued. There is no automatic end date.</figcaption>
             </figure>

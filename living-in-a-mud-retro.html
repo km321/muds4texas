@@ -378,9 +378,55 @@
             <p>Always match the portal to your district name on the bill. For ad valorem MUD tax concepts, use <a href="mud-taxes-retro.html">MUD taxes explained</a>.</p>
           </div>
           <aside class="lg:col-span-5 mt-8 lg:mt-0">
-            <figure class="diagram-card-retro">
-              <div class="p-3">
-                <img src="assets/diagrams/retro/water-bill-separate-retro.svg" alt="Diagram showing water bill and MUD tax as two separate payments through different channels: water bill monthly to operator, MUD tax annually via tax bill." class="w-full h-auto" loading="lazy" decoding="async" />
+            <figure class="diagram-card-retro" role="img" aria-label="Diagram showing water bill and MUD tax as two separate payments through different channels: water bill monthly to operator, MUD tax annually via tax bill.">
+              <div class="p-4">
+                <!-- Water Bill vs MUD Tax - HTML/CSS Version -->
+                <div class="retro-water-vs-tax">
+                  <div class="water-vs-header">TWO SEPARATE PAYMENTS</div>
+                  <div class="water-vs-cards">
+                    <div class="water-vs-card water-vs-water">
+                      <div class="water-vs-icon" aria-hidden="true">💧</div>
+                      <strong>Water/Sewer Bill</strong>
+                      <div class="water-vs-details">
+                        <span>Monthly to operator</span>
+                        <span>Usage-based charges</span>
+                      </div>
+                    </div>
+                    <div class="water-vs-divider">
+                      <span class="water-vs-neq">≠</span>
+                      <span class="water-vs-diff">different</span>
+                    </div>
+                    <div class="water-vs-card water-vs-tax">
+                      <div class="water-vs-icon" aria-hidden="true">📄</div>
+                      <strong>MUD Property Tax</strong>
+                      <div class="water-vs-details">
+                        <span>Annual via tax bill</span>
+                        <span>May be escrowed</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="water-vs-note">Pay each through the correct channel for your district</p>
+                </div>
+                <style>
+                  .retro-water-vs-tax { background: #1A1A1A; border: 2px solid #4A2511; border-radius: 6px; padding: 0.75rem; }
+                  .water-vs-header { background: linear-gradient(180deg, #CD7F4A, #A65D2C); color: #FFF8E7; font-family: "Bebas Neue", Impact, sans-serif; font-size: 0.85rem; letter-spacing: 0.08em; text-align: center; padding: 0.4rem; border-radius: 4px; margin-bottom: 0.75rem; }
+                  .water-vs-cards { display: flex; flex-direction: column; gap: 0.5rem; align-items: center; }
+                  @media (min-width: 400px) { .water-vs-cards { flex-direction: row; justify-content: center; } }
+                  .water-vs-card { flex: 1; max-width: 140px; padding: 0.6rem; border-radius: 4px; text-align: center; }
+                  .water-vs-water { background: linear-gradient(180deg, #26A69A, #00838F); }
+                  .water-vs-water strong { color: #FFF8E7; font-size: 0.8rem; display: block; margin: 0.25rem 0; }
+                  .water-vs-tax { background: linear-gradient(180deg, #E8C9A0, #D4A574); border: 1.5px solid #A65D2C; }
+                  .water-vs-tax strong { color: #0D0D0D; font-size: 0.8rem; display: block; margin: 0.25rem 0; }
+                  .water-vs-icon { font-size: 1.25rem; }
+                  .water-vs-details { background: rgba(0,0,0,0.2); border-radius: 3px; padding: 0.3rem; margin-top: 0.25rem; }
+                  .water-vs-details span { display: block; font-size: 0.6rem; }
+                  .water-vs-water .water-vs-details span { color: #B2DFDB; }
+                  .water-vs-tax .water-vs-details span { color: #4A2511; }
+                  .water-vs-divider { display: flex; flex-direction: column; align-items: center; padding: 0 0.25rem; }
+                  .water-vs-neq { font-family: "Bebas Neue", Impact, sans-serif; font-size: 1.5rem; color: #E53935; line-height: 1; }
+                  .water-vs-diff { font-size: 0.55rem; color: #D4A574; }
+                  .water-vs-note { font-size: 0.6rem; color: #D4A574; text-align: center; margin: 0.5rem 0 0; }
+                </style>
               </div>
               <figcaption class="px-4 py-2 text-xs text-mahogany border-t border-corkboard-dark/30 bg-cream-dark">Your water bill and MUD tax are two different payments.</figcaption>
             </figure>
@@ -401,9 +447,50 @@
             <p>Board members set policy within legal limits. Day-to-day leaks and billing usually go to the operator first.</p>
           </div>
           <aside class="lg:col-span-5 mt-8 lg:mt-0">
-            <figure class="diagram-card-retro">
-              <div class="p-3">
-                <img src="assets/diagrams/retro/board-participation-retro.svg" alt="Diagram showing four steps to participate in board meetings: read agenda, attend meeting, use public comment, follow up with records requests." class="w-full h-auto" loading="lazy" decoding="async" />
+            <figure class="diagram-card-retro" role="img" aria-label="Diagram showing four steps to participate in board meetings: read agenda, attend meeting, use public comment, follow up with records requests.">
+              <div class="p-4">
+                <!-- Board Participation - HTML/CSS Version -->
+                <div class="retro-board-steps">
+                  <div class="board-steps-header">BOARD MEETING PARTICIPATION</div>
+                  <div class="board-steps-grid">
+                    <div class="board-step">
+                      <span class="board-step-num">1</span>
+                      <strong>Read the agenda</strong>
+                      <span>Posted on district website or location</span>
+                    </div>
+                    <div class="board-step">
+                      <span class="board-step-num">2</span>
+                      <strong>Attend the meeting</strong>
+                      <span>Public meetings are generally open</span>
+                    </div>
+                    <div class="board-step">
+                      <span class="board-step-num">3</span>
+                      <strong>Use public comment</strong>
+                      <span>Follow meeting rules for your district</span>
+                    </div>
+                    <div class="board-step">
+                      <span class="board-step-num">4</span>
+                      <strong>Follow up</strong>
+                      <span>Records requests via district process</span>
+                    </div>
+                  </div>
+                  <div class="board-steps-note">
+                    <strong>Participation differs from city council, but it is public government</strong>
+                    <span>Day-to-day issues often go to the operator first</span>
+                  </div>
+                </div>
+                <style>
+                  .retro-board-steps { background: #1A1A1A; border: 2px solid #4A2511; border-radius: 6px; padding: 0.75rem; }
+                  .board-steps-header { background: linear-gradient(180deg, #CD7F4A, #A65D2C); color: #FFF8E7; font-family: "Bebas Neue", Impact, sans-serif; font-size: 0.8rem; letter-spacing: 0.08em; text-align: center; padding: 0.4rem; border-radius: 4px; margin-bottom: 0.75rem; }
+                  .board-steps-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.4rem; margin-bottom: 0.75rem; }
+                  .board-step { background: #1E1E1E; border: 1px solid #4A2511; border-radius: 4px; padding: 0.5rem; }
+                  .board-step-num { font-family: "Bebas Neue", Impact, sans-serif; font-size: 1.1rem; color: #26A69A; display: block; }
+                  .board-step strong { font-size: 0.7rem; color: #FFF8E7; display: block; margin: 0.15rem 0; }
+                  .board-step span { font-size: 0.55rem; color: #D4A574; display: block; line-height: 1.3; }
+                  .board-steps-note { background: linear-gradient(180deg, #26A69A, #00838F); border-radius: 4px; padding: 0.5rem; text-align: center; }
+                  .board-steps-note strong { font-size: 0.65rem; color: #FFF8E7; display: block; }
+                  .board-steps-note span { font-size: 0.55rem; color: #B2DFDB; }
+                </style>
               </div>
               <figcaption class="px-4 py-2 text-xs text-mahogany border-t border-corkboard-dark/30 bg-cream-dark">Board participation is different from city council, but it is public government.</figcaption>
             </figure>

@@ -368,9 +368,43 @@
             </ul>
           </div>
           <aside class="lg:col-span-5 mt-6 lg:mt-0">
-            <figure class="diagram-card-retro">
-              <div class="p-3">
-                <img src="assets/diagrams/retro/buyer-checklist-retro.svg" alt="Checklist showing key questions to ask when buying in a MUD: which district, notice to purchaser, tax rate, escrow, water billing, HOA/PID status." class="w-full h-auto" loading="lazy" decoding="async" />
+            <figure class="diagram-card-retro" role="img" aria-label="Checklist showing key questions to ask when buying in a MUD: which district, notice to purchaser, tax rate, escrow, water billing, HOA/PID status.">
+              <div class="p-4">
+                <!-- Buyer Checklist - HTML/CSS Version -->
+                <div class="retro-buyer-checklist corkboard-bg" style="border-radius: 4px; padding: 0.75rem;">
+                  <div class="buyer-check-pins" aria-hidden="true">
+                    <span class="buyer-pin buyer-pin-red"></span>
+                    <span class="buyer-pin buyer-pin-teal"></span>
+                  </div>
+                  <div class="buyer-check-paper">
+                    <div class="buyer-check-header">QUESTIONS TO ASK</div>
+                    <ul class="buyer-check-list">
+                      <li><span class="check-icon">✓</span> Which MUD includes this address?</li>
+                      <li><span class="check-icon">✓</span> May I have the Notice to Purchaser?</li>
+                      <li><span class="check-icon">✓</span> What is the current MUD tax rate?</li>
+                      <li><span class="check-icon">✓</span> Will my lender escrow the MUD tax?</li>
+                      <li><span class="check-icon">✓</span> Who bills water/sewer, and setup steps?</li>
+                      <li><span class="check-icon">✓</span> Is there also an HOA, PID, or both?</li>
+                      <li><span class="check-box">☐</span> ETJ or city limits? Partnership agreement?</li>
+                    </ul>
+                    <p class="buyer-check-footer">Keep answers with your closing file</p>
+                  </div>
+                </div>
+                <style>
+                  .retro-buyer-checklist { position: relative; }
+                  .buyer-check-pins { position: absolute; top: 0.5rem; left: 0.75rem; right: 0.75rem; display: flex; justify-content: space-between; }
+                  .buyer-pin { width: 12px; height: 12px; border-radius: 50%; }
+                  .buyer-pin-red { background: radial-gradient(circle at 30% 30%, #FF6B5B, #E53935); box-shadow: 0 2px 3px rgba(0,0,0,0.3); }
+                  .buyer-pin-teal { background: radial-gradient(circle at 30% 30%, #4DB6AC, #26A69A); box-shadow: 0 2px 3px rgba(0,0,0,0.3); }
+                  .buyer-check-paper { background: #FFF8E7; border-radius: 2px; padding: 0.75rem; margin-top: 0.5rem; transform: rotate(-0.5deg); box-shadow: 2px 2px 6px rgba(0,0,0,0.2); }
+                  .buyer-check-header { background: linear-gradient(180deg, #26A69A, #00838F); color: #FFF8E7; font-family: "Bebas Neue", Impact, sans-serif; font-size: 0.8rem; letter-spacing: 0.08em; text-align: center; padding: 0.35rem; border-radius: 3px; margin-bottom: 0.5rem; }
+                  .buyer-check-list { list-style: none; padding: 0; margin: 0; }
+                  .buyer-check-list li { display: flex; align-items: flex-start; gap: 0.4rem; font-size: 0.7rem; color: #4A2511; padding: 0.2rem 0; border-bottom: 1px dashed #D4A574; }
+                  .buyer-check-list li:last-child { border-bottom: none; }
+                  .check-icon { color: #26A69A; font-weight: bold; flex-shrink: 0; }
+                  .check-box { color: #26A69A; flex-shrink: 0; }
+                  .buyer-check-footer { font-size: 0.55rem; color: #8B4513; text-align: center; margin: 0.5rem 0 0; }
+                </style>
               </div>
               <figcaption class="px-4 py-2 text-xs text-mahogany border-t border-corkboard-dark/30 bg-cream-dark">Keep the answers with your closing file.</figcaption>
             </figure>
