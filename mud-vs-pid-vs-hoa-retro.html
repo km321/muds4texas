@@ -234,9 +234,45 @@
         <h2 id="table-h" class="font-display text-3xl text-cream mb-2">COMPARISON TABLE</h2>
         <p class="text-brass mb-6 max-w-2xl">Neutral comparison. No winners. A property can have more than one.</p>
         
-        <figure class="diagram-card-retro mb-10 max-w-xl">
-          <div class="p-4">
-            <img src="assets/diagrams/mud-pid-hoa-entities.svg" alt="Three entity types side by side: MUD is government with utilities and taxes, PID is an assessment tool for public improvements, HOA is a private association with covenants and dues. Note at bottom indicates a property can have more than one." class="w-full h-auto" loading="lazy" decoding="async" />
+        <figure class="diagram-card-retro mb-10 max-w-xl" role="img" aria-label="Three entity types side by side: MUD is government with utilities and taxes, PID is an assessment tool for public improvements, HOA is a private association with covenants and dues. Note at bottom indicates a property can have more than one.">
+          <div class="p-4 sm:p-6">
+            <!-- MUD vs PID vs HOA Entities - HTML/CSS Version -->
+            <div class="retro-entities-compare">
+              <div class="entities-row">
+                <div class="entity-card">
+                  <strong class="entity-name">MUD</strong>
+                  <span class="entity-type">Government</span>
+                  <span class="entity-detail">Utilities, taxes</span>
+                  <span class="entity-detail">Public board</span>
+                </div>
+                <div class="entity-card">
+                  <strong class="entity-name">PID</strong>
+                  <span class="entity-type">Government</span>
+                  <span class="entity-detail">Infrastructure</span>
+                  <span class="entity-detail">assessments</span>
+                </div>
+                <div class="entity-card">
+                  <strong class="entity-name">HOA</strong>
+                  <span class="entity-type">Private assoc.</span>
+                  <span class="entity-detail">Covenants,</span>
+                  <span class="entity-detail">dues</span>
+                </div>
+              </div>
+              <div class="entities-overlap-note">
+                <span>A property can have more than one</span>
+              </div>
+            </div>
+            <style>
+              .retro-entities-compare { text-align: center; }
+              .entities-row { display: grid; grid-template-columns: 1fr; gap: 0.75rem; margin-bottom: 0.75rem; }
+              @media (min-width: 480px) { .entities-row { grid-template-columns: repeat(3, 1fr); } }
+              .entity-card { background: #FCFDFB; border: 2px solid #1B4F72; border-radius: 6px; padding: 0.75rem 0.5rem; text-align: center; }
+              .entity-name { display: block; font-size: 1rem; color: #0B1726; margin-bottom: 0.2rem; }
+              .entity-type { display: block; font-size: 0.75rem; color: #4A5560; }
+              .entity-detail { display: block; font-size: 0.7rem; color: #4A5560; line-height: 1.3; }
+              .entities-overlap-note { background: rgba(196, 92, 38, 0.15); border: 2px solid #C45C26; border-radius: 4px; padding: 0.5rem 1rem; display: inline-block; }
+              .entities-overlap-note span { font-size: 0.85rem; font-weight: 600; color: #C45C26; }
+            </style>
           </div>
           <figcaption class="text-sm text-mahogany px-4 py-3 border-t border-corkboard-dark/30 bg-cream-dark">Three distinct entities with different governance and payment models. The table below details each row.</figcaption>
         </figure>

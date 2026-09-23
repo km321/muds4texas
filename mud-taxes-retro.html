@@ -153,9 +153,64 @@
           <h2 id="streams-h" class="font-display text-2xl sm:text-3xl text-cream whitespace-nowrap">THREE MONEY STREAMS PEOPLE MIX UP</h2>
         </div>
         
-        <figure class="diagram-card-retro max-w-3xl mx-auto mb-8">
-          <div class="p-4">
-            <img src="assets/diagrams/three-money-streams.svg" alt="Diagram showing three separate payment streams for a property: MUD tax paid annually via tax bill, water bill paid monthly to district operator, and HOA or PID dues if present" class="w-full h-auto" />
+        <figure class="diagram-card-retro max-w-3xl mx-auto mb-8" role="img" aria-label="Diagram showing three separate payment streams for a property: MUD tax paid annually via tax bill, water bill paid monthly to district operator, and HOA or PID dues if present">
+          <div class="p-4 sm:p-6">
+            <!-- Three Money Streams - HTML/CSS Version -->
+            <div class="retro-streams-diagram">
+              <!-- Your property node -->
+              <div class="streams-source">
+                <div class="streams-source-box">Your property</div>
+              </div>
+              <!-- Connector lines (CSS) -->
+              <div class="streams-connectors" aria-hidden="true">
+                <div class="streams-line streams-line-left"></div>
+                <div class="streams-line streams-line-center"></div>
+                <div class="streams-line streams-line-right"></div>
+              </div>
+              <!-- Three stream cards -->
+              <div class="streams-cards">
+                <div class="stream-card stream-card-tax">
+                  <span class="stream-badge stream-badge-tax">(a) Tax</span>
+                  <h4 class="stream-title">Ad valorem MUD tax</h4>
+                  <p class="stream-desc">Property tax levied by the district</p>
+                  <p class="stream-how">Annual tax bill; may be escrowed</p>
+                </div>
+                <div class="stream-card stream-card-utility">
+                  <span class="stream-badge stream-badge-utility">(b) Utility</span>
+                  <h4 class="stream-title">Water / sewer bill</h4>
+                  <p class="stream-desc">Usage and service charges for utilities</p>
+                  <p class="stream-how">Monthly bill to district operator</p>
+                </div>
+                <div class="stream-card stream-card-hoa">
+                  <span class="stream-badge stream-badge-hoa">(c) HOA/PID</span>
+                  <h4 class="stream-title">HOA and/or PID</h4>
+                  <p class="stream-desc">Dues and assessments (if present)</p>
+                  <p class="stream-how">Per association rules or tax bill</p>
+                </div>
+              </div>
+            </div>
+            <style>
+              .retro-streams-diagram { text-align: center; }
+              .streams-source { margin-bottom: 0.5rem; }
+              .streams-source-box { display: inline-block; padding: 0.5rem 1.5rem; background: #F7F8F6; border: 2px solid #1B4F72; border-radius: 4px; font-weight: 600; color: #0B1726; font-size: 0.95rem; }
+              .streams-connectors { display: none; height: 2rem; position: relative; margin-bottom: 0.5rem; }
+              @media (min-width: 640px) { .streams-connectors { display: block; } }
+              .streams-line { position: absolute; top: 0; width: 2px; height: 100%; background: #C5CBC4; }
+              .streams-line-left { left: 16.67%; }
+              .streams-line-center { left: 50%; transform: translateX(-50%); }
+              .streams-line-right { right: 16.67%; }
+              .streams-cards { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+              @media (min-width: 640px) { .streams-cards { grid-template-columns: repeat(3, 1fr); } }
+              .stream-card { background: #F7F8F6; border: 2px solid #1B4F72; border-radius: 6px; padding: 1rem; text-align: center; position: relative; }
+              .stream-card-tax { border-color: #C45C26; border-width: 2.5px; }
+              .stream-badge { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; font-size: 0.7rem; font-weight: 600; color: #FFF; margin-bottom: 0.5rem; }
+              .stream-badge-tax { background: #C45C26; }
+              .stream-badge-utility { background: #1B4F72; }
+              .stream-badge-hoa { background: #1B4F72; }
+              .stream-title { font-size: 0.95rem; font-weight: 600; color: #0B1726; margin: 0 0 0.25rem; }
+              .stream-desc { font-size: 0.8rem; color: #4A5560; margin: 0 0 0.25rem; }
+              .stream-how { font-size: 0.75rem; color: #4A5560; margin: 0; }
+            </style>
           </div>
           <figcaption class="px-4 py-3 text-sm text-mahogany border-t border-corkboard-dark/30 bg-cream-dark">Three separate payment streams can apply to a single property. A MUD tax is not the same as your water bill. Districts vary in what they provide.</figcaption>
         </figure>
@@ -212,12 +267,50 @@
           <h2 id="lookup-h" class="font-display text-2xl sm:text-3xl text-cream whitespace-nowrap drop-shadow-lg">HOW TO LOOK UP THE MUD TAX</h2>
         </div>
         
-        <figure class="diagram-card-retro max-w-2xl mx-auto mb-8">
-          <div class="p-4">
-            <picture>
-              <source media="(max-width: 479px)" srcset="assets/diagrams/find-steps-path-mobile.svg" />
-              <img src="assets/diagrams/find-steps-path.svg" alt="Four-step path to identify your MUD using official tools" class="w-full h-auto" decoding="async" />
-            </picture>
+        <figure class="diagram-card-retro max-w-2xl mx-auto mb-8" role="img" aria-label="Four-step path to identify your MUD using official tools">
+          <div class="p-4 sm:p-6">
+            <!-- Find Steps Path - HTML/CSS Version -->
+            <div class="retro-steps-path">
+              <div class="steps-path-grid">
+                <div class="step-path-item">
+                  <span class="step-path-num">1</span>
+                  <span class="step-path-label">TCEQ Viewer</span>
+                  <span class="step-path-sub">Find district name</span>
+                </div>
+                <div class="step-path-arrow" aria-hidden="true"></div>
+                <div class="step-path-item">
+                  <span class="step-path-num">2</span>
+                  <span class="step-path-label">County Records</span>
+                  <span class="step-path-sub">Confirm tax entities</span>
+                </div>
+                <div class="step-path-arrow" aria-hidden="true"></div>
+                <div class="step-path-item">
+                  <span class="step-path-num">3</span>
+                  <span class="step-path-label">Notice to Purchaser</span>
+                  <span class="step-path-sub">District details</span>
+                </div>
+                <div class="step-path-arrow" aria-hidden="true"></div>
+                <div class="step-path-item">
+                  <span class="step-path-num">4</span>
+                  <span class="step-path-label">Ask Lender/Title</span>
+                  <span class="step-path-sub">Escrow handling</span>
+                </div>
+              </div>
+            </div>
+            <style>
+              .retro-steps-path { padding: 0.5rem 0; }
+              .steps-path-grid { display: flex; flex-direction: column; gap: 0.75rem; align-items: stretch; }
+              @media (min-width: 640px) { .steps-path-grid { flex-direction: row; align-items: center; justify-content: center; gap: 0.5rem; } }
+              .step-path-item { display: flex; flex-direction: column; align-items: center; background: #F7F8F6; border: 2px solid #1B4F72; border-radius: 6px; padding: 0.75rem 1rem; text-align: center; min-width: 0; flex: 1; }
+              @media (min-width: 640px) { .step-path-item { max-width: 130px; padding: 0.6rem 0.5rem; } }
+              .step-path-num { display: inline-flex; align-items: center; justify-content: center; width: 1.75rem; height: 1.75rem; background: #1B4F72; color: #FFF; font-weight: 700; font-size: 0.9rem; border-radius: 50%; margin-bottom: 0.35rem; }
+              .step-path-label { font-size: 0.85rem; font-weight: 600; color: #0B1726; line-height: 1.2; }
+              @media (min-width: 640px) { .step-path-label { font-size: 0.75rem; } }
+              .step-path-sub { font-size: 0.7rem; color: #4A5560; margin-top: 0.15rem; }
+              @media (min-width: 640px) { .step-path-sub { font-size: 0.65rem; } }
+              .step-path-arrow { display: none; width: 0; height: 0; border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-left: 8px solid #C5CBC4; flex-shrink: 0; }
+              @media (min-width: 640px) { .step-path-arrow { display: block; } }
+            </style>
           </div>
           <figcaption class="px-4 py-3 text-sm text-mahogany border-t border-corkboard-dark/30 bg-cream-dark">Start with the TCEQ viewer to identify the district, then cross-check county records.</figcaption>
         </figure>

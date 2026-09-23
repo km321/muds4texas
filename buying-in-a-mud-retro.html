@@ -372,9 +372,48 @@
         <h2 id="cost-h" class="font-display text-3xl text-cream mb-6">COST MENTAL MODEL</h2>
         <p class="text-brass max-w-3xl mb-8">Model ongoing ownership cost as separate streams, not one lump "MUD fee." Compare total housing cost, not sticker price alone.</p>
         
-        <figure class="diagram-card-retro mb-10 max-w-sm">
-          <div class="p-4">
-            <img src="assets/diagrams/ownership-cost-stack.svg" alt="Stacked diagram showing layers of housing cost: county and city property tax, MUD ad valorem tax, water and sewer bills, and optional HOA dues or PID assessment" class="w-full h-auto" loading="lazy" decoding="async" />
+        <figure class="diagram-card-retro mb-10 max-w-sm" role="img" aria-label="Stacked diagram showing layers of housing cost: county and city property tax, MUD ad valorem tax, water and sewer bills, and optional HOA dues or PID assessment">
+          <div class="p-4 sm:p-6">
+            <!-- Ownership Cost Stack - HTML/CSS Version -->
+            <div class="retro-cost-stack">
+              <p class="cost-stack-title">Ownership cost layers</p>
+              <p class="cost-stack-sub">Model as separate streams, not one lump</p>
+              <div class="cost-stack-layers">
+                <div class="cost-layer cost-layer-county">
+                  <span>County &amp; city property tax</span>
+                </div>
+                <div class="cost-layer cost-layer-mud">
+                  <span>MUD ad valorem tax</span>
+                </div>
+                <div class="cost-layer cost-layer-utility">
+                  <span>Water &amp; sewer bills</span>
+                </div>
+                <div class="cost-layer cost-layer-hoa">
+                  <span>HOA dues / PID assessment</span>
+                  <em>(if present)</em>
+                </div>
+              </div>
+              <div class="cost-stack-annotation" aria-hidden="true">
+                <span>Total housing cost</span>
+              </div>
+            </div>
+            <style>
+              .retro-cost-stack { text-align: center; }
+              .cost-stack-title { font-size: 0.9rem; font-weight: 600; color: #0B1726; margin: 0 0 0.15rem; }
+              .cost-stack-sub { font-size: 0.7rem; color: #4A5560; margin: 0 0 0.75rem; }
+              .cost-stack-layers { display: flex; flex-direction: column; gap: 0.35rem; background: #F7F8F6; border: 1px solid #C5CBC4; border-radius: 6px; padding: 0.75rem; position: relative; }
+              .cost-layer { padding: 0.6rem 0.75rem; border-radius: 4px; text-align: center; }
+              .cost-layer span { font-size: 0.85rem; font-weight: 600; color: #0B1726; }
+              .cost-layer em { display: block; font-size: 0.7rem; color: #4A5560; font-style: normal; margin-top: 0.1rem; }
+              .cost-layer-county { background: #FCFDFB; border: 2px solid #1B4F72; }
+              .cost-layer-mud { background: #C45C26; }
+              .cost-layer-mud span { color: #FFF; }
+              .cost-layer-utility { background: #FCFDFB; border: 2px solid #1B4F72; }
+              .cost-layer-hoa { background: #FCFDFB; border: 2px dashed #C5CBC4; }
+              .cost-layer-hoa span { color: #4A5560; font-weight: 400; }
+              .cost-stack-annotation { margin-top: 0.5rem; }
+              .cost-stack-annotation span { font-size: 0.7rem; color: #4A5560; }
+            </style>
           </div>
           <figcaption class="text-sm text-mahogany px-4 py-3 border-t border-corkboard-dark/30 bg-cream-dark">Layers vary by property. The MUD tax is one piece, not the whole stack.</figcaption>
         </figure>

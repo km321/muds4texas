@@ -379,9 +379,47 @@
     <section class="bg-booth border-y border-mahogany py-12 sm:py-16" aria-labelledby="services-h">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <h2 id="services-h" class="sr-only">Services a MUD may provide</h2>
-        <figure class="diagram-card-retro max-w-2xl mx-auto">
-          <div class="p-4">
-            <img src="assets/diagrams/mud-services-cluster.svg" alt="Diagram showing typical MUD services: water supply, wastewater, drainage, and sometimes roads or parks (varies by district)" class="w-full h-auto" />
+        <figure class="diagram-card-retro max-w-2xl mx-auto" role="img" aria-label="Diagram showing typical MUD services: water supply, wastewater, drainage, and sometimes roads or parks (varies by district)">
+          <div class="p-4 sm:p-6">
+            <!-- MUD Services Cluster - HTML/CSS Version -->
+            <div class="retro-services-cluster">
+              <div class="services-center">
+                <div class="services-hub">
+                  <span>Municipal</span>
+                  <span>Utility District</span>
+                </div>
+              </div>
+              <div class="services-grid">
+                <div class="service-node">
+                  <strong>Water supply</strong>
+                  <span>Distribution to homes and businesses</span>
+                </div>
+                <div class="service-node">
+                  <strong>Wastewater</strong>
+                  <span>Sewer collection and treatment</span>
+                </div>
+                <div class="service-node">
+                  <strong>Drainage</strong>
+                  <span>Stormwater management</span>
+                </div>
+                <div class="service-node service-node-varies">
+                  <strong>Other (varies)</strong>
+                  <span>Roads, parks, fire (district-specific)</span>
+                </div>
+              </div>
+            </div>
+            <style>
+              .retro-services-cluster { text-align: center; }
+              .services-center { margin-bottom: 1rem; }
+              .services-hub { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; width: 120px; height: 120px; background: #1B4F72; color: #FFF; font-weight: 600; font-size: 0.85rem; border-radius: 50%; line-height: 1.3; }
+              @media (min-width: 640px) { .services-hub { width: 100px; height: 100px; font-size: 0.75rem; } }
+              .services-grid { display: grid; grid-template-columns: 1fr; gap: 0.75rem; }
+              @media (min-width: 480px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+              .service-node { background: #F7F8F6; border: 2px solid #1B4F72; border-radius: 6px; padding: 0.75rem 1rem; text-align: center; }
+              .service-node strong { display: block; font-size: 0.9rem; color: #0B1726; margin-bottom: 0.2rem; }
+              .service-node span { display: block; font-size: 0.75rem; color: #4A5560; line-height: 1.3; }
+              .service-node-varies { border-style: dashed; border-color: #1B4F72; }
+            </style>
           </div>
           <figcaption class="px-4 py-3 text-sm text-mahogany border-t border-corkboard-dark/30 bg-cream-dark">Typical services a MUD may provide. Districts vary in scope and authorized purposes.</figcaption>
         </figure>
@@ -412,9 +450,44 @@
     <section class="bg-booth border-y border-mahogany py-12 sm:py-16" aria-labelledby="governance-h">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <h2 id="governance-h" class="sr-only">Governance flow diagram</h2>
-        <figure class="diagram-card-retro max-w-2xl mx-auto">
-          <div class="p-4">
-            <img src="assets/diagrams/board-bonds-services.svg" alt="Diagram showing governance flow: elected board of directors oversees bond financing which funds infrastructure and services" class="w-full h-auto" />
+        <figure class="diagram-card-retro max-w-2xl mx-auto" role="img" aria-label="Diagram showing governance flow: elected board of directors oversees bond financing which funds infrastructure and services">
+          <div class="p-4 sm:p-6">
+            <!-- Board Bonds Services - HTML/CSS Version -->
+            <div class="retro-governance-flow">
+              <div class="governance-steps">
+                <div class="gov-card gov-card-board">
+                  <strong>Board of Directors</strong>
+                  <span class="gov-subtext">Elected by voters</span>
+                </div>
+                <div class="gov-arrow" aria-hidden="true"></div>
+                <div class="gov-card gov-card-bonds">
+                  <strong>Bond financing</strong>
+                  <span>Repaid over time via taxes and revenues</span>
+                  <em class="gov-note">Not a fixed end date</em>
+                </div>
+                <div class="gov-arrow" aria-hidden="true"></div>
+                <div class="gov-card gov-card-infra">
+                  <strong>Infrastructure &amp; Services</strong>
+                  <span>Water, sewer, drainage, and authorized facilities</span>
+                </div>
+              </div>
+            </div>
+            <style>
+              .retro-governance-flow { padding: 0.5rem 0; }
+              .governance-steps { display: flex; flex-direction: column; gap: 0.75rem; align-items: stretch; }
+              @media (min-width: 640px) { .governance-steps { flex-direction: row; align-items: center; justify-content: center; gap: 0.5rem; } }
+              .gov-card { background: #F7F8F6; border: 2px solid #1B4F72; border-radius: 6px; padding: 0.75rem 1rem; text-align: center; flex: 1; }
+              @media (min-width: 640px) { .gov-card { max-width: 180px; } }
+              .gov-card strong { display: block; font-size: 0.9rem; color: #0B1726; margin-bottom: 0.2rem; }
+              .gov-card span { display: block; font-size: 0.75rem; color: #4A5560; line-height: 1.3; }
+              .gov-card-board { background: #1B4F72; border-color: #1B4F72; }
+              .gov-card-board strong { color: #FFF; }
+              .gov-card-board .gov-subtext { color: rgba(255,255,255,0.8); font-size: 0.7rem; }
+              .gov-card-bonds { border-color: #C45C26; border-width: 2.5px; }
+              .gov-note { display: block; font-size: 0.65rem; color: #7A5B12; font-style: italic; margin-top: 0.25rem; }
+              .gov-arrow { display: none; width: 0; height: 0; border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-left: 10px solid #1B4F72; flex-shrink: 0; }
+              @media (min-width: 640px) { .gov-arrow { display: block; } }
+            </style>
           </div>
           <figcaption class="px-4 py-3 text-sm text-mahogany border-t border-corkboard-dark/30 bg-cream-dark">How MUD governance typically flows: elected board, bond financing, infrastructure delivery. This is a simplified overview, not legal advice.</figcaption>
         </figure>

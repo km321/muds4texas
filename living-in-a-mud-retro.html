@@ -268,9 +268,70 @@
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <h2 id="call-h" class="font-display text-3xl text-cream mb-6">WHO TO CALL</h2>
         
-        <figure class="diagram-card-retro mb-8 max-w-2xl">
-          <div class="p-4">
-            <img src="assets/diagrams/who-to-call-routes.svg" alt="Flowchart showing how to route homeowner questions: tax questions go to county tax office, water bill issues go to district operator, and meeting or governance questions go to district website or board contacts" class="w-full h-auto" />
+        <figure class="diagram-card-retro mb-8 max-w-2xl" role="img" aria-label="Flowchart showing how to route homeowner questions: tax questions go to county tax office, water bill issues go to district operator, and meeting or governance questions go to district website or board contacts">
+          <div class="p-4 sm:p-6">
+            <!-- Who to Call Routes - HTML/CSS Version -->
+            <div class="retro-routes-diagram">
+              <div class="routes-start">
+                <div class="routes-start-box">Your question</div>
+              </div>
+              <div class="routes-decision" aria-hidden="true">
+                <div class="routes-diamond">Topic?</div>
+              </div>
+              <div class="routes-branches">
+                <div class="route-branch">
+                  <div class="route-topic">
+                    <strong>Tax bill</strong>
+                    <span>amount, due dates</span>
+                  </div>
+                  <div class="route-arrow" aria-hidden="true"></div>
+                  <div class="route-dest">
+                    <strong>County tax office</strong>
+                    <span>or appraisal district</span>
+                  </div>
+                </div>
+                <div class="route-branch">
+                  <div class="route-topic">
+                    <strong>Water/sewer bill</strong>
+                    <span>outage, leak, login</span>
+                  </div>
+                  <div class="route-arrow" aria-hidden="true"></div>
+                  <div class="route-dest">
+                    <strong>District operator</strong>
+                    <span>from your water bill</span>
+                  </div>
+                </div>
+                <div class="route-branch">
+                  <div class="route-topic">
+                    <strong>Meetings, notices</strong>
+                    <span>governance, agenda</span>
+                  </div>
+                  <div class="route-arrow" aria-hidden="true"></div>
+                  <div class="route-dest">
+                    <strong>District website</strong>
+                    <span>or board contacts</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <style>
+              .retro-routes-diagram { text-align: center; }
+              .routes-start { margin-bottom: 0.75rem; }
+              .routes-start-box { display: inline-block; padding: 0.6rem 1.25rem; background: #C45C26; color: #FFF; font-weight: 600; font-size: 0.9rem; border-radius: 6px; }
+              .routes-decision { margin-bottom: 0.75rem; }
+              .routes-diamond { display: inline-block; padding: 0.4rem 1rem; background: #F7F8F6; border: 2px solid #1B4F72; font-size: 0.75rem; color: #4A5560; transform: rotate(0deg); border-radius: 4px; }
+              .routes-branches { display: flex; flex-direction: column; gap: 0.75rem; }
+              @media (min-width: 640px) { .routes-branches { flex-direction: row; justify-content: center; gap: 1rem; } }
+              .route-branch { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; flex: 1; max-width: 180px; margin: 0 auto; }
+              @media (min-width: 640px) { .route-branch { margin: 0; } }
+              .route-topic { background: #F7F8F6; border: 2px solid #1B4F72; border-radius: 6px; padding: 0.6rem 0.75rem; text-align: center; width: 100%; }
+              .route-topic strong { display: block; font-size: 0.85rem; color: #0B1726; }
+              .route-topic span { display: block; font-size: 0.7rem; color: #4A5560; }
+              .route-arrow { width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 8px solid #C5CBC4; }
+              .route-dest { background: #FCFDFB; border: 2.5px solid #1B4F72; border-radius: 6px; padding: 0.6rem 0.75rem; text-align: center; width: 100%; }
+              .route-dest strong { display: block; font-size: 0.85rem; color: #0B1726; }
+              .route-dest span { display: block; font-size: 0.7rem; color: #4A5560; }
+            </style>
           </div>
           <figcaption class="px-4 py-3 text-sm text-mahogany border-t border-corkboard-dark/30 bg-cream-dark">Routes vary by district. Start with the issue type to find the right contact.</figcaption>
         </figure>
