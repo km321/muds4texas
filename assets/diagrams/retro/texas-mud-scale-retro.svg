@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" role="img" aria-labelledby="scale-title scale-desc" preserveAspectRatio="xMidYMid meet">
+  <title id="scale-title">Texas MUD Scale</title>
+  <desc id="scale-desc">Visual showing the scale of MUDs in Texas: 1600+ districts serving 3 million+ residents</desc>
+  <defs>
+    <linearGradient id="corkGrad7" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#CD7F4A"/>
+      <stop offset="100%" stop-color="#A65D2C"/>
+    </linearGradient>
+    <linearGradient id="tealGrad7" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#26A69A"/>
+      <stop offset="100%" stop-color="#00838F"/>
+    </linearGradient>
+    <filter id="shadow7" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <style>
+    .label-header7 { font-family: "Bebas Neue", Impact, sans-serif; font-size: 14px; letter-spacing: 0.08em; fill: #FFF8E7; }
+    .label-big { font-family: "Bebas Neue", Impact, sans-serif; font-size: 36px; fill: #26A69A; }
+    .label-unit { font-family: "Source Sans 3", system-ui, sans-serif; font-size: 12px; font-weight: 600; fill: #FFF8E7; }
+    .label-sub7 { font-family: "Source Sans 3", system-ui, sans-serif; font-size: 10px; fill: #D4A574; }
+  </style>
+  
+  <!-- Background card -->
+  <rect x="10" y="10" width="340" height="220" rx="6" fill="#151515" filter="url(#shadow7)"/>
+  <rect x="12" y="12" width="336" height="216" rx="5" fill="#1A1A1A" stroke="#4A2511" stroke-width="2"/>
+  
+  <!-- Header -->
+  <rect x="20" y="20" width="320" height="28" rx="4" fill="url(#corkGrad7)"/>
+  <text x="180" y="40" text-anchor="middle" class="label-header7">MUDs IN TEXAS: SCALE</text>
+  
+  <!-- Stats boxes -->
+  <g transform="translate(30, 65)">
+    <!-- Districts count -->
+    <rect x="0" y="0" width="140" height="90" rx="4" fill="#1E1E1E" stroke="#4A2511" stroke-width="1"/>
+    <text x="70" y="45" text-anchor="middle" class="label-big">1,600+</text>
+    <text x="70" y="65" text-anchor="middle" class="label-unit">Districts</text>
+    <text x="70" y="80" text-anchor="middle" class="label-sub7">Municipal Utility Districts</text>
+    
+    <!-- Residents count -->
+    <rect x="160" y="0" width="140" height="90" rx="4" fill="#1E1E1E" stroke="#4A2511" stroke-width="1"/>
+    <text x="230" y="45" text-anchor="middle" class="label-big">3M+</text>
+    <text x="230" y="65" text-anchor="middle" class="label-unit">Residents</text>
+    <text x="230" y="80" text-anchor="middle" class="label-sub7">Served by MUDs</text>
+  </g>
+  
+  <!-- Note -->
+  <rect x="30" y="170" width="300" height="48" rx="4" fill="url(#tealGrad7)"/>
+  <text x="180" y="190" text-anchor="middle" style="font-family: 'Source Sans 3', sans-serif; font-size: 11px; font-weight: 600; fill: #FFF8E7;">Why you hear about MUDs so often</text>
+  <text x="180" y="207" text-anchor="middle" style="font-family: 'Source Sans 3', sans-serif; font-size: 9px; fill: #B2DFDB;">Common in new construction and master-planned communities</text>
+</svg>
