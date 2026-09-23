@@ -234,9 +234,45 @@
         <h2 id="table-h" class="font-display text-3xl text-cream mb-2">COMPARISON TABLE</h2>
         <p class="text-brass mb-6 max-w-2xl">Neutral comparison. No winners. A property can have more than one.</p>
         
-        <figure class="diagram-card-retro mb-10 max-w-xl">
-          <div class="p-4">
-            <img src="assets/diagrams/mud-pid-hoa-entities.svg" alt="Three entity types side by side: MUD is government with utilities and taxes, PID is an assessment tool for public improvements, HOA is a private association with covenants and dues. Note at bottom indicates a property can have more than one." class="w-full h-auto" loading="lazy" decoding="async" />
+        <figure class="diagram-card-retro mb-10 max-w-xl" role="img" aria-label="Three entity types side by side: MUD is government with utilities and taxes, PID is an assessment tool for public improvements, HOA is a private association with covenants and dues. Note at bottom indicates a property can have more than one.">
+          <div class="p-4 sm:p-6">
+            <!-- MUD vs PID vs HOA Entities - HTML/CSS Version -->
+            <div class="retro-entities-compare">
+              <div class="entities-row">
+                <div class="entity-card">
+                  <strong class="entity-name">MUD</strong>
+                  <span class="entity-type">Government</span>
+                  <span class="entity-detail">Utilities, taxes</span>
+                  <span class="entity-detail">Public board</span>
+                </div>
+                <div class="entity-card">
+                  <strong class="entity-name">PID</strong>
+                  <span class="entity-type">Government</span>
+                  <span class="entity-detail">Infrastructure</span>
+                  <span class="entity-detail">assessments</span>
+                </div>
+                <div class="entity-card">
+                  <strong class="entity-name">HOA</strong>
+                  <span class="entity-type">Private assoc.</span>
+                  <span class="entity-detail">Covenants,</span>
+                  <span class="entity-detail">dues</span>
+                </div>
+              </div>
+              <div class="entities-overlap-note">
+                <span>A property can have more than one</span>
+              </div>
+            </div>
+            <style>
+              .retro-entities-compare { text-align: center; }
+              .entities-row { display: grid; grid-template-columns: 1fr; gap: 0.75rem; margin-bottom: 0.75rem; }
+              @media (min-width: 480px) { .entities-row { grid-template-columns: repeat(3, 1fr); } }
+              .entity-card { background: #FCFDFB; border: 2px solid #1B4F72; border-radius: 6px; padding: 0.75rem 0.5rem; text-align: center; }
+              .entity-name { display: block; font-size: 1rem; color: #0B1726; margin-bottom: 0.2rem; }
+              .entity-type { display: block; font-size: 0.75rem; color: #4A5560; }
+              .entity-detail { display: block; font-size: 0.7rem; color: #4A5560; line-height: 1.3; }
+              .entities-overlap-note { background: rgba(196, 92, 38, 0.15); border: 2px solid #C45C26; border-radius: 4px; padding: 0.5rem 1rem; display: inline-block; }
+              .entities-overlap-note span { font-size: 0.85rem; font-weight: 600; color: #C45C26; }
+            </style>
           </div>
           <figcaption class="text-sm text-mahogany px-4 py-3 border-t border-corkboard-dark/30 bg-cream-dark">Three distinct entities with different governance and payment models. The table below details each row.</figcaption>
         </figure>
@@ -311,9 +347,43 @@
             <p>MUDs are governments. HOAs are private associations. One builds/operates certain public infrastructure and can tax. The other enforces covenants and collects dues. You can have both.</p>
           </div>
           <aside class="lg:col-span-5 mt-8 lg:mt-0">
-            <figure class="diagram-card-retro">
-              <div class="p-3">
-                <img src="assets/diagrams/retro/entity-overlap-retro.svg" alt="Venn diagram showing MUD (government), PID (assessment), and HOA (private) as overlapping circles, indicating a property can have all three at once." class="w-full h-auto" loading="lazy" decoding="async" />
+            <figure class="diagram-card-retro" role="img" aria-label="Venn diagram showing MUD (government), PID (assessment), and HOA (private) as overlapping circles, indicating a property can have all three at once.">
+              <div class="p-4 sm:p-5">
+                <!-- Entity Overlap - HTML/CSS Version -->
+                <div class="retro-entity-overlap">
+                  <div class="entity-overlap-header">ENTITIES CAN OVERLAP</div>
+                  <div class="entity-overlap-venn">
+                    <div class="venn-circle venn-mud">
+                      <span class="venn-label">MUD</span>
+                      <span class="venn-type">Government</span>
+                    </div>
+                    <div class="venn-circle venn-pid">
+                      <span class="venn-label">PID</span>
+                      <span class="venn-type">Assessment</span>
+                    </div>
+                    <div class="venn-circle venn-hoa">
+                      <span class="venn-label">HOA</span>
+                      <span class="venn-type">Private</span>
+                    </div>
+                    <div class="venn-center" aria-hidden="true"></div>
+                  </div>
+                  <div class="entity-overlap-note">A single property can have all three at once. Check each one.</div>
+                </div>
+                <style>
+                  .retro-entity-overlap { background: #1A1A1A; border: 2px solid #4A2511; border-radius: 6px; padding: 0; overflow: hidden; }
+                  .entity-overlap-header { background: linear-gradient(180deg, #CD7F4A 0%, #A65D2C 100%); padding: 0.5rem 1rem; font-family: "Bebas Neue", Impact, sans-serif; font-size: 0.875rem; letter-spacing: 0.08em; color: #FFF8E7; text-align: center; }
+                  .entity-overlap-venn { position: relative; height: 160px; margin: 1rem; }
+                  .venn-circle { position: absolute; width: 80px; height: 80px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0.85; }
+                  .venn-mud { background: linear-gradient(180deg, #26A69A 0%, #00838F 100%); top: 10px; left: 10%; }
+                  .venn-pid { background: linear-gradient(180deg, #E8C9A0 0%, #D4A574 100%); top: 10px; right: 10%; }
+                  .venn-hoa { background: linear-gradient(180deg, #FF8B7A 0%, #FF6B5B 100%); bottom: 10px; left: 50%; transform: translateX(-50%); }
+                  .venn-label { font-family: "Source Sans 3", system-ui, sans-serif; font-size: 0.875rem; font-weight: 600; color: #FFF8E7; }
+                  .venn-pid .venn-label { color: #4A2511; }
+                  .venn-type { font-size: 0.625rem; color: rgba(255,255,255,0.8); }
+                  .venn-pid .venn-type { color: #8B4513; }
+                  .venn-center { position: absolute; width: 12px; height: 12px; border-radius: 50%; background: #FFF8E7; border: 2px solid #E53935; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+                  .entity-overlap-note { padding: 0.625rem 1rem; text-align: center; font-size: 0.75rem; color: #D4A574; }
+                </style>
               </div>
               <figcaption class="px-4 py-2 text-xs text-mahogany border-t border-corkboard-dark/30 bg-cream-dark">A single property can have all three entities at the same time.</figcaption>
             </figure>

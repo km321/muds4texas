@@ -368,9 +368,43 @@
             </ul>
           </div>
           <aside class="lg:col-span-5 mt-6 lg:mt-0">
-            <figure class="diagram-card-retro">
-              <div class="p-3">
-                <img src="assets/diagrams/retro/buyer-checklist-retro.svg" alt="Checklist showing key questions to ask when buying in a MUD: which district, notice to purchaser, tax rate, escrow, water billing, HOA/PID status." class="w-full h-auto" loading="lazy" decoding="async" />
+            <figure class="diagram-card-retro" role="img" aria-label="Checklist showing key questions to ask when buying in a MUD: which district, notice to purchaser, tax rate, escrow, water billing, HOA/PID status.">
+              <div class="p-4">
+                <!-- Buyer Checklist - HTML/CSS Version -->
+                <div class="retro-buyer-checklist corkboard-bg" style="border-radius: 4px; padding: 0.75rem;">
+                  <div class="buyer-check-pins" aria-hidden="true">
+                    <span class="buyer-pin buyer-pin-red"></span>
+                    <span class="buyer-pin buyer-pin-teal"></span>
+                  </div>
+                  <div class="buyer-check-paper">
+                    <div class="buyer-check-header">QUESTIONS TO ASK</div>
+                    <ul class="buyer-check-list">
+                      <li><span class="check-icon">✓</span> Which MUD includes this address?</li>
+                      <li><span class="check-icon">✓</span> May I have the Notice to Purchaser?</li>
+                      <li><span class="check-icon">✓</span> What is the current MUD tax rate?</li>
+                      <li><span class="check-icon">✓</span> Will my lender escrow the MUD tax?</li>
+                      <li><span class="check-icon">✓</span> Who bills water/sewer, and setup steps?</li>
+                      <li><span class="check-icon">✓</span> Is there also an HOA, PID, or both?</li>
+                      <li><span class="check-box">☐</span> ETJ or city limits? Partnership agreement?</li>
+                    </ul>
+                    <p class="buyer-check-footer">Keep answers with your closing file</p>
+                  </div>
+                </div>
+                <style>
+                  .retro-buyer-checklist { position: relative; }
+                  .buyer-check-pins { position: absolute; top: 0.5rem; left: 0.75rem; right: 0.75rem; display: flex; justify-content: space-between; }
+                  .buyer-pin { width: 12px; height: 12px; border-radius: 50%; }
+                  .buyer-pin-red { background: radial-gradient(circle at 30% 30%, #FF6B5B, #E53935); box-shadow: 0 2px 3px rgba(0,0,0,0.3); }
+                  .buyer-pin-teal { background: radial-gradient(circle at 30% 30%, #4DB6AC, #26A69A); box-shadow: 0 2px 3px rgba(0,0,0,0.3); }
+                  .buyer-check-paper { background: #FFF8E7; border-radius: 2px; padding: 0.75rem; margin-top: 0.5rem; transform: rotate(-0.5deg); box-shadow: 2px 2px 6px rgba(0,0,0,0.2); }
+                  .buyer-check-header { background: linear-gradient(180deg, #26A69A, #00838F); color: #FFF8E7; font-family: "Bebas Neue", Impact, sans-serif; font-size: 0.8rem; letter-spacing: 0.08em; text-align: center; padding: 0.35rem; border-radius: 3px; margin-bottom: 0.5rem; }
+                  .buyer-check-list { list-style: none; padding: 0; margin: 0; }
+                  .buyer-check-list li { display: flex; align-items: flex-start; gap: 0.4rem; font-size: 0.7rem; color: #4A2511; padding: 0.2rem 0; border-bottom: 1px dashed #D4A574; }
+                  .buyer-check-list li:last-child { border-bottom: none; }
+                  .check-icon { color: #26A69A; font-weight: bold; flex-shrink: 0; }
+                  .check-box { color: #26A69A; flex-shrink: 0; }
+                  .buyer-check-footer { font-size: 0.55rem; color: #8B4513; text-align: center; margin: 0.5rem 0 0; }
+                </style>
               </div>
               <figcaption class="px-4 py-2 text-xs text-mahogany border-t border-corkboard-dark/30 bg-cream-dark">Keep the answers with your closing file.</figcaption>
             </figure>
@@ -384,9 +418,48 @@
         <h2 id="cost-h" class="font-display text-3xl text-cream mb-6">COST MENTAL MODEL</h2>
         <p class="text-brass max-w-3xl mb-8">Model ongoing ownership cost as separate streams, not one lump "MUD fee." Compare total housing cost, not sticker price alone.</p>
         
-        <figure class="diagram-card-retro mb-10 max-w-sm">
-          <div class="p-4">
-            <img src="assets/diagrams/ownership-cost-stack.svg" alt="Stacked diagram showing layers of housing cost: county and city property tax, MUD ad valorem tax, water and sewer bills, and optional HOA dues or PID assessment" class="w-full h-auto" loading="lazy" decoding="async" />
+        <figure class="diagram-card-retro mb-10 max-w-sm" role="img" aria-label="Stacked diagram showing layers of housing cost: county and city property tax, MUD ad valorem tax, water and sewer bills, and optional HOA dues or PID assessment">
+          <div class="p-4 sm:p-6">
+            <!-- Ownership Cost Stack - HTML/CSS Version -->
+            <div class="retro-cost-stack">
+              <p class="cost-stack-title">Ownership cost layers</p>
+              <p class="cost-stack-sub">Model as separate streams, not one lump</p>
+              <div class="cost-stack-layers">
+                <div class="cost-layer cost-layer-county">
+                  <span>County &amp; city property tax</span>
+                </div>
+                <div class="cost-layer cost-layer-mud">
+                  <span>MUD ad valorem tax</span>
+                </div>
+                <div class="cost-layer cost-layer-utility">
+                  <span>Water &amp; sewer bills</span>
+                </div>
+                <div class="cost-layer cost-layer-hoa">
+                  <span>HOA dues / PID assessment</span>
+                  <em>(if present)</em>
+                </div>
+              </div>
+              <div class="cost-stack-annotation" aria-hidden="true">
+                <span>Total housing cost</span>
+              </div>
+            </div>
+            <style>
+              .retro-cost-stack { text-align: center; }
+              .cost-stack-title { font-size: 0.9rem; font-weight: 600; color: #0B1726; margin: 0 0 0.15rem; }
+              .cost-stack-sub { font-size: 0.7rem; color: #4A5560; margin: 0 0 0.75rem; }
+              .cost-stack-layers { display: flex; flex-direction: column; gap: 0.35rem; background: #F7F8F6; border: 1px solid #C5CBC4; border-radius: 6px; padding: 0.75rem; position: relative; }
+              .cost-layer { padding: 0.6rem 0.75rem; border-radius: 4px; text-align: center; }
+              .cost-layer span { font-size: 0.85rem; font-weight: 600; color: #0B1726; }
+              .cost-layer em { display: block; font-size: 0.7rem; color: #4A5560; font-style: normal; margin-top: 0.1rem; }
+              .cost-layer-county { background: #FCFDFB; border: 2px solid #1B4F72; }
+              .cost-layer-mud { background: #C45C26; }
+              .cost-layer-mud span { color: #FFF; }
+              .cost-layer-utility { background: #FCFDFB; border: 2px solid #1B4F72; }
+              .cost-layer-hoa { background: #FCFDFB; border: 2px dashed #C5CBC4; }
+              .cost-layer-hoa span { color: #4A5560; font-weight: 400; }
+              .cost-stack-annotation { margin-top: 0.5rem; }
+              .cost-stack-annotation span { font-size: 0.7rem; color: #4A5560; }
+            </style>
           </div>
           <figcaption class="text-sm text-mahogany px-4 py-3 border-t border-corkboard-dark/30 bg-cream-dark">Layers vary by property. The MUD tax is one piece, not the whole stack.</figcaption>
         </figure>
