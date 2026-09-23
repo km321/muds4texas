@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What Is a Municipal Utility District (MUD) in Texas? | MUDs 4 Texas</title>
+  <meta name="description" content="A plain-language definition of a Municipal Utility District (MUD) in Texas: what it does, who runs it, how bonds work, and how it shows up in real estate." />
+  <link rel="icon" href="assets/logo-muds4texas-stacked.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            stage: '#0D0D0D',
+            booth: '#151515',
+            corkboard: '#CD7F4A',
+            'corkboard-dark': '#A65D2C',
+            'corkboard-light': '#DCA06A',
+            mahogany: '#4A2511',
+            'mahogany-light': '#6B3A1E',
+            brass: '#D4A574',
+            'brass-light': '#E8C9A0',
+            onair: '#E53935',
+            'onair-dark': '#C62828',
+            teal: '#26A69A',
+            'teal-dark': '#00838F',
+            'teal-light': '#4DB6AC',
+            coral: '#FF6B5B',
+            hibiscus: '#FF8B7A',
+            cream: '#FFF8E7',
+            'cream-dark': '#F5EBD8',
+            bulb: '#FFE4B5',
+            duck: '#FDD835',
+            'duck-dark': '#F9A825',
+            navy: '#0D47A1',
+          },
+          fontFamily: {
+            display: ['"Bebas Neue"', 'Impact', 'sans-serif'],
+            sans: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    html { scroll-behavior: smooth; overflow-x: clip; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    ::selection { background: rgba(229, 57, 53, 0.25); color: #FFF8E7; }
+    body {
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      background-color: #0D0D0D;
+      color: #FFF8E7;
+      font-size: 1.125rem;
+      line-height: 1.65;
+    }
+    .font-display { font-family: "Bebas Neue", Impact, sans-serif; letter-spacing: 0.04em; }
+
+    :focus-visible {
+      outline: 2px solid #E53935;
+      outline-offset: 3px;
+    }
+
+    .onair-badge {
+      background: linear-gradient(180deg, #E53935 0%, #C62828 100%);
+      color: #FFF;
+      font-family: "Bebas Neue", Impact, sans-serif;
+      letter-spacing: 0.15em;
+      padding: 0.5rem 1.25rem;
+      border-radius: 4px;
+      box-shadow: 0 0 20px rgba(229, 57, 53, 0.7), 0 0 40px rgba(229, 57, 53, 0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .onair-badge {
+        animation: onairPulse 2s ease-in-out infinite;
+      }
+    }
+    @keyframes onairPulse {
+      0%, 100% { box-shadow: 0 0 20px rgba(229, 57, 53, 0.7), 0 0 40px rgba(229, 57, 53, 0.4), inset 0 1px 0 rgba(255,255,255,0.2); }
+      50% { box-shadow: 0 0 30px rgba(229, 57, 53, 0.9), 0 0 60px rgba(229, 57, 53, 0.6), inset 0 1px 0 rgba(255,255,255,0.3); }
+    }
+
+    .corkboard-bg {
+      background: 
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E"),
+        radial-gradient(ellipse at 30% 20%, rgba(220, 160, 106, 0.4) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 80%, rgba(166, 93, 44, 0.3) 0%, transparent 50%),
+        linear-gradient(180deg, #CD7F4A 0%, #A65D2C 100%);
+    }
+
+    .pinned-card {
+      background: linear-gradient(180deg, #FFF8E7 0%, #F5EBD8 100%);
+      border-radius: 2px;
+      box-shadow: 
+        3px 3px 8px rgba(0, 0, 0, 0.25),
+        0 1px 0 rgba(255, 255, 255, 0.5) inset;
+      position: relative;
+      transform: rotate(-0.5deg);
+    }
+    .pinned-card:nth-child(even) { transform: rotate(0.5deg); }
+    .pinned-card::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 16px;
+      background: radial-gradient(circle at 30% 30%, #FF6B5B, #E53935);
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), inset 0 -2px 4px rgba(0,0,0,0.2);
+    }
+    .pinned-card-teal::before {
+      background: radial-gradient(circle at 30% 30%, #4DB6AC, #00838F);
+    }
+
+    .btn-teal {
+      background: linear-gradient(180deg, #26A69A 0%, #00838F 100%);
+      color: #FFF;
+      border: 2px solid #4DB6AC;
+      font-weight: 600;
+      transition: all 0.15s ease;
+    }
+    .btn-teal:hover {
+      background: linear-gradient(180deg, #4DB6AC 0%, #26A69A 100%);
+      transform: translateY(-1px);
+    }
+    .btn-teal:active { transform: translateY(0); }
+
+    .btn-coral {
+      background: linear-gradient(180deg, #FF6B5B 0%, #E55A4A 100%);
+      color: #FFF;
+      border: 2px solid #FF8B7A;
+      font-weight: 600;
+      transition: all 0.15s ease;
+    }
+    .btn-coral:hover {
+      background: linear-gradient(180deg, #FF8B7A 0%, #FF6B5B 100%);
+      transform: translateY(-1px);
+    }
+
+    .btn-brass {
+      background: transparent;
+      color: #D4A574;
+      border: 2px solid #D4A574;
+      font-weight: 600;
+      transition: all 0.15s ease;
+    }
+    .btn-brass:hover {
+      background: rgba(212, 165, 116, 0.15);
+      color: #E8C9A0;
+      border-color: #E8C9A0;
+    }
+
+    .nav-retro {
+      background: linear-gradient(180deg, #151515 0%, #0D0D0D 100%);
+      border-bottom: 3px solid #4A2511;
+    }
+    .nav-link-retro {
+      color: #D4A574;
+      transition: color 0.15s ease;
+    }
+    .nav-link-retro:hover { color: #FFF8E7; }
+    .nav-link-retro[aria-current="page"] {
+      color: #FFF8E7;
+      border-bottom: 2px solid #E53935;
+    }
+
+    .footer-retro {
+      background: linear-gradient(180deg, #151515 0%, #0D0D0D 100%);
+      border-top: 3px solid #4A2511;
+    }
+
+    #mobile-nav[data-open="false"] { display: none; }
+    #mobile-nav[data-open="true"] { display: block; }
+
+    .prose-retro h2 {
+      font-family: "Bebas Neue", Impact, sans-serif;
+      letter-spacing: 0.04em;
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      line-height: 1.15;
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+      color: #FFF8E7;
+    }
+    .prose-retro h3 {
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 1.125rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #FFF8E7;
+    }
+    .prose-retro p { color: #D4A574; margin-bottom: 1rem; max-width: 42rem; }
+    .prose-retro ul { margin: 0.75rem 0 1.25rem; padding-left: 1.25rem; }
+    .prose-retro li { color: #D4A574; margin-bottom: 0.4rem; }
+    .prose-retro strong { color: #FFF8E7; }
+    .prose-retro a { color: #26A69A; text-decoration: underline; text-underline-offset: 3px; }
+    .prose-retro a:hover { color: #4DB6AC; }
+
+    .callout-retro {
+      border: 2px solid #4A2511;
+      background: linear-gradient(180deg, #1A1A1A 0%, #151515 100%);
+      padding: 1.25rem 1.5rem;
+      border-radius: 4px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .section-header::before,
+    .section-header::after {
+      content: "";
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #A65D2C, transparent);
+    }
+
+    .diagram-card-retro {
+      background: linear-gradient(180deg, #FFF8E7 0%, #F5EBD8 100%);
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
+    }
+    .diagram-card-retro img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    details summary {
+      cursor: pointer;
+      list-style: none;
+    }
+    details summary::-webkit-details-marker { display: none; }
+
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    main h1 {
+      font-size: clamp(2.25rem, 6vw + 0.5rem, 4rem);
+      line-height: 1.08;
+    }
+
+    .page-hero-retro {
+      background: linear-gradient(180deg, #151515 0%, #0D0D0D 100%);
+      border-bottom: 3px solid #4A2511;
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-onair focus:text-cream focus:px-4 focus:py-2 focus:rounded">
+    Skip to main content
+  </a>
+
+  <!-- Navigation -->
+  <header class="nav-retro sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between gap-4 min-h-[64px]">
+        <a href="home-retro.html" class="inline-flex items-center gap-3 shrink-0 min-h-[44px]" aria-label="MUDs 4 Texas home">
+          <span class="onair-badge text-sm">ON AIR</span>
+          <span class="font-display text-2xl sm:text-3xl text-cream tracking-wider">MUDs 4 TEXAS</span>
+        </a>
+        <nav class="hidden lg:flex items-center gap-5 text-sm font-medium" aria-label="Primary">
+          <a href="what-is-a-mud-retro.html" class="nav-link-retro py-1" aria-current="page">What is a MUD?</a>
+          <a href="mud-taxes-retro.html" class="nav-link-retro py-1">Taxes</a>
+          <a href="buying-in-a-mud-retro.html" class="nav-link-retro py-1">Buying</a>
+          <a href="living-in-a-mud-retro.html" class="nav-link-retro py-1">Living</a>
+          <a href="mud-vs-pid-vs-hoa-retro.html" class="nav-link-retro py-1">Compare</a>
+          <a href="find-your-mud-retro.html" class="btn-teal inline-flex items-center rounded px-3 py-1.5 text-sm">Find your MUD</a>
+          <a href="about-retro.html" class="nav-link-retro py-1">About</a>
+        </nav>
+        <button type="button" id="menu-toggle" class="lg:hidden inline-flex items-center justify-center min-h-[44px] min-w-[44px] rounded border border-mahogany bg-booth text-brass" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
+          <i data-lucide="menu" class="w-5 h-5" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-nav" data-open="false" class="lg:hidden border-t border-mahogany bg-booth" hidden>
+      <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-4 space-y-1" aria-label="Mobile primary">
+        <a href="what-is-a-mud-retro.html" class="block rounded px-3 py-2.5 text-base font-medium text-cream bg-mahogany/30 min-h-[44px]" aria-current="page">What is a MUD?</a>
+        <a href="mud-taxes-retro.html" class="block rounded px-3 py-2.5 text-base font-medium text-cream hover:bg-mahogany/30 min-h-[44px]">Taxes</a>
+        <a href="buying-in-a-mud-retro.html" class="block rounded px-3 py-2.5 text-base font-medium text-cream hover:bg-mahogany/30 min-h-[44px]">Buying</a>
+        <a href="living-in-a-mud-retro.html" class="block rounded px-3 py-2.5 text-base font-medium text-cream hover:bg-mahogany/30 min-h-[44px]">Living</a>
+        <a href="mud-vs-pid-vs-hoa-retro.html" class="block rounded px-3 py-2.5 text-base font-medium text-cream hover:bg-mahogany/30 min-h-[44px]">Compare</a>
+        <a href="find-your-mud-retro.html" class="block rounded px-3 py-2.5 text-base font-medium text-teal hover:bg-mahogany/30 min-h-[44px]">Find your MUD</a>
+        <a href="about-retro.html" class="block rounded px-3 py-2.5 text-base font-medium text-cream hover:bg-mahogany/30 min-h-[44px]">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Page Hero -->
+    <section class="page-hero-retro" aria-labelledby="page-h1">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-16 lg:py-20">
+        <h1 id="page-h1" class="font-display text-cream leading-tight max-w-3xl mb-5">
+          WHAT IS A MUNICIPAL UTILITY DISTRICT (MUD)?
+        </h1>
+        <p class="text-lg sm:text-xl text-brass leading-relaxed max-w-3xl">
+          A Municipal Utility District (MUD) is a political subdivision of the State of Texas created to provide certain public services, most often water, wastewater (sewer), and drainage, within defined boundaries. In everyday real estate talk, people shorten that to "MUD." On this site we always mean Municipal Utility District, not a game or slang term.
+        </p>
+      </div>
+    </section>
+
+    <!-- Campaign Overview -->
+    <section class="bg-booth border-b border-mahogany" aria-labelledby="infographic-h">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20">
+        <div class="section-header">
+          <h2 id="infographic-h" class="font-display text-2xl sm:text-3xl text-cream whitespace-nowrap">CAMPAIGN OVERVIEW</h2>
+        </div>
+        <p class="text-brass mb-6 max-w-3xl">A one-page visual from the MUDs 4 Texas campaign covering what a MUD is, who governs it, how bonds work, and the scale of MUDs in Texas.</p>
+        <figure class="diagram-card-retro max-w-4xl">
+          <img
+            src="assets/factsheet-infographic.png"
+            alt="Infographic titled What is a MUD explaining Municipal Utility Districts in Texas: limited-purpose local government for water, wastewater, drainage, and infrastructure; elected board governance; bonds repaid by property taxes; and statewide scale of 1,600 or more MUDs serving 3 million or more residents"
+            width="1366"
+            height="768"
+            class="w-full h-auto"
+            decoding="async"
+          />
+          <figcaption class="px-4 py-3 text-sm text-mahogany border-t border-corkboard-dark/30 bg-cream-dark">What is a MUD? campaign factsheet. Details below expand on each point in plain language.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Video Overview -->
+    <section class="bg-stage py-12 sm:py-16 lg:py-20" aria-labelledby="video-h">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <h2 id="video-h" class="font-display text-2xl sm:text-3xl text-cream mb-4">VIDEO OVERVIEW</h2>
+        <figure class="max-w-3xl mx-auto">
+          <div class="aspect-video rounded border-2 border-mahogany bg-booth flex flex-col items-center justify-center text-center p-6" role="img" aria-label="Video placeholder: What is a Municipal Utility District?">
+            <i data-lucide="play" class="w-12 h-12 text-teal mb-3" aria-hidden="true"></i>
+            <p class="font-semibold text-cream text-base">Video coming soon</p>
+            <p class="text-sm text-brass mt-2 max-w-md">What is a Municipal Utility District?</p>
+          </div>
+          <figcaption class="text-sm text-brass/70 mt-3">What is a Municipal Utility District?</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- In Plain Language -->
+    <section class="corkboard-bg py-12 sm:py-16 lg:py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <article class="pinned-card p-6 sm:p-8 mt-4 max-w-3xl mx-auto">
+          <h2 class="font-display text-2xl sm:text-3xl text-mahogany mb-4 tracking-wide">IN PLAIN LANGUAGE</h2>
+          <p class="text-corkboard-dark mb-4 leading-relaxed">Think of a MUD as a small local government focused on utility and related infrastructure for a specific area. Many Texas neighborhoods, especially master-planned and new-construction communities outside older city cores, sit inside a MUD. The district can levy property (ad valorem) taxes and may charge for utility service. Those are different money streams. We explain taxes on the <a href="mud-taxes-retro.html" class="text-teal-dark hover:text-teal font-semibold underline underline-offset-2">MUD taxes</a> page and living costs on <a href="living-in-a-mud-retro.html" class="text-teal-dark hover:text-teal font-semibold underline underline-offset-2">Living in a MUD</a>.</p>
+          
+          <h3 class="font-semibold text-mahogany mt-6 mb-2">What services can a MUD provide?</h3>
+          <p class="text-corkboard-dark mb-2">Common purposes include:</p>
+          <ul class="text-corkboard-dark list-disc pl-5 space-y-1 mb-4">
+            <li>Water supply and distribution</li>
+            <li>Wastewater (sewer) collection and treatment</li>
+            <li>Drainage and stormwater management</li>
+            <li>In some districts: roads, parks and recreation, firefighting, or other authorized facilities (district-specific)</li>
+          </ul>
+          <p class="text-corkboard-dark"><strong class="text-mahogany">Important:</strong> Not every MUD provides the same mix. The Notice to Purchaser for a property lists the district's stated purposes. Always check that notice and the district's own materials for the parcel you care about.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Services Diagram -->
+    <section class="bg-booth border-y border-mahogany py-12 sm:py-16" aria-labelledby="services-h">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 id="services-h" class="sr-only">Services a MUD may provide</h2>
+        <figure class="diagram-card-retro max-w-2xl mx-auto">
+          <div class="p-4">
+            <img src="assets/diagrams/mud-services-cluster.svg" alt="Diagram showing typical MUD services: water supply, wastewater, drainage, and sometimes roads or parks (varies by district)" class="w-full h-auto" />
+          </div>
+          <figcaption class="px-4 py-3 text-sm text-mahogany border-t border-corkboard-dark/30 bg-cream-dark">Typical services a MUD may provide. Districts vary in scope and authorized purposes.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Who Governs -->
+    <section class="bg-stage py-12 sm:py-16 lg:py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 prose-retro">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-10 lg:items-start">
+          <div class="lg:col-span-7">
+            <h2>WHO GOVERNS A MUD?</h2>
+            <p>A MUD is typically governed by a board of directors. Directors are usually elected by qualified voters in the district (rules and election timing are district- and law-specific). The board sets policy within its legal authority, including tax rate decisions on the schedule required by law, and oversees contracts for operations and construction.</p>
+            <p>Residents can often attend public board meetings, review agendas and minutes when published, vote in district elections when eligible, and contact the district's operator or attorney for operational questions.</p>
+            <p>Participation looks different from city council life, but it is still public government. See <a href="living-in-a-mud-retro.html">Living in a MUD</a> for practical next steps.</p>
+          </div>
+          <aside class="lg:col-span-5 mt-8 lg:mt-0">
+            <div class="callout-retro">
+              <h3 class="font-semibold text-cream mb-2">Bonds, in one paragraph</h3>
+              <p class="text-sm text-brass leading-relaxed">Many MUDs issue bonds to finance infrastructure. Bond debt is repaid over time, often through property taxes and other revenues. Bond repayment does <strong class="text-cream">not</strong> automatically mean "the MUD tax disappears on a fixed consumer date." See <a href="mud-taxes-retro.html#does-mud-tax-go-away" class="text-teal underline underline-offset-2">Does the MUD tax go away?</a></p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Governance Diagram -->
+    <section class="bg-booth border-y border-mahogany py-12 sm:py-16" aria-labelledby="governance-h">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 id="governance-h" class="sr-only">Governance flow diagram</h2>
+        <figure class="diagram-card-retro max-w-2xl mx-auto">
+          <div class="p-4">
+            <img src="assets/diagrams/board-bonds-services.svg" alt="Diagram showing governance flow: elected board of directors oversees bond financing which funds infrastructure and services" class="w-full h-auto" />
+          </div>
+          <figcaption class="px-4 py-3 text-sm text-mahogany border-t border-corkboard-dark/30 bg-cream-dark">How MUD governance typically flows: elected board, bond financing, infrastructure delivery. This is a simplified overview, not legal advice.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Texas Framing -->
+    <section class="bg-stage py-12 sm:py-16 lg:py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 prose-retro">
+        <h2>TEXAS FRAMING (WHY YOU HEAR ABOUT MUDS SO OFTEN)</h2>
+        <p>Texas growth has long used special districts to extend utility infrastructure where traditional city service is not yet in place, or where cities and districts share overlapping arrangements. Some properties sit in a city's extraterritorial jurisdiction (ETJ). Some districts have strategic partnership agreements with nearby cities. Annexation and overlap rules are legal topics. We stay high-level here and point you to official notices and licensed professionals for parcel-specific questions.</p>
+
+        <h2>PRIMARY SOURCES TO READ NEXT</h2>
+        <ul>
+          <li><a href="https://www.tceq.texas.gov/gis/iwudview.html" target="_blank" rel="noopener noreferrer">TCEQ Water Districts Map Viewer</a> <span class="text-sm text-brass/70">(opens official site)</span></li>
+          <li><a href="https://trerc.tamu.edu/article/clear-as-mud/" target="_blank" rel="noopener noreferrer">TAMU TRERC, "Clear as MUD"</a></li>
+          <li><a href="https://www.trec.texas.gov/forms/notice-purchaser-special-taxing-or-assessment-district" target="_blank" rel="noopener noreferrer">TREC Form 59-0, Notice to Purchaser</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="corkboard-bg py-12 sm:py-16 lg:py-20" aria-labelledby="faq-h">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="section-header">
+          <h2 id="faq-h" class="font-display text-2xl sm:text-3xl text-cream whitespace-nowrap drop-shadow-lg">COMMON QUESTIONS</h2>
+        </div>
+        <div class="max-w-3xl mx-auto space-y-4">
+          <details class="group pinned-card p-5 pt-6 mt-2">
+            <summary class="flex items-start justify-between gap-4 font-semibold text-mahogany text-base min-h-[44px]">
+              <span>What is a MUD district in Texas?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-teal-dark shrink-0 mt-0.5 group-open:rotate-180 transition-transform" aria-hidden="true"></i>
+            </summary>
+            <div class="pt-3 text-corkboard-dark leading-relaxed">A Municipal Utility District is a Texas political subdivision that can provide water, sewer, drainage, and other authorized services inside its boundaries, and that may levy taxes and charges related to those purposes.</div>
+          </details>
+          <details class="group pinned-card p-5 pt-6 mt-2">
+            <summary class="flex items-start justify-between gap-4 font-semibold text-mahogany text-base min-h-[44px]">
+              <span>What is a MUD in real estate?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-teal-dark shrink-0 mt-0.5 group-open:rotate-180 transition-transform" aria-hidden="true"></i>
+            </summary>
+            <div class="pt-3 text-corkboard-dark leading-relaxed">On listings and closing paperwork, "MUD" usually means the property sits in a Municipal Utility District. That can affect property taxes, utility billing, and required seller notices. It is not the same thing as an HOA or a PID (see <a href="mud-vs-pid-vs-hoa-retro.html" class="text-teal-dark hover:text-teal font-semibold underline underline-offset-2">MUD vs PID vs HOA</a>).</div>
+          </details>
+          <details class="group pinned-card p-5 pt-6 mt-2">
+            <summary class="flex items-start justify-between gap-4 font-semibold text-mahogany text-base min-h-[44px]">
+              <span>Is a MUD the same as the city?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-teal-dark shrink-0 mt-0.5 group-open:rotate-180 transition-transform" aria-hidden="true"></i>
+            </summary>
+            <div class="pt-3 text-corkboard-dark leading-relaxed">No. A MUD is its own district government. A property can be in a MUD and also related to a nearby city (for example, ETJ or corporate limits) depending on location. Check the Notice to Purchaser location section for the parcel.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Disclaimer -->
+    <section class="bg-booth border-y border-mahogany py-10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="callout-retro max-w-3xl mx-auto" role="note">
+          <p class="font-semibold text-cream mb-1">Education only</p>
+          <p class="text-sm text-brass">Not legal, tax, or financial advice. Confirm details with your district and licensed professionals.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Reading -->
+    <section class="bg-stage py-10 sm:py-12" aria-labelledby="related-heading">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 id="related-heading" class="font-display text-xl text-cream mb-3">RELATED READING</h2>
+        <p class="text-brass">
+          <a href="buying-in-a-mud-retro.html" class="text-teal hover:text-teal-light underline underline-offset-2">Buying a home in a MUD</a> · 
+          <a href="living-in-a-mud-retro.html" class="text-teal hover:text-teal-light underline underline-offset-2">Living in a MUD</a> · 
+          <a href="mud-taxes-retro.html" class="text-teal hover:text-teal-light underline underline-offset-2">MUD taxes explained</a> · 
+          <a href="mud-vs-pid-vs-hoa-retro.html" class="text-teal hover:text-teal-light underline underline-offset-2">MUD vs PID vs HOA</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-retro text-cream">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-14">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-12 gap-10 mb-10">
+        <div class="lg:col-span-4">
+          <a href="home-retro.html" class="inline-flex items-center gap-3 mb-4">
+            <span class="font-display text-2xl text-cream tracking-wider">MUDs 4 TEXAS</span>
+          </a>
+          <p class="text-sm text-brass/70 leading-relaxed max-w-sm">
+            MUDs 4 Texas is an education hub about Municipal Utility Districts (MUDs) in Texas. Content is for general information only and is not legal, tax, financial, or real estate advice. Always verify with official sources and licensed professionals.
+          </p>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="text-sm font-semibold text-cream mb-2">Already live in a MUD?</p>
+          <ul class="text-sm space-y-2">
+            <li><a href="living-in-a-mud-retro.html" class="text-brass hover:text-cream underline underline-offset-2">Living in a MUD</a></li>
+            <li><a href="find-your-mud-retro.html" class="text-brass hover:text-cream underline underline-offset-2">Find your MUD</a></li>
+            <li><a href="mud-taxes-retro.html" class="text-brass hover:text-cream underline underline-offset-2">MUD taxes explained</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="text-sm font-semibold text-cream mb-2">Considering a home in a MUD?</p>
+          <ul class="text-sm space-y-2">
+            <li><a href="what-is-a-mud-retro.html" class="text-brass hover:text-cream underline underline-offset-2">What is a MUD?</a></li>
+            <li><a href="buying-in-a-mud-retro.html" class="text-brass hover:text-cream underline underline-offset-2">Buying a home in a MUD</a></li>
+            <li><a href="mud-vs-pid-vs-hoa-retro.html" class="text-brass hover:text-cream underline underline-offset-2">MUD vs PID vs HOA</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-2">
+          <p class="text-sm font-semibold text-cream mb-2">Official tools</p>
+          <ul class="text-sm space-y-2">
+            <li>
+              <a href="https://www.tceq.texas.gov/gis/iwudview.html" target="_blank" rel="noopener noreferrer" class="text-brass hover:text-cream underline underline-offset-2 inline-flex items-center gap-1">
+                TCEQ map viewer
+                <i data-lucide="external-link" class="w-3 h-3" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li><a href="about-retro.html" class="text-brass hover:text-cream underline underline-offset-2">About this site</a></li>
+            <li><a href="what-is-a-mud.html" class="text-brass/50 hover:text-brass underline underline-offset-2 text-xs">Civic version</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pt-6 border-t border-mahogany text-sm text-brass/50">
+        <p>&copy; 2026 MUDs 4 Texas. Education hub.</p>
+        <p class="flex flex-wrap gap-x-4 gap-y-1">
+          <a href="privacy-retro.html" class="hover:text-cream underline underline-offset-2">Privacy</a>
+          <a href="terms-retro.html" class="hover:text-cream underline underline-offset-2">Terms</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    (function () {
+      var toggle = document.getElementById('menu-toggle');
+      var panel = document.getElementById('mobile-nav');
+      if (!toggle || !panel) return;
+      toggle.addEventListener('click', function () {
+        var open = panel.getAttribute('data-open') === 'true';
+        panel.setAttribute('data-open', open ? 'false' : 'true');
+        panel.hidden = open;
+        toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+        toggle.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+      });
+    })();
+  </script>
+</body>
+</html>
